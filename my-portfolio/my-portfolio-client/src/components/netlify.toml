@@ -1,3 +1,0 @@
-[build]
-base = "https://github.com/gonzalolater/portafolio/tree/main/my-portfolio/my-portfolio-client"
-publish = "build"
