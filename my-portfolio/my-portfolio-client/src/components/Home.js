@@ -1,15 +1,18 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faTrophy } from '@fortawesome/free-solid-svg-icons';
 
 const Home = () => {
   return (
     <div
       style={{
+        height: '100vh',
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
-        marginTop: '60px', // Ajusta la altura según corresponda
+        marginTop: '90px',
+        minHeight: '100vh',
       }}
     >
       <img
@@ -22,13 +25,11 @@ const Home = () => {
           objectFit: 'cover',
         }}
       />
-      <div
-        style={{
-          padding: '20px',
-          textAlign: 'center',
-        }}
-      >
+      <div style={{ padding: '20px', textAlign: 'center' }}>
         <h1>Gonzalo Daniel Aguilar</h1>
+        <h3 style={{ textAlign: 'center',margin: '0 80px'}}>
+          Software Engineer - Full Stack Web Developer - Oficial Alchemy Certified Ethereum Developer - Agile Coach - Polygon, Algorand, Chainlink, Solana, DeFi Builder. Microsoft Cybersecurity & Microsoft IA developer.
+        </h3>
         <a
           href="https://www.linkedin.com/in/gonzalo-daniel-aguilar/"
           style={{
@@ -36,28 +37,48 @@ const Home = () => {
             alignItems: 'center',
             justifyContent: 'center',
             textDecoration: 'none',
-            color: 'red', // Color rojo
-            fontSize: '1.2em', // Tamaño de fuente más grande
+            color: 'red',
+            fontSize: '1.2em',
+            marginTop: '10px',
           }}
         >
           <FontAwesomeIcon icon={faLinkedin} style={{ marginRight: '5px' }} />
           LinkedIn
         </a>
-        <p>Más información sobre mí:</p>
-        <ul
+        <a
+          href="https://github.com/gonzalolater"
           style={{
-            listStyle: 'none',
-            padding: '0',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            textDecoration: 'none',
+            color: 'red',
+            fontSize: '1.2em',
+            marginTop: '10px',
           }}
         >
-          <li>Experiencia laboral</li>
-          <li>Educación</li>
-          <li>Habilidades</li>
-          <li>Proyectos destacados</li>
-        </ul>
+          <FontAwesomeIcon icon={faGithub} style={{ marginRight: '5px' }} />
+          GitHub
+        </a>
+<a
+          href="https://lol.fandom.com/wiki/Dodging_Bullets"
+          style={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            textDecoration: 'none',
+            color: 'red',
+            fontSize: '1.2em',
+            marginTop: '10px',
+          }}
+        > 
+         <FontAwesomeIcon icon={faTrophy} style={{ marginRight: '5px' }} />
+          Leaguepedia
+        </a>
       </div>
     </div>
   );
 };
 
 export default Home;
+
