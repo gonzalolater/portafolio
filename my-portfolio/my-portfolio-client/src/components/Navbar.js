@@ -40,7 +40,8 @@ const Navbar = () => {
           <ul
             className="menu"
             style={{
-              display: isOpen ? 'block' : 'none',
+              display: isOpen ? 'flex' : 'none',
+              flexDirection: 'column',
               listStyle: 'none',
               padding: '0',
               margin: '0',
@@ -56,6 +57,8 @@ const Navbar = () => {
             <li>Auditorías</li>
             <li>Entrevistas</li>
             <li>Entrevistas técnicas</li>
+            <li>Estudios</li>
+
           </ul>
         </div>
       </nav>

@@ -2,6 +2,8 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faTrophy } from '@fortawesome/free-solid-svg-icons';
+import ImageCard from './ImageCard';
+
 
 const Home = () => {
   return (
@@ -60,7 +62,7 @@ const Home = () => {
           <FontAwesomeIcon icon={faGithub} style={{ marginRight: '5px' }} />
           GitHub
         </a>
-<a
+          <a
           href="https://lol.fandom.com/wiki/Dodging_Bullets"
           style={{
             display: 'flex',
@@ -76,6 +78,7 @@ const Home = () => {
           Leaguepedia
         </a>
       </div>
+      <ImageCard/>
     </div>
   );
 };
