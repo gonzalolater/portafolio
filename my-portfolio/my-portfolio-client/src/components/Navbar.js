@@ -44,13 +44,14 @@ const Navbar = () => {
               flexDirection: 'column',
               listStyle: 'none',
               padding: '0',
-              margin: '0',
+              margin: '0 10px',
               position: 'absolute',
               top: '100%',
               left: '0',
               backgroundColor: 'violet',
               boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.1)',
               zIndex: '200',
+              justifyContent: 'flex-end',
             }}
           >
             <li>Mentorías</li>

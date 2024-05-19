@@ -107,9 +107,9 @@ const Carousel = () => {
     top: 0,
     right: 0,
     padding: '20px',
-    display: 'inline-block',
+    display: 'flex',
+    justifyContent: 'flex-end',
   };
-
   const footerStyle = {
     background: 'violet',
     color: '#FFFFFF',
@@ -130,7 +130,7 @@ const Carousel = () => {
     textDecoration: 'none',
     display: 'inline-block',
     fontSize: '16px',
-    margin: '10px',
+    margin: '0 10px',
     cursor: 'pointer',
     borderRadius: '5px',
   };
@@ -191,7 +191,7 @@ const Carousel = () => {
       </div>
       <>
         <footer style={footerStyle}>
-          <h2>My Portfolio Full-Responsive</h2>
+          <h2>My Portfolio</h2>
         </footer>
       </>
     </div>
