@@ -107,9 +107,7 @@ const Carousel = () => {
     top: 0,
     right: 0,
     padding: '20px',
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'flex-end',
+    display: 'inline-block',
   };
 
   const footerStyle = {
