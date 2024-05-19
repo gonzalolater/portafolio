@@ -122,7 +122,7 @@ const Carousel = () => {
   };
 
   const buttonStyle = {
-    marginTop: '-10px',
+    marginTop: '-12px',
     background: 'violet',
     border: 'none',
     color: 'white',
