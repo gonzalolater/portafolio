@@ -2,7 +2,7 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faTrophy } from '@fortawesome/free-solid-svg-icons';
-import ImageCard from './ImageCard';
+import Carousel from './Carousel';
 
 
 const Home = () => {
@@ -78,7 +78,7 @@ const Home = () => {
           Leaguepedia
         </a>
       </div>
-      <ImageCard/>
+      <Carousel/>
     </div>
   );
 };
