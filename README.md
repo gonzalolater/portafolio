@@ -1,6 +1,6 @@
 # Gonzalo Daniel Aguilar - Software Engineer | Full Stack Web Developer
 
-## [Portfolio](https://portfolio-aguilar-gonzalo-daniel.netlify.app/)
+## Link to the portfolio Working: [Portfolio](https://portfolio-aguilar-gonzalo-daniel.netlify.app/)
 
 ## About Me
 Hello! I'm Gonzalo Daniel Aguilar, a passionate Software Engineer with over 16 years of experience in web application development. I specialize in cutting-edge technologies like Web 3.0 and hold official certifications as an Alchemy Certified Ethereum Developer. I also have experience in Polygon, Algorand, Chainlink, and Solana. Additionally, I am an Agile Coach focused on driving efficiency and collaboration in development teams.
@@ -27,7 +27,7 @@ Thank you for visiting my portfolio, and I hope you enjoy exploring my projects 
 
 # Gonzalo Daniel Aguilar - Software Engineer | Full Stack Web Developer
 
-## [Portfolio](https://portfolio-aguilar-gonzalo-daniel.netlify.app/)
+## Link al portafolio Funcionando: [Portfolio](https://portfolio-aguilar-gonzalo-daniel.netlify.app/)
 
 ## About Me
 ¡Hola! Soy Gonzalo Daniel Aguilar, un apasionado Ingeniero de Software con más de 16 años de experiencia en el desarrollo de aplicaciones web. Me especializo en tecnologías de vanguardia como Web 3.0 y cuento con certificaciones oficiales en Alchemy Certified Ethereum Developer, así como experiencia en Polygon, Algorand, Chainlink y Solana. Además, soy un Agile Coach que se enfoca en impulsar la eficiencia y la colaboración en los equipos de desarrollo.
