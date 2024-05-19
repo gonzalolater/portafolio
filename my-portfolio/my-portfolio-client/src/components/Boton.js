@@ -1,13 +1,20 @@
-import React from 'react';
-
 const Boton = () => {
   return (
-    <div>
+    <div
+      style={{
+        display: 'flex',
+        flexDirection: 'row',
+        flexWrap: 'wrap',
+        justifyContent: 'center',
+      }}
+    >
       <button
         style={{
+          marginTop: '10px',
           marginRight: '10px',
+          marginBottom: '10px',
           padding: '10px',
-          backgroundColor: '#333',
+          backgroundColor: 'red',
           color: '#fff',
           border: 'none',
           borderRadius: '5px',
@@ -18,16 +25,18 @@ const Boton = () => {
       </button>
       <button
         style={{
+          marginTop: '10px',
           marginRight: '20px',
+          marginBottom: '10px',
           padding: '10px',
-          backgroundColor: '#333',
+          backgroundColor: 'red',
           color: '#fff',
           border: 'none',
           borderRadius: '5px',
           cursor: 'pointer',
         }}
       >
-        Conectar con Mercado Pago
+        Conectar Mercado Pago
       </button>
     </div>
   );

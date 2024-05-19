@@ -104,7 +104,7 @@ const Carousel = () => {
 
   const buttonContainerStyle = {
     position: 'absolute',
-    top: 0,
+    top: -1,
     right: 0,
     padding: '20px',
     display: 'flex',
@@ -122,6 +122,7 @@ const Carousel = () => {
   };
 
   const buttonStyle = {
+    marginTop: '-10px',
     background: 'violet',
     border: 'none',
     color: 'white',
@@ -132,7 +133,8 @@ const Carousel = () => {
     fontSize: '16px',
     margin: '0 10px',
     cursor: 'pointer',
-    borderRadius: '5px',
+    borderRadius: '5px'
+    ,
   };
 
   const navigate = (direction) => {

@@ -54,12 +54,11 @@ const Navbar = () => {
               justifyContent: 'flex-end',
             }}
           >
-            <li>Mentorías</li>
-            <li>Auditorías</li>
-            <li>Entrevistas</li>
-            <li>Entrevistas técnicas</li>
-            <li>Estudios</li>
-
+          <li>Mentorships</li> 
+          <li>Audits</li> 
+          <li>Interviews</li> 
+          <li>Technical interviews</li> 
+          <li>Studies</li>
           </ul>
         </div>
       </nav>
