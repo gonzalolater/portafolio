@@ -21,7 +21,7 @@ const Boton = () => {
           cursor: 'pointer',
         }}
       >
-        Conectar Wallets
+        Connect Wallets
       </button>
       <button
         style={{
@@ -36,7 +36,7 @@ const Boton = () => {
           cursor: 'pointer',
         }}
       >
-        Conectar Mercado Pago
+        Conenct Mercado Pago
       </button>
     </div>
   );
