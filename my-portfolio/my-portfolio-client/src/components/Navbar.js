@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import Boton from './Boton';
 import './Navbar.css';
 import Hamburguesa from './Hamburguesa';
@@ -54,11 +55,24 @@ const Navbar = () => {
               justifyContent: 'flex-end',
             }}
           >
-          <li>Mentorships</li> 
-          <li>Audits</li> 
-          <li>Interviews</li> 
-          <li>Technical interviews</li> 
-          <li>Studies</li>
+            <li>
+              <Link to="/mentorships">Mentorships</Link>
+            </li>
+            <li>
+              <Link to="/audits">Audits</Link>
+            </li>
+            <li>
+              <Link to="/interviews">Interviews</Link>
+            </li>
+            <li>
+              <Link to="/technical-interviews">Technical interviews</Link>
+            </li>
+            <li>
+              <Link to="/studies">Studies</Link>
+            </li>
+            <li>
+              <Link to="/">Principal Page</Link>
+            </li>
           </ul>
         </div>
       </nav>
