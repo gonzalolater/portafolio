@@ -191,7 +191,7 @@ const Carousel = () => {
       </div>
       <>
         <footer style={footerStyle}>
-          <h2>My Portfolio</h2>
+          <h2>My Portfolio Full-Responsive</h2>
         </footer>
       </>
     </div>
