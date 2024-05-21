@@ -8,18 +8,20 @@ import Interviews from './components/Interviews';
 import TechnicalInterviews from './components/TechnicalInterviews';
 import Studies from './components/Studies';
 import Footer from './components/Footer';
+import TechnicalChallenges from './components/TechnicalChallenges'
 
 const App = () => {
   return (
     <Router>
       <Navbar />
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/mentorships" element={<Mentorships />} />
         <Route path="/audits" element={<Audits />} />
+        <Route path="/TechnicalChallenges" element={<TechnicalChallenges />} />
         <Route path="/interviews" element={<Interviews />} />
         <Route path="/technical-interviews" element={<TechnicalInterviews />} />
+        <Route path="/mentorships" element={<Mentorships />} />
         <Route path="/studies" element={<Studies />} />
+        <Route path="/" element={<Home />} />
       </Routes>
       <Footer />
     </Router>
