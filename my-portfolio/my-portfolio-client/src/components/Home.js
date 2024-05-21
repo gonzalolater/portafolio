@@ -30,7 +30,7 @@ const Home = () => {
       <div style={{ padding: '20px', textAlign: 'center' }}>
         <h1>Gonzalo Daniel Aguilar</h1>
         <h3 style={{ textAlign: 'center',margin: '0 80px'}}>
-          Software Engineer - Full Stack Web Developer - Oficial Alchemy Certified Ethereum Developer - Agile Coach - Polygon, Algorand, Chainlink, Solana, DeFi Builder. Microsoft Cybersecurity & Microsoft IA developer.
+        Software Engineer - Full Stack Web Developer - Oficial Alchemy Certified Ethereum Developer - Agile Coach - Polygon, Algorand, Chainlink, Solana, DeFi Builder. Microsoft Cybersecurity & Microsoft Azure IA Developer.
         </h3>
         <a
           href="https://www.linkedin.com/in/gonzalo-daniel-aguilar/"
