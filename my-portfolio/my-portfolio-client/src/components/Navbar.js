@@ -11,6 +11,10 @@ const Navbar = () => {
     setIsOpen(!isOpen);
   };
 
+  const closeMenu = () => {
+    setIsOpen(false);
+  };
+
   return (
     <>
       <nav>
@@ -56,25 +60,37 @@ const Navbar = () => {
             }}
           >
             <li>
-              <Link to="/mentorships">Mentorships</Link>
+              <Link to="/mentorships" onClick={closeMenu}>
+                Mentorships
+              </Link>
             </li>
             <li>
-              <Link to="/audits">Audits</Link>
+              <Link to="/audits" onClick={closeMenu}>
+                Audits
+              </Link>
             </li>
             <li>
-              <Link to="/interviews">Interviews</Link>
+               <Link to="/interviews" onClick={closeMenu}>
+                Interviews
+              </Link>
             </li>
             <li>
-              <Link to="/technical-interviews">Technical interviews</Link>
+              <Link to="/technical-interviews" onClick={closeMenu}>
+                Technical interviews
+              </Link>
             </li>
             <li>
-              <Link to="/studies">Studies</Link>
+              <Link to="/studies" onClick={closeMenu}>
+                Studies
+              </Link>
             </li>
             <li>
-              <Link to="/">Principal Page</Link>
+              <Link to="/" onClick={closeMenu}>
+                Principal Page
+              </Link>
             </li>
-          </ul>
-        </div>
+            </ul>
+            </div>
       </nav>
     </>
   );

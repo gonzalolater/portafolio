@@ -1,7 +1,7 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
-import { faTrophy } from '@fortawesome/free-solid-svg-icons';
+import { faTrophy, faLocationArrow, faFire } from '@fortawesome/free-solid-svg-icons';
 import Carousel from './Carousel';
 
 
@@ -62,7 +62,7 @@ const Home = () => {
           <FontAwesomeIcon icon={faGithub} style={{ marginRight: '5px' }} />
           GitHub
         </a>
-          <a
+                <a
           href="https://lol.fandom.com/wiki/Dodging_Bullets"
           style={{
             display: 'flex',
@@ -73,9 +73,39 @@ const Home = () => {
             fontSize: '1.2em',
             marginTop: '10px',
           }}
-        > 
-         <FontAwesomeIcon icon={faTrophy} style={{ marginRight: '5px' }} />
+        >
+          <FontAwesomeIcon icon={faTrophy} style={{ marginRight: '5px' }} />
           Leaguepedia
+        </a>
+        <a
+          href="https://fin.guru/u/gonzalo-daniel-aguilar"
+          style={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            textDecoration: 'none',
+            color: 'red',
+            fontSize: '1.2em',
+            marginTop: '10px',
+          }}
+        >
+          <FontAwesomeIcon icon={faLocationArrow} style={{ marginRight: '5px' }} />
+          FinGurú
+        </a>
+        <a
+          href="https://www.freecodecamp.org/GonzaloDanielAguilar"
+          style={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            textDecoration: 'none',
+            color: 'red',
+            fontSize: '1.2em',
+            marginTop: '10px',
+          }}
+        >
+          <FontAwesomeIcon icon={faFire} style={{ marginRight: '5px' }} />
+          FreeCodeCamp
         </a>
       </div>
       <Carousel/>

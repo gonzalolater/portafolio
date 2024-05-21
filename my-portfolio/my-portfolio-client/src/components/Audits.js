@@ -1,4 +1,5 @@
 import React from 'react';
+import './Audits.css';
 
 const Audits = () => {
   const apps = [
@@ -9,18 +10,18 @@ const Audits = () => {
       link: 'https://github.com/gonzalolater/CCex-Staking-Platform'
     },
     {
-      name: 'App 2',
-      image: 'url_de_la_imagen_2',
-      description: '',
-      link: 'url_del_link_2'
+      name: 'DeFiExchange with Node v16.20.0',
+      image: 'https://i.ibb.co/sjrGPj2/img-4.png',
+      description: 'Decentralized exchange - 8 hours audit. - Click on the image to see the project and read all the Issues and Recommendations.',
+      link: 'https://github.com/gonzalolater/DeFiExchange'
     },
     // Agrega más objetos para cada aplicación que desees mostrar
   ];
 
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-      <h1>Audits</h1>
-      <h2 style={{ textAlign: 'center' }}>Audited Projects</h2>
+    <div className="auditsContainer" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+      <h1>Auditorys</h1>
+      <h1 style={{ textAlign: 'center'}}>Audited Projects</h1>
       {apps.map((app, index) => (
         <div style={{ textAlign: 'center' }} key={index}>
           <h2 >{app.name}</h2>
