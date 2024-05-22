@@ -65,7 +65,7 @@ const TechnicalChallenges = () => {
       <h2>Technical Challenges</h2>
       <ul>
         {challenges.map((challenge, index) => (
-          <li key={index}>
+          <li style={{margin:'20px'}} key={index}>
             <h3>{challenge.title}</h3>
             <p>{challenge.description}</p>
             {challenge.repositoryLink && <a href={challenge.repositoryLink}>Repository</a>}

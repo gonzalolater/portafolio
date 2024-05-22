@@ -9,8 +9,8 @@ const Sponsors = () => {
         alignItems: 'center',
       }}>
       <h1>Sponsors</h1>
-      <h2 style={{color: 'red'}}>I would like to thank the following companies for their support in my professional training:</h2>
-      <div className="sponsors" style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gridGap: "10px", marginBottom: '70px', justifyContent: "center"}}>
+      <h2 style={{color: 'red', margin:'20px'}}>I would like to thank the following companies for their support in my professional training:</h2>
+      <div className="sponsors" style={{ margin:'20px', display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gridGap: "10px", marginBottom: '70px', justifyContent: "center"}}>
         <a href="https://www.microsoft.com" target="_blank" rel="noopener noreferrer">
           <img src="https://i.ibb.co/bKsmcph/Microsoft.jpg" alt="Microsoft" style={{ maxWidth: "100%", height: "auto", objectFit: "cover" }} />
         </a>
