@@ -33,9 +33,79 @@ const Carousel = () => {
       alt: 'Polygon-Developer-Advance',
     },
     {
-      link: 'https://www.linkedin.com/in/gonzalo-daniel-aguilar/details/experience/urn:li:fsd_profilePosition:(ACoAACfSHlcBueqUQJz1OGpE1E-k79RqsnYORXo,2173630008)/treasury/',
-      image: 'https://i.ibb.co/FD7YG4j/Web-3-Pionner.jpg',
-      alt: 'Web-3-Pionner',
+      link: 'https://www.freecodecamp.org/GonzaloDanielAguilar',
+      image: 'https://i.ibb.co/hV1Q79p/Responsive-Web-Design.jpg',
+      alt: 'FreeCodeCamp.Org',
+    },
+    {
+      link: 'https://www.freecodecamp.org/GonzaloDanielAguilar',
+      image: 'https://i.ibb.co/3d3fqd2/Front-End-Development-Liberaries.jpg',
+      alt: 'FreeCodeCamp.Org',
+    },
+    {
+      link: 'https://www.freecodecamp.org/GonzaloDanielAguilar',
+      image: 'https://i.ibb.co/DfkmHwJ/Legacy-Java-Script-Algorithms-and-Data-Structures.jpg',
+      alt: 'FreeCodeCamp.Org',
+    },
+    {
+      link: 'https://learndigital.withgoogle.com/link/1nur091p2ww',
+      image: 'https://i.ibb.co/3Yz3PJJ/google-titulo.jpg',
+      alt: 'Google Desarrollo Web 1',
+    },
+    {
+      link: 'https://learndigital.withgoogle.com/link/1nur091p2ww',
+      image: 'https://i.ibb.co/rZyKMmT/google-titulo-2.jpg',
+      alt: 'Google Desarrollo Web 2',
+    },
+    {
+      link: 'https://docs.alchemy.com/docs/welcome-to-the-road-to-web3',
+      image: 'https://i.ibb.co/0nBYn7Z/Built-a-Decentralized-Application.jpg',
+      alt: 'Built a Decentralized Application',
+    },
+    {
+      link: 'https://docs.alchemy.com/docs/welcome-to-the-road-to-web3',
+      image: 'https://i.ibb.co/dJ5vGcY/Developed-an-on-chain-turn-based-game.jpg',
+      alt: 'Developed an on-chain turn-based game',
+    },
+    {
+      link: 'https://docs.alchemy.com/docs/welcome-to-the-road-to-web3',
+      image: 'https://i.ibb.co/XkfXjGM/Deployed-an-NFT-smart-contract.jpg',
+      alt: 'Deployed an NFT smart contract',
+    },
+    {
+      link: 'https://docs.alchemy.com/docs/welcome-to-the-road-to-web3',
+      image: 'https://i.ibb.co/TtWQgK5/Deployed-a-Web-App-with-Lens-API.jpg',
+      alt: 'Deployed a Web App with Lens API',
+    },
+    {
+      link: 'https://docs.alchemy.com/docs/welcome-to-the-road-to-web3',
+      image: 'https://i.ibb.co/fCKKLpd/Deployed-a-betting-game-on-Optimism-L2.jpg',
+      alt: 'Deployed a betting game on Optimism L2',
+    },
+    {
+      link: 'https://docs.alchemy.com/docs/welcome-to-the-road-to-web3',
+      image: 'https://i.ibb.co/51KQpfD/Built-Smart-Contracts-using-Chainlink.jpg',
+      alt: 'Built Smart Contracts using Chainlink',
+    },
+    {
+      link: 'https://docs.alchemy.com/docs/welcome-to-the-road-to-web3',
+      image: 'https://i.ibb.co/f9bVpmn/Built-complex-Blockchain-applications-using-Alchemy.jpg',
+      alt: 'Built complex Blockchain applications using Alchemy',
+    },
+    {
+      link: 'https://docs.alchemy.com/docs/welcome-to-the-road-to-web3',
+      image: 'https://i.ibb.co/xDPqdPX/Built-an-ERC20-staking-application.jpg',
+      alt: 'Built an ERC20 staking application',
+    },
+    {
+      link: 'https://docs.alchemy.com/docs/welcome-to-the-road-to-web3',
+      image: 'https://i.ibb.co/qyp4dz7/Built-a-Token-Swap-Dapp-with-0x-API.jpg',
+      alt: 'Built a Token Swap Dapp with 0x API',
+    },
+    {
+      link: 'https://docs.alchemy.com/docs/welcome-to-the-road-to-web3',
+      image: 'https://i.ibb.co/c26MRVD/Built-a-full-stack-dapp-for-buying-selling-NFTs.jpg',
+      alt: 'Built a full stack dapp for buying & selling NFTs',
     },
   ];
 
