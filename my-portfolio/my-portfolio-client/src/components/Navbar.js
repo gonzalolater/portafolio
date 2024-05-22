@@ -48,7 +48,7 @@ const Navbar = () => {
               display: isOpen ? 'flex' : 'none',
               flexDirection: 'column',
               listStyle: 'none',
-              padding: '0',
+              padding: '10px',
               margin: '0 10px',
               position: 'absolute',
               top: '100%',
@@ -57,44 +57,46 @@ const Navbar = () => {
               boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.1)',
               zIndex: '200',
               justifyContent: 'flex-end',
+              textDecoration: 'none',
+              color: 'inherit',
             }}
           >
-            <li>
+            <li style={{ textDecoration: 'none', color: 'inherit' }}>
               <Link to="/audits" onClick={closeMenu}>
                 Audits
               </Link>
             </li>
-            <li>
+            <li style={{ textDecoration: 'none', color: 'inherit' }}>
                <Link to="/TechnicalChallenges" onClick={closeMenu}>
                 Technical Challenges
               </Link>
             </li>
-            <li>
+            <li style={{ textDecoration: 'none', color: 'inherit' }}>
                <Link to="/interviews" onClick={closeMenu}>
                 Interviews
               </Link>
             </li>
-            <li>
+            <li style={{ textDecoration: 'none', color: 'inherit' }}>
               <Link to="/technical-interviews" onClick={closeMenu}>
                 Technical interviews
               </Link>
             </li>
-            <li>
+            <li style={{ textDecoration: 'none', color: 'inherit' }}>
               <Link to="/studies" onClick={closeMenu}>
                 Studies
               </Link>
             </li>
-            <li>
+            <li style={{ textDecoration: 'none', color: 'inherit' }}>
               <Link to="/mentorships" onClick={closeMenu}>
                 Mentorships
               </Link>
             </li>
-            <li>
+            <li style={{ textDecoration: 'none', color: 'inherit' }}>
               <Link to="/sponsors" onClick={closeMenu}>
                 Sponsors
               </Link>
             </li>
-            <li>
+            <li style={{ textDecoration: 'none', color: 'inherit' }}>
               <Link to="/" onClick={closeMenu}>
                 Principal Page
               </Link>
