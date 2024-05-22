@@ -9,6 +9,7 @@ import TechnicalInterviews from './components/TechnicalInterviews';
 import Studies from './components/Studies';
 import Footer from './components/Footer';
 import TechnicalChallenges from './components/TechnicalChallenges'
+import Sponsors from './components/Sponsors';
 
 const App = () => {
   return (
@@ -21,6 +22,7 @@ const App = () => {
         <Route path="/technical-interviews" element={<TechnicalInterviews />} />
         <Route path="/mentorships" element={<Mentorships />} />
         <Route path="/studies" element={<Studies />} />
+        <Route path="/sponsors" element={<Sponsors />} />
         <Route path="/" element={<Home />} />
       </Routes>
       <Footer />

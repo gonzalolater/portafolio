@@ -3,7 +3,14 @@ import React from 'react';
 const Mentorships = () => {
   return (
     <div>
-      <h1>Mentorships</h1>
+      <h1
+      style={{
+        marginTop: '70px',
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+      }}
+    >Mentorships</h1>
      
     </div>
   );
