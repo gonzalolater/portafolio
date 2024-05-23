@@ -219,7 +219,7 @@ const Carousel = () => {
       </div>
       <div style={carouselStyle}>
         <div style={imageContainerStyle}>
-          <a href={carouselImages[currentImageIndex].link}>
+          <a target="_blank" rel="noopener noreferrer" href={carouselImages[currentImageIndex].link}>
             <img
               src={carouselImages[currentImageIndex].image}
               alt={carouselImages[currentImageIndex].alt}
