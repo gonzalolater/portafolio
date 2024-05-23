@@ -1,0 +1,44 @@
+#navbar {
+  top: 0;
+  left: 0;
+  width: 80%;
+  height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+#navbar ul {
+  height: 100%;
+  padding: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+#navbar li {
+  border-top: 1px solid;
+  border-left: 1px solid;
+  list-style: none;
+  position: center;
+  width: 100%;
+}
+
+#navbar a {
+  display: block;
+  padding: 10px 30px;
+  color: #0333F5;
+  text-decoration: none;
+}
+
+header {
+  color: black;
+  text-align: center;
+  font-size: 1.8em;
+
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+  
+}
