@@ -17,7 +17,7 @@ const Sponsors = () => {
         <a href="https://www.google.com" target="_blank" rel="noopener noreferrer">
           <img src="https://i.ibb.co/PFZQTrN/Google.jpg" alt="Google" style={{ maxWidth: "100%", height: "auto", objectFit: "cover" }} />
         </a>
-        <a href="https://www.alchemy.edu" target="_blank" rel="noopener noreferrer">
+        <a href="https://www.alchemy.com/university" target="_blank" rel="noopener noreferrer">
           <img src="https://i.ibb.co/T0JkZXL/Alchemy-University.jpg" alt="Alchemy University" style={{ maxWidth: "100%", height: "auto", objectFit: "cover" }} />
         </a>
         <a href="https://www.platzi.com" target="_blank" rel="noopener noreferrer">

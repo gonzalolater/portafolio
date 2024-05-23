@@ -1,6 +1,6 @@
 {
   "name": "my-portfolio-client",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-free": "^6.5.2",
@@ -8,18 +8,10 @@
     "@fortawesome/free-regular-svg-icons": "^6.5.2",
     "@fortawesome/free-solid-svg-icons": "^6.5.2",
     "@fortawesome/react-fontawesome": "^0.2.1",
-    "@testing-library/jest-dom": "^5.17.0",
-    "@testing-library/react": "^13.4.0",
-    "@testing-library/user-event": "^13.5.0",
-    "materialize-css": "^1.0.0-rc.2",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "react-responsive-carousel": "^3.2.23",
     "react-router-dom": "^6.23.1",
-    "react-scripts": "^5.0.1",
-    "react-slick": "^0.30.2",
-    "slick-carousel": "^1.8.1",
-    "web-vitals": "^2.1.4"
+    "react-scripts": "^5.0.1"
   },
   "scripts": {
     "start": "react-scripts start",
