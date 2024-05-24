@@ -1,6 +1,6 @@
 ## frontend created with custom and handcrafted create-react-app.
 
-## Npm Start in portfolio/my-portfolio-myp-portfolio-client
+## cd portfolio/my-portfolio-myp-portfolio-client npm start
 
 localhost:3000
 

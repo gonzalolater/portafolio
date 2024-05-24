@@ -1,0 +1,27 @@
+{
+    "nombre": "Built Smart Contracts using Chainlink",
+        "descripcion": "Learned how to build smart contracts using Chainlink",
+        "video": "ipfs://QmWwUvLduVnT6T1E381QLN2X4trp89RYBSnT5VfZ1LdLww/Built Smart Contracts using Chainlink.mp4",
+        "atrributes": [
+            {
+                "trait_type": "Smart Contracts",
+                "value": "Chainlink"
+            },
+            {
+                "trait_type": "Blockchain",
+                "value": "Ethereum"
+            },
+            {
+                "trait_type": "Date",
+                "value": "2024-05-24"
+            },
+            {
+                "trait_type": "Level",
+                "value": "Advanced"
+            },
+            {
+                "trait_type": "Duration",
+                "value": "5 hours"
+            }
+        ]
+}

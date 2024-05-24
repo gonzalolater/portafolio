@@ -1,0 +1,30 @@
+{
+    "nombre": "eth-bootcamp-completion-nft",
+        "descripcion": "Alchemy Certified Ethereum Developer",
+        "video": "ipfs://QmWwUvLduVnT6T1E381QLN2X4trp89RYBSnT5VfZ1LdLww/eth-bootcamp-completion-nft.mp4",
+        "atrributes": [
+            {
+                "trait_type":"Blockchain",
+                "value":"Ethereum"
+            },
+            {
+                "trait_type":"Alchemy full"
+            },
+            {
+                "trait_type":"Certification",
+                "value":"Alchemy Certified Ethereum Developer"
+            },
+            {
+                "trait_type": "Date",
+                "value": "2024-05-24"
+            },
+            {
+                "trait_type": "Level",
+                "value": "Advanced"
+            },
+            {
+                "trait_type": "Duration",
+                "value": "500 hours"
+            }
+        ]
+}

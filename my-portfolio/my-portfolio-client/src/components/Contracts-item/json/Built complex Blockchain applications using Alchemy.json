@@ -1,0 +1,31 @@
+{
+    "nombre": "Built complex Blockchain applications using Alchemy",
+        "descripcion": "Developed complex blockchain applications using Alchemy",
+        "video": "ipfs://QmWwUvLduVnT6T1E381QLN2X4trp89RYBSnT5VfZ1LdLww/Built complex Blockchain applications using Alchemy.mp4",
+        "atrributes": [
+            {
+                "trait_type": "Smart Contracts",
+                "value": "Solidity"
+            },
+            {
+                "trait_type": "Blockchain",
+                "value": "Ethereum"
+            },
+            {
+                "trait_type": "Alchemy",
+                "value": "Alchemy"
+            },
+            {
+                "trait_type": "Date",
+                "value": "2024-05-24"
+            },
+            {
+                "trait_type": "Level",
+                "value": "Advanced"
+            },
+            {
+                "trait_type": "Duration",
+                "value": "50 hours"
+            }
+        ]
+}

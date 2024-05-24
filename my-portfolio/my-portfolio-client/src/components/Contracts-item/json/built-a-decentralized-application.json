@@ -1,0 +1,27 @@
+{
+    "nombre": "Built a Decentralized Application",
+        "descripcion": "Developed a decentralized application",
+        "video": "ipfs://QmWwUvLduVnT6T1E381QLN2X4trp89RYBSnT5VfZ1LdLww/Built a Decentralized Application.mp4",
+        "atrributes": [
+            {
+                "trait_type": "Smart Contracts",
+                "value": "Solidity"
+            },
+            {
+                "trait_type": "Blockchain",
+                "value": "Ethereum"
+            },
+            {
+                "trait_type": "Date",
+                "value": "2024-05-24"
+            },
+            {
+                "trait_type": "Level",
+                "value": "Advanced"
+            },
+            {
+                "trait_type": "Duration",
+                "value": "30 hours"
+            }
+        ]
+}
