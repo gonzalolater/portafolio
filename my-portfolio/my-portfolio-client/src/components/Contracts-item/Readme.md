@@ -9,6 +9,8 @@ Build a contract in Remix, to add a section With MarketPlace in Polygon layer 2 
 - Remix
 - OpenZeppelin
 - Solidity
+- ERC 721
+- ipfs - pinata
 
 ---------
 
