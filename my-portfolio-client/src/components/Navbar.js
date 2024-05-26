@@ -98,7 +98,7 @@ const Navbar = () => {
             </li>
             <li style={{ textDecoration: 'none', color: 'inherit' }}>
               <Link to="/" onClick={closeMenu}>
-                Principal Page
+                Home
               </Link>
             </li>
             </ul>
