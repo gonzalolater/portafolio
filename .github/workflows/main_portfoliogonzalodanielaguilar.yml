@@ -52,5 +52,5 @@ jobs:
         with:
           app-name: 'PortfolioGonzaloDanielAguilar'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_9D861751C25046E4A077820030FFEBC5 }}
+          # publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_9D861751C25046E4A077820030FFEBC5 }}
           package: .
