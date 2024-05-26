@@ -7,7 +7,7 @@ import "@openzeppelin/contracts@5.0.2/token/ERC721/extensions/ERC721Enumerable.s
 import "@openzeppelin/contracts@5.0.2/token/ERC721/extensions/ERC721Pausable.sol";
 import "@openzeppelin/contracts@5.0.2/access/Ownable.sol";
 
-contract Observers is ERC721, ERC721Enumerable, ERC721Pausable, Ownable {
+contract portfolioErc721GDA is ERC721, ERC721Enumerable, ERC721Pausable, Ownable {
     uint256 private _nextTokenId;
 
     uint public immutable maxSupply = 4;
