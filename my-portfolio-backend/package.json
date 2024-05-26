@@ -1,0 +1,20 @@
+{
+  "name": "my-portfolio-backend",
+  "version": "1.0.0",
+  "description": "backend portfolio",
+  "main": "app.js",
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon src/index.js"
+  },
+  "author": "Gonzalo Daniel Aguilar",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.19.2",
+    "mongoose": "^8.4.0",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.1"
+  }
+}
