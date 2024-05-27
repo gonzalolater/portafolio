@@ -1,11 +1,11 @@
-import mongoose from 'mongoose'
+import mongoose from "mongoose";
+import { MONGODB_URI } from "./config.js";
 
 export const connectDB = async () => {
-        try {
-            await mongoose.connect('mongodb+srv://<user>:<password>@portfolio.mongocluster.cosmos.azure.com/?tls=true&authMechanism=SCRAM-SHA-256&retrywrites=false&maxIdleTimeMS=120000');
-            console.log('MongoDB Connected')
-        }
-        catch (error) {
-            console.log(error);
-        }
+  try {
+    await mongoose.connect(MONGODB_URI);
+    console.log("MongoDB is connected");
+  } catch (error) {
+    console.error(error);
+  }
 };
