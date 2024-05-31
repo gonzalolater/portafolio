@@ -11,7 +11,7 @@ const Studies = () => {
 
   return (
     <div>
-        <header style={{ textAlign: "center", color: "red", display: 'flex', justifyContent: 'center', marginTop: "90px"}}>
+        <header style={{ textAlign: "center", color: "red", display: 'flex', justifyContent: 'center', marginTop: "110px"}}>
           Studies List - more than 10,000 hours PROGRAMMING and STUDY OF WEB
           SOFTWARE.
         </header>

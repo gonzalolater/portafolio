@@ -5,7 +5,7 @@ const Interviews = () => {
     <div>
       <h1
       style={{
-        marginTop: '70px',
+        marginTop: '110px',
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
