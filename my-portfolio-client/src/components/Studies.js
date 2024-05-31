@@ -18,7 +18,7 @@ const Studies = () => {
       <nav id="navbar">
         <ul>
           <li>
-            <a
+            <a style={{textAlign:"center"}}
               className="nav-link"
               href="#9"
               onClick={(e) => handleNavLinkClick(e, "9")}
@@ -27,7 +27,7 @@ const Studies = () => {
             </a>
           </li>
           <li>
-            <a
+            <a style={{textAlign:"center"}}
               className="nav-link"
               href="#24"
               onClick={(e) => handleNavLinkClick(e, "24")}
@@ -37,7 +37,7 @@ const Studies = () => {
           </li>
           <li>
             {" "}
-            <a
+            <a style={{textAlign:"center"}}
               className="nav-link"
               href="#12"
               onClick={(e) => handleNavLinkClick(e, "12")}
@@ -46,7 +46,7 @@ const Studies = () => {
             </a>{" "}
           </li>
           <li>
-            <a
+            <a style={{textAlign:"center"}}
               className="nav-link"
               href="#28"
               onClick={(e) => handleNavLinkClick(e, "28")}
@@ -54,8 +54,8 @@ const Studies = () => {
               Google Web Developer 1
             </a>
           </li>
-          <li>
-            <a
+          <li> 
+            <a style={{textAlign:"center"}}
               className="nav-link"
               href="#27"
               onClick={(e) => handleNavLinkClick(e, "27")}
@@ -64,7 +64,7 @@ const Studies = () => {
             </a>
           </li>
           <li>
-            <a
+            <a style={{textAlign:"center"}}
               className="nav-link"
               href="#32"
               onClick={(e) => handleNavLinkClick(e, "32")}
@@ -73,7 +73,7 @@ const Studies = () => {
             </a>
           </li>
           <li>
-            <a
+            <a style={{textAlign:"center"}}
               className="nav-link"
               href="#34"
               onClick={(e) => handleNavLinkClick(e, "34")}
@@ -82,7 +82,7 @@ const Studies = () => {
             </a>
           </li>
           <li>
-            <a
+            <a style={{textAlign:"center"}}
               className="nav-link"
               href="#35"
               onClick={(e) => handleNavLinkClick(e, "35")}
@@ -91,7 +91,7 @@ const Studies = () => {
             </a>
           </li>
           <li>
-            <a
+            <a style={{textAlign:"center"}}
               className="nav-link"
               href="#36"
               onClick={(e) => handleNavLinkClick(e, "36")}
@@ -101,7 +101,7 @@ const Studies = () => {
             </a>
           </li>
           <li>
-            <a
+            <a style={{textAlign:"center"}}
               className="nav-link"
               href="#39"
               onClick={(e) => handleNavLinkClick(e, "39")}
@@ -110,7 +110,7 @@ const Studies = () => {
             </a>
           </li>
           <li>
-            <a
+            <a style={{textAlign:"center"}}
               className="nav-link"
               href="#40"
               onClick={(e) => handleNavLinkClick(e, "39")}
@@ -119,7 +119,7 @@ const Studies = () => {
             </a>
           </li>
           <li>
-            <a
+            <a style={{textAlign:"center"}}
               className="nav-link"
               href="#1"
               onClick={(e) => handleNavLinkClick(e, "1")}
@@ -129,7 +129,7 @@ const Studies = () => {
             </a>
           </li>
           <li>
-            <a
+            <a style={{textAlign:"center"}}
               className="nav-link"
               href="#2"
               onClick={(e) => handleNavLinkClick(e, "2")}
@@ -138,7 +138,7 @@ const Studies = () => {
             </a>
           </li>
           <li>
-            <a
+            <a style={{textAlign:"center"}}
               className="nav-link"
               href="#3"
               onClick={(e) => handleNavLinkClick(e, "3")}
@@ -147,7 +147,7 @@ const Studies = () => {
             </a>
           </li>
           <li>
-            <a
+            <a style={{textAlign:"center"}}
               className="nav-link"
               href="#4"
               onClick={(e) => handleNavLinkClick(e, "4")}
@@ -156,7 +156,7 @@ const Studies = () => {
             </a>
           </li>
           <li>
-            <a
+            <a style={{textAlign:"center"}}
               className="nav-link"
               href="#5"
               onClick={(e) => handleNavLinkClick(e, "5")}
@@ -165,7 +165,7 @@ const Studies = () => {
             </a>
           </li>
           <li>
-            <a
+            <a style={{textAlign:"center"}}
               className="nav-link"
               href="#6"
               onClick={(e) => handleNavLinkClick(e, "6")}
@@ -174,7 +174,7 @@ const Studies = () => {
             </a>
           </li>
           <li>
-            <a
+            <a style={{textAlign:"center"}}
               className="nav-link"
               href="#7"
               onClick={(e) => handleNavLinkClick(e, "7")}
@@ -183,7 +183,7 @@ const Studies = () => {
             </a>
           </li>
           <li>
-            <a
+            <a style={{textAlign:"center"}}
               className="nav-link"
               href="#8"
               onClick={(e) => handleNavLinkClick(e, "8")}
@@ -192,7 +192,7 @@ const Studies = () => {
             </a>
           </li>
           <li>
-            <a
+            <a style={{textAlign:"center"}}
               className="nav-link"
               href="#10"
               onClick={(e) => handleNavLinkClick(e, "10")}
@@ -201,7 +201,7 @@ const Studies = () => {
             </a>{" "}
           </li>
           <li>
-            <a
+            <a style={{textAlign:"center"}}
               className="nav-link"
               href="#11"
               onClick={(e) => handleNavLinkClick(e, "11")}
@@ -210,7 +210,7 @@ const Studies = () => {
             </a>
           </li>
           <li>
-            <a
+            <a style={{textAlign:"center"}}
               className="nav-link"
               href="#13"
               onClick={(e) => handleNavLinkClick(e, "13")}
@@ -219,7 +219,7 @@ const Studies = () => {
             </a>
           </li>
           <li>
-            <a
+            <a style={{textAlign:"center"}}
               className="nav-link"
               href="#14"
               onClick={(e) => handleNavLinkClick(e, "14")}
@@ -228,7 +228,7 @@ const Studies = () => {
             </a>
           </li>
           <li>
-            <a
+            <a style={{textAlign:"center"}}
               className="nav-link"
               href="#15"
               onClick={(e) => handleNavLinkClick(e, "15")}
@@ -237,7 +237,7 @@ const Studies = () => {
             </a>
           </li>
           <li>
-            <a
+            <a style={{textAlign:"center"}}
               className="nav-link"
               href="#16"
               onClick={(e) => handleNavLinkClick(e, "16")}
@@ -246,7 +246,7 @@ const Studies = () => {
             </a>
           </li>
           <li>
-            <a
+            <a style={{textAlign:"center"}}
               className="nav-link"
               href="#17"
               onClick={(e) => handleNavLinkClick(e, "17")}
@@ -255,7 +255,7 @@ const Studies = () => {
             </a>
           </li>
           <li>
-            <a
+            <a style={{textAlign:"center"}}
               className="nav-link"
               href="#18"
               onClick={(e) => handleNavLinkClick(e, "18")}
@@ -264,7 +264,7 @@ const Studies = () => {
             </a>
           </li>
           <li>
-            <a
+            <a style={{textAlign:"center"}}
               className="nav-link"
               href="#19"
               onClick={(e) => handleNavLinkClick(e, "19")}
@@ -273,7 +273,7 @@ const Studies = () => {
             </a>
           </li>
           <li>
-            <a
+            <a style={{textAlign:"center"}}
               className="nav-link"
               href="#20"
               onClick={(e) => handleNavLinkClick(e, "20")}
@@ -283,7 +283,7 @@ const Studies = () => {
             </a>
           </li>
           <li>
-            <a
+            <a style={{textAlign:"center"}}
               className="nav-link"
               href="#21"
               onClick={(e) => handleNavLinkClick(e, "21")}
@@ -292,7 +292,7 @@ const Studies = () => {
             </a>
           </li>
           <li>
-            <a
+            <a style={{textAlign:"center"}}
               className="nav-link"
               href="#22"
               onClick={(e) => handleNavLinkClick(e, "22")}
@@ -301,7 +301,7 @@ const Studies = () => {
             </a>
           </li>
           <li>
-            <a
+            <a style={{textAlign:"center"}}
               className="nav-link"
               href="#23"
               onClick={(e) => handleNavLinkClick(e, "23")}
@@ -310,7 +310,7 @@ const Studies = () => {
             </a>
           </li>
           <li>
-            <a
+            <a style={{textAlign:"center"}}
               className="nav-link"
               href="#25"
               onClick={(e) => handleNavLinkClick(e, "25")}
@@ -319,7 +319,7 @@ const Studies = () => {
             </a>
           </li>
           <li>
-            <a
+            <a style={{textAlign:"center"}}
               className="nav-link"
               href="#26"
               onClick={(e) => handleNavLinkClick(e, "26")}
@@ -328,7 +328,7 @@ const Studies = () => {
             </a>
           </li>
           <li>
-            <a
+            <a style={{textAlign:"center"}}
               className="nav-link"
               href="#29"
               onClick={(e) => handleNavLinkClick(e, "29")}
@@ -338,7 +338,7 @@ const Studies = () => {
             </a>
           </li>
           <li>
-            <a
+            <a style={{textAlign:"center"}}
               className="nav-link"
               href="#30"
               onClick={(e) => handleNavLinkClick(e, "30")}
@@ -347,7 +347,7 @@ const Studies = () => {
             </a>
           </li>
           <li>
-            <a
+            <a style={{textAlign:"center"}}
               className="nav-link"
               href="#31"
               onClick={(e) => handleNavLinkClick(e, "31")}
@@ -356,7 +356,7 @@ const Studies = () => {
             </a>
           </li>
           <li>
-            <a
+            <a style={{textAlign:"center"}}
               className="nav-link"
               href="#33"
               onClick={(e) => handleNavLinkClick(e, "33")}
@@ -365,7 +365,7 @@ const Studies = () => {
             </a>
           </li>
           <li>
-            <a
+            <a style={{textAlign:"center"}}
               className="nav-link"
               href="#37"
               onClick={(e) => handleNavLinkClick(e, "37")}
@@ -374,8 +374,8 @@ const Studies = () => {
             </a>
           </li>
           <li>
-            <a
-              style={{ marginBottom: "10px" }}
+            <a 
+              style={{textAlign:"center", marginBottom: "10px" }}
               className="nav-link"
               href="#38"
               onClick={(e) => handleNavLinkClick(e, "38")}
