@@ -5,8 +5,8 @@ import './Navbar.css';
 import Hamburguesa from './Hamburguesa';
 
 const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [isConnected, setIsConnected] = useState(false);
+  const [isOpen, setIsOpen] = useState(false); 
+  const [isConnected, setIsConnected] = useState(false); // eslint-disable-next-line no-unused-vars
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
