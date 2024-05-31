@@ -13,7 +13,7 @@ const Home = () => {
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
-        marginTop: '90px',
+        marginTop: '110px',
         minHeight: '100vh',
       }}
     >

@@ -6,6 +6,7 @@ import Hamburguesa from './Hamburguesa';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isConnected, setIsConnected] = useState(false);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -41,7 +42,7 @@ const Navbar = () => {
           >
             <Hamburguesa />
           </div>
-          <Boton />
+          <Boton isConnected={isConnected} />
           <ul
             className="menu"
             style={{
@@ -101,8 +102,8 @@ const Navbar = () => {
                 Home
               </Link>
             </li>
-            </ul>
-            </div>
+          </ul>
+        </div>
       </nav>
     </>
   );
