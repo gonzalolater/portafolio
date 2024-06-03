@@ -82,61 +82,102 @@ const Home = () => {
             borderRadius: "10px",
             backgroundColor: "violet",
             color: "white",
-            textShadow: "2px 2px 4px rgba(0, 0, 0, 0.5)", WebkitTextStroke: "1px red", WebkitTextFillColor: "white", }} > Gonzalo Daniel Aguilar </h1> <ul style={{ fontSize: "20px", fontWeight: "bold" }}> <li>Software Engineer, more than 10,000 hours of development.</li> <li>Full Stack Web 2 & 3 Developer.</li> <li>Oficial Alchemy Certified Ethereum Developer.</li> <li>Agile Coach - Project Manager - Scrum Master.</li> <li>Polygon, Algorand, Chainlink, Solana & DeFi Builder.</li> <li>Microsoft Cybersecurity.</li> <li>Microsoft Azure IA Developer With OpenAI.</li> </ul>
+            textShadow: "2px 2px 4px rgba(0, 0, 0, 0.5)",
+            WebkitTextStroke: "1px red",
+            WebkitTextFillColor: "white",
+          }}
+        >
+          Gonzalo Daniel Aguilar
+        </h1>
+        <ul style={{ fontSize: "20px", fontWeight: "bold" }}>
+          <li>Software Engineer, more than 10,000 hours of development.</li>
+          <li>Full Stack Web 2 & 3 Developer.</li>
+          <li>Oficial Alchemy Certified Ethereum Developer.</li>
+          <li>Agile Coach - Project Manager - Scrum Master.</li>
+          <li>Polygon, Algorand, Chainlink, Solana & DeFi Builder.</li>
+          <li>Microsoft Cybersecurity.</li>
+          <li>Microsoft Azure IA Developer With OpenAI.</li>
+        </ul>
+        {showMessage && (
+          <div
+            style={{
+              position: "fixed",
+              top: "20%",
+              right: "20px",
+              transform: "translateY(-50%)",
+              backgroundColor: "transparent",
+              color: "red",
+              padding: "10px",
+              border: "2px solid red",
+              fontSize: "12px",
+              animation: "blink 2.5s linear infinite",
+              borderRadius: "50%",
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              justifyContent: "center",
+              textAlign: "center",
+              width: "60px",
+              height: "60px",
+            }}
+          >
+            SCROLL DOWN
+            <br />
+            <span style={{ fontSize: "24px" }}>↓</span>
+          </div>
+        )}
+        {[
+          {
+            href: "https://www.linkedin.com/in/gonzalo-daniel-aguilar/",
+            icon: faLinkedin,
+            text: "LinkedIn",
+          },
+          {
+            href: "https://github.com/gonzalolater",
+            icon: faGithub,
+            text: "GitHub",
+          },
+          {
+            href: "https://lol.fandom.com/wiki/Dodging_Bullets",
+            icon: faTrophy,
+            text: "Leaguepedia",
+          },
+          {
+            href: "https://fin.guru/u/gonzalo-daniel-aguilar",
+            icon: faLocationArrow,
+            text: "FinGurú",
+          },
+          {
+            href: "https://www.freecodecamp.org/GonzaloDanielAguilar",
+            icon: faFire,
+            text: "FreeCodeCamp",
+          },
+        ].map((link) => (
+          <a
+            key={link.href}
+            href={link.href}
+            style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              textDecoration: "none",
+              color: "red",
+              fontSize: "1.2em",
+              marginTop: "10px",
+            }}
+          >
+            {" "}
+            <FontAwesomeIcon
+              icon={link.icon}
+              style={{ marginRight: "5px" }}
+            />{" "}
+            {link.text}{" "}
+          </a>
+        ))}{" "}
+      </div>{" "}
+      <Carousel />{" "}
+    </div>
+  );
+};
 
-            {showMessage && (
-              <div
-              style={{
-                position: "fixed",
-                top: "20%",
-                right: "20px",
-                transform: "translateY(-50%)",
-                backgroundColor: "transparent",
-                color: "red",
-                padding: "10px",
-                border: "2px solid red",
-                fontSize: "12px",
-                animation: "blink 2.5s linear infinite",
-                borderRadius: "50%",
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "center",
-                justifyContent: "center",
-                textAlign: "center",
-                width: "60px",
-                height: "60px",
-              }}
-            >
-                SCROLL DOWN
-                <br />
-                <span style={{ fontSize: "24px" }}>↓</span>
-              </div>
-            )}
-        
-            {[
-              {
-                href: "https://www.linkedin.com/in/gonzalo-daniel-aguilar/",
-                icon: faLinkedin,
-                text: "LinkedIn",
-              },
-              {
-                href: "https://github.com/gonzalolater",
-                icon: faGithub,
-                text: "GitHub",
-              },
-              {
-                href: "https://lol.fandom.com/wiki/Dodging_Bullets",
-                icon: faTrophy,
-                text: "Leaguepedia",
-              },
-              {
-                href: "https://fin.guru/u/gonzalo-daniel-aguilar",
-                icon: faLocationArrow,
-                text: "FinGurú",
-              },
-              {
-                href: "https://www.freecodecamp.org/GonzaloDanielAguilar",
-                icon: faFire,
-                text: "FreeCodeCamp", }, ].map((link) => ( <a key={link.href} href={link.href} style={{ display: "flex", alignItems: "center", justifyContent: "center", textDecoration: "none", color: "red", fontSize: "1.2em", marginTop: "10px", }} > <FontAwesomeIcon icon={link.icon} style={{ marginRight: "5px" }} /> {link.text} </a> ))} </div> <Carousel /> </div> ); };
-
-                export default Home;
+export default Home;
