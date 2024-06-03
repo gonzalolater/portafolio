@@ -180,7 +180,6 @@ const Carousel = () => {
     display: 'flex',
     justifyContent: 'flex-end',
   };
-
   const buttonStyle = {
     marginTop: '-12px',
     background: 'violet',
@@ -193,8 +192,24 @@ const Carousel = () => {
     fontSize: '16px',
     margin: '0 10px',
     cursor: 'pointer',
-    borderRadius: '5px'
-    ,
+    borderRadius: '5px',
+    boxShadow: '0 0 5px red',
+  };
+
+  const buttonStyle1 = {
+    marginTop: '-12px',
+    background: 'violet',
+    color: 'white',
+    padding: '15px 16px',
+    textAlign: 'center',
+    textDecoration: 'none',
+    display: 'inline-block',
+    fontSize: '16px',
+    margin: '0 10px',
+    cursor: 'pointer',
+    borderRadius: '5px',
+    fontWeight: 'bold',
+    border: '3px solid red'
   };
 
   const navigate = (direction) => {
@@ -240,13 +255,13 @@ const Carousel = () => {
         </div>
         <div style={buttonContainerStyle}>
           <button style={buttonStyle} onClick={() => navigate('prev')}>
-            previous
+            Previous
           </button>
           <button style={buttonStyle} onClick={() => navigate('next')}>
-            next
+            Next
           </button>
-          <button style={buttonStyle} onClick={handleClickButton}>
-            -click images-
+          <button style={buttonStyle1} onClick={handleClickButton}>
+            CLICK IMAGES
             </button> 
         </div>
       </div>

@@ -16,14 +16,14 @@ const ChatButton = () => {
     <div>
       <button
         style={{
-          backgroundColor: 'blue',
+          backgroundColor: 'red',
           color: 'white',
           padding: '10px',
           borderRadius: '5px',
         }}
         onClick={openModal}
       >
-        Chat
+        Chat With IA
       </button>
 
       {showModal && (

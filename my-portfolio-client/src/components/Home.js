@@ -27,11 +27,18 @@ const Home = () => {
           objectFit: 'cover',
         }}
       />
-      <div style={{ padding: '20px', textAlign: 'center' }}>
-        <h1>Gonzalo Daniel Aguilar</h1>
-        <h3 style={{ textAlign: 'center',margin: '0 80px'}}>
-        Software Engineer - Full Stack Web Developer - Oficial Alchemy Certified Ethereum Developer - Agile Coach - Polygon, Algorand, Chainlink, Solana, DeFi Builder. Microsoft Cybersecurity & Microsoft Azure IA Developer.
-        </h3>
+      <div>
+        <h1 style={{ padding: '20px', textAlign: 'center' }}>Gonzalo Daniel Aguilar</h1>
+        <ul style={{ fontSize: '20px', fontWeight: 'bold' }}>
+          <li>Software Engineer, more than 10,000 hours of development.</li>
+          <li>Full Stack Web 2 & 3 Developer.</li>
+          <li>Oficial Alchemy Certified Ethereum Developer.</li>
+          <li>Agile Coach - Project Manager - Scrum Master.</li>
+          <li>Polygon, Algorand, Chainlink, Solana & DeFi Builder.</li>
+          <li>Microsoft Cybersecurity.</li>
+          <li>Microsoft Azure IA Developer.</li>
+        </ul>
+        
         <a
           href="https://www.linkedin.com/in/gonzalo-daniel-aguilar/"
           style={{
