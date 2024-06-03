@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
 import {
@@ -9,6 +9,22 @@ import {
 import Carousel from "./Carousel";
 
 const Home = () => {
+  const [showMessage, setShowMessage] = useState(true);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 0) {
+        setShowMessage(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <div
       style={{
@@ -31,18 +47,50 @@ const Home = () => {
         }}
       />
       <div>
-      <h1 style={{ padding: "20px", textAlign: "center", border: "2px solid red", borderRadius: "10px", backgroundColor: "violet", color: "white", textShadow: "2px 2px 4px rgba(0, 0, 0, 0.5)", WebkitTextStroke: "1px red", WebkitTextFillColor: "white" }}>
-        Gonzalo Daniel Aguilar
-      </h1>
+        <h1
+          style={{
+            padding: "20px",
+            textAlign: "center",
+            border: "2px solid red",
+            borderRadius: "10px",
+            backgroundColor: "violet",
+            color: "white",
+            textShadow: "2px 2px 4px rgba(0, 0, 0, 0.5)",
+            WebkitTextStroke: "1px red",
+            WebkitTextFillColor: "white",
+          }}
+        >
+          Gonzalo Daniel Aguilar
+        </h1>
         <ul style={{ fontSize: "20px", fontWeight: "bold" }}>
           <li>Software Engineer, more than 10,000 hours of development.</li>
           <li>Full Stack Web 2 & 3 Developer.</li>
-          <li>Oficial Alchemy Certified Ethereum Developer.</li>
+          <li>Oficial Alchemy Certified Ethereum Developer
+          </li>
           <li>Agile Coach - Project Manager - Scrum Master.</li>
           <li>Polygon, Algorand, Chainlink, Solana & DeFi Builder.</li>
           <li>Microsoft Cybersecurity.</li>
           <li>Microsoft Azure IA Developer With OpenAI.</li>
         </ul>
+
+        {showMessage && (
+          <div
+            style={{
+              position: "fixed",
+              top: "50%",
+              right: "20px",
+              transform: "translateY(-50%)",
+              backgroundColor: "#fff",
+              padding: "10px",
+              border: "2px solid #000",
+              fontSize: "12px",
+            }}
+          >
+            Scroll Down
+            <br />
+            <span style={{ fontSize: "24px" }}>↓</span>
+          </div>
+        )}
 
         <a
           href="https://www.linkedin.com/in/gonzalo-daniel-aguilar/"
@@ -126,6 +174,6 @@ const Home = () => {
       <Carousel />
     </div>
   );
-};
-
-export default Home;
+  };
+  
+  export default Home;
