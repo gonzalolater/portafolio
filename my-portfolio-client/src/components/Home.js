@@ -13,9 +13,7 @@ const Home = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 0) {
-        setShowMessage(false);
-      }
+      setShowMessage(window.scrollY === 0);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -23,6 +21,17 @@ const Home = () => {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
+  }, []);
+
+  useEffect(() => {
+    const style = document.createElement("style");
+    style.innerHTML = `body::-webkit-scrollbar {
+        width: 0.5em;
+        background-color: #f5f5f5;
+      } body::-webkit-scrollbar-thumb {
+        background-color: #000;
+      }`;
+    document.head.appendChild(style);
   }, []);
 
   return (
@@ -65,8 +74,7 @@ const Home = () => {
         <ul style={{ fontSize: "20px", fontWeight: "bold" }}>
           <li>Software Engineer, more than 10,000 hours of development.</li>
           <li>Full Stack Web 2 & 3 Developer.</li>
-          <li>Oficial Alchemy Certified Ethereum Developer
-          </li>
+          <li>Oficial Alchemy Certified Ethereum Developer.</li>
           <li>Agile Coach - Project Manager - Scrum Master.</li>
           <li>Polygon, Algorand, Chainlink, Solana & DeFi Builder.</li>
           <li>Microsoft Cybersecurity.</li>
@@ -77,7 +85,7 @@ const Home = () => {
           <div
             style={{
               position: "fixed",
-              top: "50%",
+              top: "40%",
               right: "20px",
               transform: "translateY(-50%)",
               backgroundColor: "#fff",
@@ -92,88 +100,54 @@ const Home = () => {
           </div>
         )}
 
-        <a
-          href="https://www.linkedin.com/in/gonzalo-daniel-aguilar/"
-          style={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            textDecoration: "none",
-            color: "red",
-            fontSize: "1.2em",
-            marginTop: "10px",
-          }}
-        >
-          <FontAwesomeIcon icon={faLinkedin} style={{ marginRight: "5px" }} />
-          LinkedIn
-        </a>
-        <a
-          href="https://github.com/gonzalolater"
-          style={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            textDecoration: "none",
-            color: "red",
-            fontSize: "1.2em",
-            marginTop: "10px",
-          }}
-        >
-          <FontAwesomeIcon icon={faGithub} style={{ marginRight: "5px" }} />
-          GitHub
-        </a>
-        <a
-          href="https://lol.fandom.com/wiki/Dodging_Bullets"
-          style={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            textDecoration: "none",
-            color: "red",
-            fontSize: "1.2em",
-            marginTop: "10px",
-          }}
-        >
-          <FontAwesomeIcon icon={faTrophy} style={{ marginRight: "5px" }} />
-          Leaguepedia
-        </a>
-        <a
-          href="https://fin.guru/u/gonzalo-daniel-aguilar"
-          style={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            textDecoration: "none",
-            color: "red",
-            fontSize: "1.2em",
-            marginTop: "10px",
-          }}
-        >
-          <FontAwesomeIcon
-            icon={faLocationArrow}
-            style={{ marginRight: "5px" }}
-          />
-          FinGurú
-        </a>
-        <a
-          href="https://www.freecodecamp.org/GonzaloDanielAguilar"
-          style={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            textDecoration: "none",
-            color: "red",
-            fontSize: "1.2em",
-            marginTop: "10px",
-          }}
-        >
-          <FontAwesomeIcon icon={faFire} style={{ marginRight: "5px" }} />
-          FreeCodeCamp
-        </a>
+        {[
+          {
+            href: "https://www.linkedin.com/in/gonzalo-daniel-aguilar/",
+            icon: faLinkedin,
+            text: "LinkedIn",
+          },
+          {
+            href: "https://github.com/gonzalolater",
+            icon: faGithub,
+            text: "GitHub",
+          },
+          {
+            href: "https://lol.fandom.com/wiki/Dodging_Bullets",
+            icon: faTrophy,
+            text: "Leaguepedia",
+          },
+          {
+            href: "https://fin.guru/u/gonzalo-daniel-aguilar",
+            icon: faLocationArrow,
+            text: "FinGurú",
+          },
+          {
+            href: "https://www.freecodecamp.org/GonzaloDanielAguilar",
+            icon: faFire,
+            text: "FreeCodeCamp",
+          },
+        ].map((link) => (
+          <a
+            key={link.href}
+            href={link.href}
+            style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              textDecoration: "none",
+              color: "red",
+              fontSize: "1.2em",
+              marginTop: "10px",
+            }}
+          >
+            <FontAwesomeIcon icon={link.icon} style={{ marginRight: "5px" }} />
+            {link.text}
+          </a>
+        ))}
       </div>
       <Carousel />
     </div>
   );
-  };
-  
-  export default Home;
+};
+
+export default Home;
