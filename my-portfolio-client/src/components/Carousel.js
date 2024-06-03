@@ -230,7 +230,7 @@ const Carousel = () => {
   return (
     <div style={containerStyle}>
       <div style={messageElementStyle}>
-        <h1>Some Achievements - Carousel </h1>
+        <h1>SOME ACHIEVEMENTS</h1>
       </div>
       <div style={carouselStyle}>
         <div style={imageContainerStyle}>

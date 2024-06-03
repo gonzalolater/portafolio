@@ -19,13 +19,13 @@ const Footer = () => {
   };
 
   const h2Style = {
-    margin: 0,
+    marginRight: '10px',
     textAlign: 'center',
     flex: 1,
   };
 
   const chatButtonStyle = {
-    marginRight: '20px',
+    marginRight: '40px',
   };
 
   return (
