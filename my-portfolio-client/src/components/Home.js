@@ -9,7 +9,7 @@ import {
 import Carousel from "./Carousel";
 
 const Home = () => {
-  const [showMessage, setShowMessage] = useState(true);
+  const [showMessage, setShowMessage] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -24,12 +24,30 @@ const Home = () => {
   }, []);
 
   useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowMessage(true);
+    }, 4000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  useEffect(() => {
     const style = document.createElement("style");
     style.innerHTML = `body::-webkit-scrollbar {
         width: 0.5em;
         background-color: #f5f5f5;
       } body::-webkit-scrollbar-thumb {
         background-color: #000;
+      } @keyframes blink {
+        0% {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
       }`;
     document.head.appendChild(style);
   }, []);
@@ -64,90 +82,61 @@ const Home = () => {
             borderRadius: "10px",
             backgroundColor: "violet",
             color: "white",
-            textShadow: "2px 2px 4px rgba(0, 0, 0, 0.5)",
-            WebkitTextStroke: "1px red",
-            WebkitTextFillColor: "white",
-          }}
-        >
-          Gonzalo Daniel Aguilar
-        </h1>
-        <ul style={{ fontSize: "20px", fontWeight: "bold" }}>
-          <li>Software Engineer, more than 10,000 hours of development.</li>
-          <li>Full Stack Web 2 & 3 Developer.</li>
-          <li>Oficial Alchemy Certified Ethereum Developer.</li>
-          <li>Agile Coach - Project Manager - Scrum Master.</li>
-          <li>Polygon, Algorand, Chainlink, Solana & DeFi Builder.</li>
-          <li>Microsoft Cybersecurity.</li>
-          <li>Microsoft Azure IA Developer With OpenAI.</li>
-        </ul>
+            textShadow: "2px 2px 4px rgba(0, 0, 0, 0.5)", WebkitTextStroke: "1px red", WebkitTextFillColor: "white", }} > Gonzalo Daniel Aguilar </h1> <ul style={{ fontSize: "20px", fontWeight: "bold" }}> <li>Software Engineer, more than 10,000 hours of development.</li> <li>Full Stack Web 2 & 3 Developer.</li> <li>Oficial Alchemy Certified Ethereum Developer.</li> <li>Agile Coach - Project Manager - Scrum Master.</li> <li>Polygon, Algorand, Chainlink, Solana & DeFi Builder.</li> <li>Microsoft Cybersecurity.</li> <li>Microsoft Azure IA Developer With OpenAI.</li> </ul>
 
-        {showMessage && (
-          <div
-            style={{
-              position: "fixed",
-              top: "40%",
-              right: "20px",
-              transform: "translateY(-50%)",
-              backgroundColor: "#fff",
-              padding: "10px",
-              border: "2px solid #000",
-              fontSize: "12px",
-            }}
-          >
-            Scroll Down
-            <br />
-            <span style={{ fontSize: "24px" }}>↓</span>
-          </div>
-        )}
+            {showMessage && (
+              <div
+              style={{
+                position: "fixed",
+                top: "20%",
+                right: "20px",
+                transform: "translateY(-50%)",
+                backgroundColor: "transparent",
+                color: "red",
+                padding: "10px",
+                border: "2px solid red",
+                fontSize: "12px",
+                animation: "blink 2.5s linear infinite",
+                borderRadius: "50%",
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+                justifyContent: "center",
+                textAlign: "center",
+                width: "60px",
+                height: "60px",
+              }}
+            >
+                SCROLL DOWN
+                <br />
+                <span style={{ fontSize: "24px" }}>↓</span>
+              </div>
+            )}
+        
+            {[
+              {
+                href: "https://www.linkedin.com/in/gonzalo-daniel-aguilar/",
+                icon: faLinkedin,
+                text: "LinkedIn",
+              },
+              {
+                href: "https://github.com/gonzalolater",
+                icon: faGithub,
+                text: "GitHub",
+              },
+              {
+                href: "https://lol.fandom.com/wiki/Dodging_Bullets",
+                icon: faTrophy,
+                text: "Leaguepedia",
+              },
+              {
+                href: "https://fin.guru/u/gonzalo-daniel-aguilar",
+                icon: faLocationArrow,
+                text: "FinGurú",
+              },
+              {
+                href: "https://www.freecodecamp.org/GonzaloDanielAguilar",
+                icon: faFire,
+                text: "FreeCodeCamp", }, ].map((link) => ( <a key={link.href} href={link.href} style={{ display: "flex", alignItems: "center", justifyContent: "center", textDecoration: "none", color: "red", fontSize: "1.2em", marginTop: "10px", }} > <FontAwesomeIcon icon={link.icon} style={{ marginRight: "5px" }} /> {link.text} </a> ))} </div> <Carousel /> </div> ); };
 
-        {[
-          {
-            href: "https://www.linkedin.com/in/gonzalo-daniel-aguilar/",
-            icon: faLinkedin,
-            text: "LinkedIn",
-          },
-          {
-            href: "https://github.com/gonzalolater",
-            icon: faGithub,
-            text: "GitHub",
-          },
-          {
-            href: "https://lol.fandom.com/wiki/Dodging_Bullets",
-            icon: faTrophy,
-            text: "Leaguepedia",
-          },
-          {
-            href: "https://fin.guru/u/gonzalo-daniel-aguilar",
-            icon: faLocationArrow,
-            text: "FinGurú",
-          },
-          {
-            href: "https://www.freecodecamp.org/GonzaloDanielAguilar",
-            icon: faFire,
-            text: "FreeCodeCamp",
-          },
-        ].map((link) => (
-          <a
-            key={link.href}
-            href={link.href}
-            style={{
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              textDecoration: "none",
-              color: "red",
-              fontSize: "1.2em",
-              marginTop: "10px",
-            }}
-          >
-            <FontAwesomeIcon icon={link.icon} style={{ marginRight: "5px" }} />
-            {link.text}
-          </a>
-        ))}
-      </div>
-      <Carousel />
-    </div>
-  );
-};
-
-export default Home;
+                export default Home;
