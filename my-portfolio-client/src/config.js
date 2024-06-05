@@ -1,0 +1,1 @@
+export const API_URL = import.meta.env || "http://localhost:4000/api";

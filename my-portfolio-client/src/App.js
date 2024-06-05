@@ -10,9 +10,11 @@ import Studies from './components/Studies';
 import Footer from './components/Footer';
 import TechnicalChallenges from './components/TechnicalChallenges'
 import Sponsors from './components/Sponsors';
+import { AuthProvider } from './loginComponents/context/AuthContext';
 
 const App = () => {
   return (
+    <AuthProvider>
     <Router>
       <Navbar />
       <Routes>
@@ -27,6 +29,7 @@ const App = () => {
       </Routes>
       <Footer />
     </Router>
+    </AuthProvider>
   );
 };
 
