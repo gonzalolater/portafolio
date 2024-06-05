@@ -884,7 +884,7 @@ const Studies = () => {
               OpenSea Collection
               </p>
             </a>
-            <p style={{ marginBottom: "90px", textAlign: 'center' }}>
+            <p style={{ marginBottom: "130px", textAlign: 'center' }}>
               <a href="https://docs.alchemy.com/docs/welcome-to-the-road-to-web3">
                 https://docs.alchemy.com/docs/welcome-to-the-road-to-web3
               </a>

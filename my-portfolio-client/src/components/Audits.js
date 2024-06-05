@@ -20,13 +20,13 @@ const Audits = () => {
   return (
     <div
       style={{
-        marginBottom: '70px',
+        marginBottom: '90px',
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
       }}
     >
-      <h1 style={{ textAlign: 'center', marginTop: '110px' }}>Audited Projects - North Korean hacking activity</h1>
+      <h1 style={{ textAlign: 'center', marginTop: '110px' }}>Audited Projects - North Korean hacking Activity</h1>
       {apps.map((app, index) => (
         <div
           style={{

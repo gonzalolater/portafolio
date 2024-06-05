@@ -5,7 +5,7 @@ const Mentorships = () => {
     <div>
       <h1
       style={{
-        marginTop: '110px',
+        marginTop: '130px',
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',

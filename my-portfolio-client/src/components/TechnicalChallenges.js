@@ -60,7 +60,7 @@ const TechnicalChallenges = () => {
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
-        marginBottom: '70px',
+        marginBottom: '90px',
       }}>
       <h2>Technical Challenges</h2>
       <ul>
