@@ -3,15 +3,15 @@ import React from 'react';
 const Audits = () => {
   const apps = [
     {
-      name: 'CCex Bank Staking Platform',
+      name: '1. CCex Bank Staking Platform',
       image: 'https://i.ibb.co/PcWKQTq/Decentralized-stacking-platform-Audit-3-hours.jpg',
-      description: 'Decentralized Bank Staking Platform. - Audit 3 hours. - Click Image to see the project, Malware Here, https://github.com/gonzalolater/CCex-Staking-Platform/blob/main/server/routes/transactions.js#L9 ',
+      description: 'Decentralized Bank Staking Platform. - Audit 3 hours. - Click Image to see the project,',
       link: 'https://github.com/gonzalolater/CCex-Staking-Platform'
     },
     {
-      name: 'DeFi Exchange with Node v16.20.0',
+      name: '2. DeFi Exchange with Node v16.20.0',
       image: 'https://i.ibb.co/sjrGPj2/img-4.png',
-      description: 'Decentralized Financial Exchange - 8 hours audit. - Click on the image to see the project and read all the Issues and Recommendations, Malware Here: https://github.com/gonzalolater/DeFiExchange/blob/main/backend/src/routes/api/ieo.route.js#L1',
+      description: 'Decentralized Financial Exchange - 8 hours audit. - Click on the image to see the project and read all the Issues and Recommendations',
       link: 'https://github.com/gonzalolater/DeFiExchange'
     },
     // Agrega más objetos para cada aplicación que desees mostrar
@@ -52,6 +52,13 @@ const Audits = () => {
           <p style={{fontWeight: 'bold', color: 'red'}}>{app.description}</p>
         </div>
       ))}
+     <ul style={{textAlign:'center'}}>
+      <li>1. Malware Here:</li>
+      <a href="https://github.com/gonzalolater/CCex-Staking-Platform/blob/main/server/routes/transactions.js#L9">CCex-Staking-Platform</a>
+      <li>2. Malware Here: <a href="https://github.com/gonzalolater/DeFiExchange/blob/main/backend/src/routes/api/ieo.route.js#L1">DeFiExchange</a></li>
+      
+    </ul>
+    <p style={{textAlign:'center', marginBottom: '40px'}}>The code is from a malware family called BeaverTail described here: <a href="https://unit42.paloaltonetworks.com/two-campaigns-by-north-korea-bad-actors-target-job-hunters/">Link</a></p>
     </div>
   );
 };
