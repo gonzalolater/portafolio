@@ -3,7 +3,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import dayjs from "dayjs";
 import utc from "dayjs/plugin/utc";
 import { Button, Card, Input, Label } from "../components/ui";
-import { useTasks } from "../context/tasksContext";
+import { useTasks } from '../context/TasksContext'
 import { Textarea } from "../components/ui/Textarea";
 import { useForm } from "react-hook-form";
 dayjs.extend(utc);

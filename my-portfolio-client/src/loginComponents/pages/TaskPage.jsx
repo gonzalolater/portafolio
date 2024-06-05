@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { useTasks } from "../context/tasksContext";
+import { useTasks } from "../context/TasksContext";
 import { TaskCard } from "../components/tasks/TaskCard";
 import { ImFileEmpty } from "react-icons/im";
 
