@@ -5,13 +5,13 @@ const Audits = () => {
     {
       name: 'CCex Bank Staking Platform',
       image: 'https://i.ibb.co/PcWKQTq/Decentralized-stacking-platform-Audit-3-hours.jpg',
-      description: 'Decentralized Bank Staking Platform. - Audit 3 hours. - Click Image to see the project',
+      description: 'Decentralized Bank Staking Platform. - Audit 3 hours. - Click Image to see the project, Malware Here, https://github.com/gonzalolater/CCex-Staking-Platform/blob/main/server/routes/transactions.js#L9 ',
       link: 'https://github.com/gonzalolater/CCex-Staking-Platform'
     },
     {
       name: 'DeFi Exchange with Node v16.20.0',
       image: 'https://i.ibb.co/sjrGPj2/img-4.png',
-      description: 'Decentralized Financial Exchange - 8 hours audit. - Click on the image to see the project and read all the Issues and Recommendations.',
+      description: 'Decentralized Financial Exchange - 8 hours audit. - Click on the image to see the project and read all the Issues and Recommendations, Malware Here: https://github.com/gonzalolater/DeFiExchange/blob/main/backend/src/routes/api/ieo.route.js#L1',
       link: 'https://github.com/gonzalolater/DeFiExchange'
     },
     // Agrega más objetos para cada aplicación que desees mostrar
