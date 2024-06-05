@@ -53,12 +53,13 @@ const Audits = () => {
         </div>
       ))}
      <ul style={{textAlign:'center'}}>
-      <li>1. Malware Here:</li>
-      <a href="https://github.com/gonzalolater/CCex-Staking-Platform/blob/main/server/routes/transactions.js#L9">CCex-Staking-Platform</a>
-      <li>2. Malware Here: <a href="https://github.com/gonzalolater/DeFiExchange/blob/main/backend/src/routes/api/ieo.route.js#L1">DeFiExchange</a></li>
+      <li>Malware Here: </li>
+      <a target="_blank" rel="noopener noreferrer"  href="https://github.com/gonzalolater/CCex-Staking-Platform/blob/main/server/routes/transactions.js#L9">CCex-Staking-Platform</a>
+      <li>Malware Here: </li>
+      <a target="_blank" rel="noopener noreferrer"  href="https://github.com/gonzalolater/DeFiExchange/blob/main/backend/src/routes/api/ieo.route.js#L1">DeFiExchange</a>
       
     </ul>
-    <p style={{textAlign:'center', marginBottom: '40px'}}>The code is from a malware family called BeaverTail described here: <a href="https://unit42.paloaltonetworks.com/two-campaigns-by-north-korea-bad-actors-target-job-hunters/">Link</a></p>
+    <p style={{textAlign:'center', marginBottom: '40px'}}>The code is from a malware family called BeaverTail described here: <a target="_blank" rel="noopener noreferrer"  href="https://unit42.paloaltonetworks.com/two-campaigns-by-north-korea-bad-actors-target-job-hunters/">Link</a></p>
     </div>
   );
 };
