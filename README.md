@@ -9,8 +9,6 @@ My project "Portfolio-Fullstack-Web2&Web3-Chat-With-IA" is showcased on Devpost.
 
 Feel free to visit the link to explore my project in more detail and see how I utilized various technologies, including Microsoft Azure, CozmosDB with MongoDB, and the ChatGPT API. This project demonstrates my skills in full-stack web development, incorporating both traditional web technologies (Web2) and blockchain technologies (Web3). Additionally, the integration of AI enhances user interactions and provides a personalized chat experience.
 
-
-## Link to the portfolio Working in Microsoft Azure: [Portfolio](https://orange-mud-001adea10.5.azurestaticapps.net/)
 ## Link to the portfolio Working in Netlify: [Portfolio](https://main--portfolio-aguilar-gonzalo-daniel.netlify.app/)
 
 ## About Me
@@ -46,7 +44,6 @@ Mi proyecto "Portfolio-Fullstack-Web2&Web3-Chat-With-IA" está exhibido en Devpo
 
 Siéntete libre de visitar el enlace para explorar mi proyecto en más detalle y ver cómo utilicé diversas tecnologías, incluyendo Microsoft Azure, CozmosDB con MongoDB y la API de ChatGPT. Este proyecto demuestra mis habilidades en desarrollo web full-stack, incorporando tanto tecnologías web tradicionales (Web2) como tecnologías de blockchain (Web3). Además, la integración de IA mejora las interacciones con los usuarios y brinda una experiencia de chat personalizada.
 
-## Link al portafolio Funcionando en Microsoft Azure: [Portfolio](https://orange-mud-001adea10.5.azurestaticapps.net/)
 ## Link al portafolio Funcionando en Netlify: [Portafolio](https://main--portfolio-aguilar-gonzalo-daniel.netlify.app/)
 
 ## Sobre mi.
