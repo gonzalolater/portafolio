@@ -1,4 +1,4 @@
-#navbar {
+.navbar {
   top: 0;
   left: 0;
   width: 100%;
@@ -7,14 +7,14 @@
   box-sizing: border-box;
 }
 
-#navbar ul {
+.navbar ul {
   height: 100%;
   padding: 0;
   overflow-y: auto;
   overflow-x: hidden;
 }
 
-#navbar li {
+.navbar li {
   border-top: 1px solid;
   border-left: 1px solid;
   list-style: none;
@@ -22,7 +22,7 @@
   width: 100%;
 }
 
-#navbar a {
+.navbar a {
   display: block;
   padding: 10px 30px;
   color: #0333F5;

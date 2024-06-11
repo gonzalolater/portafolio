@@ -15,7 +15,7 @@ const Studies = () => {
           Studies List - more than 10,000 hours PROGRAMMING and STUDY OF WEB
           SOFTWARE.
         </header>
-      <nav id="navbar">
+      <nav class="navbar">
         <ul>
           <li>
             <a style={{textAlign:"center"}}
