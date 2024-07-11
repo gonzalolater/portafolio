@@ -15,7 +15,7 @@ const Audits = () => {
       link: 'https://github.com/gonzalolater/DeFiExchange'
     },{
       name: '3. playflysports',
-      image: 'https://ibb.co/ydKcY1F',
+      image: 'https://i.ibb.co/VJbcQZY/Malvare-playflysports.png',
       description: 'playflysports - Audit 1 hours. - Click Image to see the project,',
       link: 'https://github.com/gonzalolater/playflysports'
     }
