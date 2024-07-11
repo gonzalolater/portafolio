@@ -16,6 +16,7 @@ const Audits = () => {
     },{
       name: '3. playflysports',
       image: 'https://ibb.co/ydKcY1F',
+      description: 'playflysports - Audit 1 hours. - Click Image to see the project,',
       link: 'https://github.com/gonzalolater/playflysports'
     }
     
