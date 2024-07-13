@@ -16,11 +16,11 @@ function Register() {
   } = useForm({
     resolver: zodResolver(registerSchema),
   });
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
-  const onSubmit = async (value) => {
-    await signup(value);
-  };
+  // const onSubmit = async (value) => {
+  //   await signup(value);
+  // };
 
   useEffect(() => {
     if (isAuthenticated) navigate("/tasks");
