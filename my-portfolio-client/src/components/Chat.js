@@ -44,25 +44,29 @@ const Chat = () => {
   };
 
   return (
-    <div style={{ height: '300px', overflowY: 'scroll' }} ref={chatRef}>
-      <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'flex-end' }}>
-        {messages.map((message, index) => (
-          <div key={index}>{message.role}: {message.content}</div>
-        ))}
-      </div>
-      <div>
-        <input
-          type="text"
-          value={newMessage}
-          onChange={handleInputChange}
-          onKeyDown={handleKeyDown}
-          ref={inputRef}
-        />
-        <button onClick={handleSendMessage}>Send</button>
+    <div>
+      <div style={{ margin: '10px 0' }}>
+      This chat is working, but you will need to provide your own API Key to use it.</div>
+      <div style={{ height: '300px', overflowY: 'scroll' }} ref={chatRef}>
+        <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'flex-end' }}>
+          {messages.map((message, index) => (
+            <div key={index}>{message.role}: {message.content}</div>
+          ))}
+        </div>
+        <div>
+          <input
+            type="text"
+            value={newMessage}
+            onChange={handleInputChange}
+            onKeyDown={handleKeyDown}
+            ref={inputRef}
+            style={{ marginTop: '10px' }}
+          />
+          <button onClick={handleSendMessage}>Send</button>
+        </div>
       </div>
     </div>
   );
 };
-
 
 export default Chat;
