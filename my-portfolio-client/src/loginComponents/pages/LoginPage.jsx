@@ -1,7 +1,7 @@
 import { useAuth } from "../context/AuthContext";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
-// import { useEffect } from "react";
+import { useEffect } from "react";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Card, Message, Button, Input, Label } from "../components/";
 import { loginSchema } from "../schemas/auth";
@@ -14,16 +14,16 @@ export function LoginPage() {
   } = useForm({
     resolver: zodResolver(loginSchema),
   });
-  const { signin, errors: loginErrors } = useAuth();
-  // const navigate = useNavigate();
+  const { signin, errors: loginErrors, isAuthenticated } = useAuth();
+  const navigate = useNavigate();
 
   const onSubmit = (data) => signin(data);
 
-  // useEffect(() => {
-  //   if (isAuthenticated) {
-  //     navigate("/tasks");
-  //   }
-  // }, [isAuthenticated]);
+  useEffect(() => {
+    if (isAuthenticated) {
+      navigate("/tasks");
+    }
+  }, [isAuthenticated]);
 
   return (
     <div className="h-[calc(100vh-100px)] flex items-center justify-center">

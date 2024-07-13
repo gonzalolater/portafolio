@@ -16,17 +16,16 @@ function Register() {
   } = useForm({
     resolver: zodResolver(registerSchema),
   });
-  // const navigate = useNavigate();
+  const navigate = useNavigate();
 
   const onSubmit = async (value) => {
     await signup(value);
   };
 
-  // useEffect(() => {
-  //   if (isAuthenticated) navigate("/tasks");
-  // }, [isAuthenticated]);
+  useEffect(() => {
+    if (isAuthenticated) navigate("/tasks");
+  }, [isAuthenticated]);
 
-  
   return (
     <div className="h-[calc(100vh-100px)] flex items-center justify-center">
       <Card>
