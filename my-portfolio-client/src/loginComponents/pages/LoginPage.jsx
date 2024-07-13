@@ -19,11 +19,11 @@ export function LoginPage() {
 
   const onSubmit = (data) => signin(data);
 
-  useEffect(() => {
-    if (isAuthenticated) {
-      navigate("/tasks");
-    }
-  }, [isAuthenticated]);
+  // useEffect(() => {
+  //   if (isAuthenticated) {
+  //     navigate("/tasks");
+  //   }
+  // }, [isAuthenticated]);
 
   return (
     <div className="h-[calc(100vh-100px)] flex items-center justify-center">
