@@ -1,9 +1,11 @@
 import { useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { Card, Message, Button, Input, Label } from "../components/ui";
+import { Card, Message, Button, Input, Label } from "../components";
 import { useForm } from "react-hook-form";
 import { registerSchema } from "../schemas/auth";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { useAuth } from "../context/AuthContext";
+
 
 function Register() {
   const { signup, errors: registerErrors, isAuthenticated } = useAuth();

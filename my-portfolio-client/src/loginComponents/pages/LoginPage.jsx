@@ -1,9 +1,9 @@
-import { useAuth } from "../context/authContext";
+import { useAuth } from "../context/AuthContext";
 import { Link, useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { useEffect } from "react";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { Card, Message, Button, Input, Label } from "../components/ui";
+import { Card, Message, Button, Input, Label } from "../components/";
 import { loginSchema } from "../schemas/auth";
 
 export function LoginPage() {
