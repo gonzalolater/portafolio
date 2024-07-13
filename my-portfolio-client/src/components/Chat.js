@@ -18,15 +18,19 @@ const Chat = () => {
   const handleSendMessage = async () => {
     if (newMessage.trim() !== '') {
       setMessages([...messages, { role: 'user', content: newMessage }]);
-      const response = await axios.post('https://polite-ground-030dc3103.4.azurestaticapps.net/', {
-        prompt: newMessage,
-        max_tokens: 60
-      }, {
-        headers: {
-          'Authorization': `Bearer ${process.env.REACT_APP_OPENAI_API_KEY}`
-        }
-      });
-      setMessages(prevMessages => [...prevMessages, { role: 'assistant', content: response.data.choices[0].text.trim() }]);
+      try {
+        const response = await axios.post('/', {
+          prompt: newMessage,
+          max_tokens: 60
+        }, {
+          headers: {
+            'Authorization': `Bearer ${process.env.REACT_APP_OPENAI_API_KEY}`
+          }
+        });
+        setMessages(prevMessages => [...prevMessages, { role: 'assistant', content: response.data.choices[0].text.trim() }]);
+      } catch (error) {
+        console.error(error);
+      }
       setNewMessage('');
       inputRef.current.focus();
     }
@@ -59,5 +63,6 @@ const Chat = () => {
     </div>
   );
 };
+
 
 export default Chat;
