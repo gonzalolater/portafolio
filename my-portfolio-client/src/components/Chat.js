@@ -19,7 +19,7 @@ const Chat = () => {
     if (newMessage.trim() !== '') {
       setMessages([...messages, { role: 'user', content: newMessage }]);
       try {
-        const response = await axios.post('/', {
+        const response = await axios.post('https://polite-ground-030dc3103.4.azurestaticapps.net/api/v1', {
           prompt: newMessage,
           max_tokens: 60
         }, {
@@ -45,8 +45,7 @@ const Chat = () => {
 
   return (
     <div>
-      <div style={{ margin: '10px 0' }}>
-      This chat is working, but you will need to provide your own API Key to use it.</div>
+      <div style={{ margin: '10px 0' }}>This chat is working, but you will need to provide your own API Key to use it.</div>
       <div style={{ height: '300px', overflowY: 'scroll' }} ref={chatRef}>
         <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'flex-end' }}>
           {messages.map((message, index) => (
@@ -63,10 +62,10 @@ const Chat = () => {
             style={{ marginTop: '10px' }}
           />
           <button onClick={handleSendMessage}>Send</button>
+          </div>
         </div>
-      </div>
     </div>
-  );
-};
+); };
 
 export default Chat;
+
