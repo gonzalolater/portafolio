@@ -1,4 +1,4 @@
-import React from 'react';
+viimport React from 'react';
 
 const TechnicalChallenges = () => {
   const challenges = [
@@ -50,7 +50,7 @@ const TechnicalChallenges = () => {
     {
       "title": "Technical Challenge 10 - 10 Projects created in the to be FullStack WEB 3 in Alchemy University",
       "description": "1 How to Develop an NFT Smart Contract (ERC721) with Alchemy - 2 How to Build a Buy Me a Coffee DeFi dApp - 3 How to Make NFTs with On-chain Metadata with Hardhat and Javascript - 4 How to Create an NFT Gallery - 5 How to Create a Dynamic NFT - 6 How to Build a Staking dApp - 7 How to Build an NFT Marketplace from Scratch - 8 How to Build a Betting Game on Optimism - 9 How to Build a Token Swap Dapp with 0x API - 10 How to Create a Decentralized Twitter with Lens Protocol",
-      "repositoryLink": "https://github.com/stars/gonzalolater/lists/road-to-web-3"
+      "repositoryLink": "https://github.com/gonzalolater?tab=repositories&q=Rtw&type=&language=&sort="
     }
   ];
   
