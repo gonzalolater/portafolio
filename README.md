@@ -32,6 +32,10 @@ My portfolio is a compilation of all my achievements and projects, showcasing a 
 
 Thank you for visiting my portfolio, and I hope you enjoy exploring my projects and contributions in the field of technology!
 
+<p align="center">
+  <img src="https://i.ibb.co/Y2TXsqw/IMG-20240719-WA0014.jpg" />
+</p>
+
 -----------------------------------------------------------
 
 # Gonzalo Daniel Aguilar - Ingeniero de Software | Desarrollador Web Full Stack.
