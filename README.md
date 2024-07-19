@@ -66,3 +66,7 @@ Mi portafolio es una recopilación de todos mis logros y proyectos, donde podrá
 - Correo electrónico: [aguilar.daniel.gonzalo@gmail.com](mailto:aguilar.daniel.gonzalo@gmail.com)
 
 ¡Gracias por visitar mi portafolio y espero que disfrutes explorando mis proyectos y contribuciones en el campo de la tecnología!
+
+<p align="center">
+  <img src="https://i.ibb.co/Y2TXsqw/IMG-20240719-WA0014.jpg" />
+</p>
