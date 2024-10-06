@@ -72,16 +72,16 @@ const Navbar = () => {
                 Technical Challenges
               </Link>
             </li>
-            <li style={{ textDecoration: 'none', color: 'inherit' }}>
+            {/* <li style={{ textDecoration: 'none', color: 'inherit' }}>
                <Link to="/interviews" onClick={closeMenu}>
                 Interviews
               </Link>
-            </li>
-            <li style={{ textDecoration: 'none', color: 'inherit' }}>
+            </li> */}
+            {/* <li style={{ textDecoration: 'none', color: 'inherit' }}>
               <Link to="/technical-interviews" onClick={closeMenu}>
                 Technical interviews
               </Link>
-            </li>
+            </li> */}
             <li style={{ textDecoration: 'none', color: 'inherit' }}>
               <Link to="/studies" onClick={closeMenu}>
                 Studies
