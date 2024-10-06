@@ -87,11 +87,11 @@ const Navbar = () => {
                 Studies
               </Link>
             </li>
-            <li style={{ textDecoration: 'none', color: 'inherit' }}>
+            {/* <li style={{ textDecoration: 'none', color: 'inherit' }}>
               <Link to="/mentorships" onClick={closeMenu}>
                 Mentorships
               </Link>
-            </li>
+            </li> */}
             <li style={{ textDecoration: 'none', color: 'inherit' }}>
               <Link to="/sponsors" onClick={closeMenu}>
                 Sponsors
