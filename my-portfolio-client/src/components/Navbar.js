@@ -94,7 +94,7 @@ const Navbar = () => {
             </li> */}
             <li style={{ textDecoration: 'none', color: 'inherit' }}>
               <Link to="/sponsors" onClick={closeMenu}>
-                Sponsors + 1
+                Sponsors
               </Link>
             </li>
             <li style={{ textDecoration: 'none', color: 'inherit' }}>
