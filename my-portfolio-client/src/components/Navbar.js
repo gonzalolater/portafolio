@@ -1,20 +1,24 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import Boton from './Boton';
 import './Navbar.css';
 import Hamburguesa from './Hamburguesa';
 
 const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false); // eslint-disable-next-line
-  const [isConnected, setIsConnected] = useState(false); 
+  const [isOpen, setIsOpen] = useState(false);
+  const [colorIndex, setColorIndex] = useState(0);
+  const colors = ['#FF0000', '#00FF00', '#0000FF', '#FFFF00', '#00FFFF', '#FF00FF'];
 
   const toggleMenu = () => {
-    setIsOpen(!isOpen);
+    setIsOpen(!isOpen); // Esta es la clave: invierte el valor de isOpen
   };
 
-  const closeMenu = () => {
-    setIsOpen(false);
-  };
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      setColorIndex((prevIndex) => (prevIndex + 1) % colors.length);
+    }, 500);
+
+    return () => clearInterval(intervalId);
+  }, [colors.length]);
 
   return (
     <>
@@ -35,14 +39,13 @@ const Navbar = () => {
         >
           <div
             className="hamburger"
-            onClick={toggleMenu}
+            onClick={toggleMenu} // Usamos toggleMenu aquí
             style={{
               cursor: 'pointer',
             }}
           >
-            <Hamburguesa />
+            <Hamburguesa color={colors[colorIndex]} />
           </div>
-          <Boton isConnected={isConnected} />
           <ul
             className="menu"
             style={{
@@ -63,44 +66,19 @@ const Navbar = () => {
             }}
           >
             <li style={{ textDecoration: 'none', color: 'inherit' }}>
-              <Link to="/audits" onClick={closeMenu}>
-                Audits
-              </Link>
+              <Link to="/audits" onClick={toggleMenu}>Audits</Link> {/* Añadido onClick */}
             </li>
             <li style={{ textDecoration: 'none', color: 'inherit' }}>
-               <Link to="/TechnicalChallenges" onClick={closeMenu}>
-                Technical Challenges
-              </Link>
-            </li>
-            {/* <li style={{ textDecoration: 'none', color: 'inherit' }}>
-               <Link to="/interviews" onClick={closeMenu}>
-                Interviews
-              </Link>
-            </li> */}
-            {/* <li style={{ textDecoration: 'none', color: 'inherit' }}>
-              <Link to="/technical-interviews" onClick={closeMenu}>
-                Technical interviews
-              </Link>
-            </li> */}
-            <li style={{ textDecoration: 'none', color: 'inherit' }}>
-              <Link to="/studies" onClick={closeMenu}>
-                Studies
-              </Link>
-            </li>
-            {/* <li style={{ textDecoration: 'none', color: 'inherit' }}>
-              <Link to="/mentorships" onClick={closeMenu}>
-                Mentorships
-              </Link>
-            </li> */}
-            <li style={{ textDecoration: 'none', color: 'inherit' }}>
-              <Link to="/sponsors" onClick={closeMenu}>
-                Sponsors
-              </Link>
+              <Link to="/TechnicalChallenges" onClick={toggleMenu}>Technical Challenges</Link> {/* Añadido onClick */}
             </li>
             <li style={{ textDecoration: 'none', color: 'inherit' }}>
-              <Link to="/" onClick={closeMenu}>
-                Home
-              </Link>
+              <Link to="/studies" onClick={toggleMenu}>Studies</Link> {/* Añadido onClick */}
+            </li>
+            <li style={{ textDecoration: 'none', color: 'inherit' }}>
+              <Link to="/sponsors" onClick={toggleMenu}>Sponsors</Link> {/* Añadido onClick */}
+            </li>
+            <li style={{ textDecoration: 'none', color: 'inherit' }}>
+              <Link to="/" onClick={toggleMenu}>Home</Link> {/* Añadido onClick */}
             </li>
           </ul>
         </div>

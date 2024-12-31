@@ -1,3 +1,47 @@
 .menu li {
     padding: 10px;
   }
+  .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: violet; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+  }
+  
+  .container {
+    width: 100%; 
+    max-width: 960px; /* Ajusta el ancho máximo según tus necesidades */
+    margin: 0 auto; 
+  }
+  
+  .hamburger {
+    cursor: pointer;
+  }
+  
+  .menu {
+    display: none; 
+    flex-direction: column; 
+    list-style: none;
+    padding: 10px; 
+    margin: 0 10px; 
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: violet;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 200;
+    text-decoration: none;
+    color: inherit; 
+  }
+  
+  .menu.active {
+    display: flex; 
+  }
+  
+  /* Agrega más estilos CSS según tus necesidades */
