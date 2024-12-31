@@ -1,0 +1,145 @@
+.home-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 110px;
+    min-height: 100vh;
+    padding: 20px;
+    background-color: #f8f8f8; /* Un sutil fondo grisáceo */
+  }
+  
+  .profile-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px; /* Aumenta el margen inferior */
+  }
+  
+  .profile-photo {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    transition: transform 0.3s ease-in-out; /* Transición para el hover */
+  }
+  
+  .profile-photo:hover {
+    transform: scale(1.05); /* Escala ligeramente la imagen al pasar el mouse */
+  }
+  
+  .info-section {
+    width: 100%; /* El ancho ocupa todo el contenedor padre */
+    max-width: 600px; /* Ancho máximo para evitar que sea demasiado ancho en pantallas grandes */
+    text-align: center;
+  }
+  
+  .info-section h2 {
+    padding: 10px;
+    border: 2px solid red;
+    border-radius: 10px;
+    background-color: violet;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    -webkit-text-stroke: 1px red;
+    -webkit-text-fill-color: white;
+    margin-bottom: 10px;
+    box-sizing: border-box; /* Incluye el padding y el border en el ancho */
+  }
+  
+  .visitor-count {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%; /* Ancho igual al título */
+    box-sizing: border-box; /* Incluye el padding y el border en el ancho */
+  }
+  
+  .visitor-count h2 {
+      margin: 0; /* Elimina el margen por defecto del h2 dentro de visitor-count */
+  }
+  
+  .skills-list {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-bottom: 20px;
+    text-align: left; /* Alinea el texto a la izquierda */
+  }
+  
+  .scroll-prompt {
+    position: fixed;
+    top: 10%;
+    right: 20px;
+    background-color: rgba(255, 0, 0, 0.2);
+    color: red;
+    padding: 10px;
+    border: 2px solid red;
+    font-size: 12px;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 60px;
+    height: 60px;
+    animation: fade-in 1s ease-in-out forwards;
+  }
+  
+  @keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  .social-links-title { /* Estilos para el título de los enlaces sociales */
+      width: 100%; /* Ancho igual al título principal */
+      max-width: 600px; /* Ancho máximo igual al título principal */
+      padding: 10px;
+      border: 2px solid red;
+      border-radius: 10px;
+      background-color: violet;
+      color: white;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      -webkit-text-stroke: 1px red;
+      -webkit-text-fill-color: white;
+      margin-bottom: 20px;
+      box-sizing: border-box; /* Incluye el padding y el border en el ancho */
+      text-align: center;
+  }
+  
+  .social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+    flex-wrap: wrap; /* Permite que los enlaces se ajusten a varias líneas en pantallas pequeñas */
+  }
+  
+  .social-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: red;
+    font-size: 1.2em;
+    transition: color 0.3s ease;
+  }
+  
+  .social-link:hover {
+    color: darkred;
+  }
+  
+  .social-icon {
+    margin-right: 5px;
+  }
+  
+  @media (max-width: 768px) {
+    .profile-section {
+      flex-direction: column;
+      align-items: center;
+    }
+    .social-links {
+      flex-direction: column; /* Apila los enlaces en pantallas pequeñas */
+      align-items: center;
+    }
+  }

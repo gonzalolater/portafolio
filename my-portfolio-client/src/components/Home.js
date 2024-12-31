@@ -1,12 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
-import {
-  faTrophy,
-  faLocationArrow,
-  faFire,
-} from "@fortawesome/free-solid-svg-icons";
+import { faTrophy, faLocationArrow, faFire } from "@fortawesome/free-solid-svg-icons";
 import Carousel from "./Carousel";
+import "./Home.css";
 
 const Home = () => {
   const [showMessage, setShowMessage] = useState(false);
@@ -31,151 +28,60 @@ const Home = () => {
     return () => clearTimeout(timer);
   }, []);
 
-  useEffect(() => {
-    const style = document.createElement("style");
-    style.innerHTML = `body::-webkit-scrollbar {
-        width: 0.5em;
-        background-color: #f5f5f5;
-      } body::-webkit-scrollbar-thumb {
-        background-color: #000;
-      } @keyframes blink {
-        0% {
-          opacity: 1;
-        }
-        50% {
-          opacity: 0;
-        }
-        100% {
-          opacity: 1;
-        }
-      }`;
-    document.head.appendChild(style);
-  }, []);
-
   return (
-    <div
-      style={{
-        height: "100vh",
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-        marginTop: "110px",
-        minHeight: "100vh",
-      }}
-    >
-      <img
-        src="https://i.ibb.co/Gn3fxfv/foto-perfil.jpg"
-        alt="Foto de perfil"
-        style={{
-          width: "250px",
-          height: "250px",
-          borderRadius: "50%",
-          objectFit: "cover",
-        }}
-      />
-      <div>
-        <h1
-          style={{
-            padding: "20px",
-            textAlign: "center",
-            border: "2px solid red",
-            borderRadius: "10px",
-            backgroundColor: "violet",
-            color: "white",
-            textShadow: "2px 2px 4px rgba(0, 0, 0, 0.5)",
-            WebkitTextStroke: "1px red",
-            WebkitTextFillColor: "white",
-          }}
-        >
-          Gonzalo Daniel Aguilar
-        </h1>
-        <ul style={{ fontSize: "20px", fontWeight: "bold" }}>
-          <li>Software Engineer, more than 10,000 hours of development.</li>
-          <li>Full Stack Web 2 & 3 Developer.</li>
-          <li>Oficial Alchemy Certified Ethereum Developer.</li>
-          <li>Agile Coach - Project Manager - Scrum Master.</li>
-          <li>Polygon, Algorand, Chainlink, Solana & DeFi Builder.</li>
-          <li>Microsoft Cybersecurity.</li>
-          <li>Microsoft Azure IA Developer With OpenAI.</li>
-        </ul>
-        {showMessage && (
-          <div
-            style={{
-              position: "fixed",
-              top: "20%",
-              right: "20px",
-              transform: "translateY(-50%)",
-              backgroundColor: "transparent",
-              color: "red",
-              padding: "10px",
-              border: "2px solid red",
-              fontSize: "12px",
-              animation: "blink 2.5s linear infinite",
-              borderRadius: "50%",
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-              justifyContent: "center",
-              textAlign: "center",
-              width: "60px",
-              height: "60px",
-            }}
-          >
-            SCROLL DOWN
+    <div className="home-container">
+      <div className="profile-section">
+        <img
+          src="https://i.ibb.co/Gn3fxfv/foto-perfil.jpg"
+          alt="Foto de perfil"
+          className="profile-photo"
+        />
+        <div className="info-section">
+          <h2>Gonzalo Daniel Aguilar</h2>
+          <p className="visitor-count">
+            <h2>VISITOR COUNT</h2>
             <br />
-            <span style={{ fontSize: "24px" }}>↓</span>
-          </div>
-        )}
+            <img src="https://profile-counter.glitch.me/gonzalolater/count.svg" alt="Visitor Count" />
+          </p>
+          <ul className="skills-list">
+            <li>Software Engineer, more than 10,000 hours of development.</li>
+            <li>Full Stack Web 2 & 3 Developer.</li>
+            <li>Oficial Alchemy Certified Ethereum Developer.</li>
+            <li>Agile Coach - Project Manager - Scrum Master.</li>
+            <li>Polygon, Algorand, Chainlink, Solana & DeFi Builder.</li>
+            <li>Microsoft Cybersecurity.</li>
+            <li>Microsoft Azure IA Developer With OpenAI.</li>
+          </ul>
+        </div>
+      </div>
+      {showMessage && (
+        <div className="scroll-prompt">
+          SCROLL DOWN<br />
+          <span>↓</span>
+        </div>
+      )}
+      <h2 className="social-links-title">Social Web Icon Links</h2> {/* New heading with class */}
+      <div className="social-links">
         {[
-          {
-            href: "https://www.linkedin.com/in/gonzalo-daniel-aguilar/",
-            icon: faLinkedin,
-            text: "LinkedIn",
-          },
-          {
-            href: "https://github.com/gonzalolater",
-            icon: faGithub,
-            text: "GitHub",
-          },
-          {
-            href: "https://lol.fandom.com/wiki/Dodging_Bullets",
-            icon: faTrophy,
-            text: "Leaguepedia",
-          },
-          {
-            href: "https://fin.guru/u/gonzalo-daniel-aguilar",
-            icon: faLocationArrow,
-            text: "FinGurú",
-          },
-          {
-            href: "https://www.freecodecamp.org/GonzaloDanielAguilar",
-            icon: faFire,
-            text: "FreeCodeCamp",
-          },
+          { href: "https://www.linkedin.com/in/gonzalo-daniel-aguilar/", icon: faLinkedin, text: "LinkedIn" },
+          { href: "https://github.com/gonzalolater", icon: faGithub, text: "GitHub" },
+          { href: "https://lol.fandom.com/wiki/Dodging_Bullets", icon: faTrophy, text: "Leaguepedia" },
+          { href: "https://fin.guru/u/gonzalo-daniel-aguilar", icon: faLocationArrow, text: "FinGurú" },
+          { href: "https://www.freecodecamp.org/GonzaloDanielAguilar", icon: faFire, text: "FreeCodeCamp" },
         ].map((link) => (
           <a
             key={link.href}
             href={link.href}
-            style={{
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              textDecoration: "none",
-              color: "red",
-              fontSize: "1.2em",
-              marginTop: "10px",
-            }}
+            className="social-link"
+            target="_blank"
+            rel="noopener noreferrer"
           >
-            {" "}
-            <FontAwesomeIcon
-              icon={link.icon}
-              style={{ marginRight: "5px" }}
-            />{" "}
-            {link.text}{" "}
+            <FontAwesomeIcon icon={link.icon} className="social-icon" />
+            {link.text}
           </a>
-        ))}{" "}
-      </div>{" "}
-      <Carousel />{" "}
+        ))}
+      </div>
+      <Carousel />
     </div>
   );
 };
