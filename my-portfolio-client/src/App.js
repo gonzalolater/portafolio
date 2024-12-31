@@ -16,7 +16,7 @@ import { AuthProvider } from './loginComponents/context/AuthContext';
 
 const App = () => {
   return (
-    <AuthProvider>
+   <AuthProvider>
     <Router>
       <Navbar />
       <Routes>
@@ -36,5 +36,4 @@ const App = () => {
     </AuthProvider>
   );
 };
-
 export default App;
