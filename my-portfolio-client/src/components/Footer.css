@@ -1,0 +1,41 @@
+.footer {
+    background: linear-gradient(to right, #8a2be2, #da70d6); /* Gradiente violeta */
+    color: white; /* Texto blanco para mejor contraste */
+    text-align: center;
+    padding: 10px 20px; /* Aumenta el padding vertical */
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box; /* Incluye padding y border en el ancho */
+    border-top: 2px solid rgba(0, 0, 0, 0.1); /* Borde superior sutil */
+    box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.1); /* Sombra superior sutil */
+  }
+  
+  .footer h2 {
+      flex: 1;
+      margin: 0; /* Elimina margenes por defecto del h2 */
+  }
+  
+  .chat-button-container {
+    margin-left: auto; /* Empuja el botón al extremo derecho */
+  }
+  
+  /* Media query para que el footer no ocupe toda la pantalla en moviles */
+  @media (max-width: 768px) {
+      .footer {
+          flex-direction: column; /* Apila los elementos verticalmente */
+          align-items: center;
+          padding: 10px;
+      }
+      .footer h2 {
+          margin-bottom: 5px;
+          text-align: center;
+      }
+      .chat-button-container {
+          margin-left: 0;
+      }
+  }
