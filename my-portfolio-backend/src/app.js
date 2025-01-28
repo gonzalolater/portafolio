@@ -2,10 +2,31 @@ import express from "express";
 import cors from "cors";
 import morgan from "morgan";
 import cookieParser from "cookie-parser";
-
 import authRoutes from "./routes/auth.routes.js";
 import taksRoutes from "./routes/tasks.routes.js";
 import { FRONTEND_URL } from "./config.js";
+// // SDK de Mercado Pago
+// import { MercadoPagoConfig } from 'mercadopago';
+// // Agrega credenciales
+// const client = new MercadoPagoConfig({ accessToken: 'YOUR_ACCESS_TOKEN' });
+
+
+// const preference = new Preference(client);
+
+// preference.create({
+//   body: {
+//     items: [
+//       {
+//         title: 'Mi producto',
+//         quantity: 1,
+//         unit_price: 2000
+//       }
+//     ],
+//   }
+// })
+// .then(console.log)
+// .catch(console.log);
+
 
 const app = express();
 
