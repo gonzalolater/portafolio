@@ -9,6 +9,7 @@ import TechnicalInterviews from './components/TechnicalInterviews';
 import Studies from './components/Studies';
 import Footer from './components/Footer';
 import TechnicalChallenges from './components/TechnicalChallenges'
+import AuditoriasOEntrevistas from './components/AuditoriasOEntrevistas'
 import Sponsors from './components/Sponsors';
 import { AuthProvider } from './loginComponents/context/AuthContext';
 // import {LoginPage} from './loginComponents/pages/LoginPage';
@@ -29,6 +30,7 @@ const App = () => {
         <Route path="/mentorships" element={<Mentorships />} />
         <Route path="/studies" element={<Studies />} />
         <Route path="/sponsors" element={<Sponsors />} />
+        <Route path="/Auditorias & Entrevistas" element={<AuditoriasOEntrevistas />} />
         <Route path="/" element={<Home />} />
       </Routes>
       <Footer />
