@@ -78,6 +78,9 @@ const Navbar = () => {
               <Link to="/sponsors" onClick={toggleMenu}>Sponsors</Link> {/* Añadido onClick */}
             </li>
             <li style={{ textDecoration: 'none', color: 'inherit' }}>
+              <Link to="/AuditoriasOEntrevistas" onClick={toggleMenu}>Auditorias & Entrevistas</Link> {/* Añadido onClick */}
+            </li>
+            <li style={{ textDecoration: 'none', color: 'inherit' }}>
               <Link to="/" onClick={toggleMenu}>Home</Link> {/* Añadido onClick */}
             </li>
           </ul>
