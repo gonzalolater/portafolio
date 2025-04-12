@@ -17,100 +17,100 @@ const INITIAL_STATE = {
 
 export default function MercadoPagoForm() {
     const [state, setState] = useState(INITIAL_STATE);
-    const resultPayment = useMercadoPago();
+    const ResultPayment = useMercadoPago();
 
-    // const { MercadoPago } = useScript(
-    //     "https://sdk.mercadopago.com/js/v2",
-    //     "MercadoPago"
-    // );
+    const { MercadoPago } = useScript(
+        "https://sdk.mercadopago.com/js/v2",
+        "MercadoPago"
+    );
 
-    // useEffect(() => {
-    //     if (MercadoPago) {
-    //         const mp = new MercadoPago(import.meta.env.VITE_PUBLIC_KEY_MP);
-    //         const cardForm = mp.cardForm({
-    //             amount: "100.5",
-    //             autoMount: true,
-    //             form: formConfig,
-    //             callbacks: {
-    //                 onFormMounted: (error) => {
-    //                     if (error)
-    //                         return console.warn(
-    //                             "Form Mounted handling error: ",
-    //                             error
-    //                         );
-    //                 },
-    //                 onIssuersReceived: (error, issuers) => {
-    //                     console.log("hello", issuers);
-    //                     if (error)
-    //                         return console.warn(
-    //                             "issuers handling error: ",
-    //                             error
-    //                         );
-    //                 },
-    //                 onSubmit: (event) => {
-    //                     event.preventDefault();
+    useEffect(() => {
+        if (MercadoPago) {
+            const mp = new MercadoPago(import.meta.env.VITE_PUBLIC_KEY_MP);
+            const cardForm = mp.cardForm({
+                amount: "100.5",
+                autoMount: true,
+                form: formConfig,
+                callbacks: {
+                    onFormMounted: (error) => {
+                        if (error)
+                            return console.warn(
+                                "Form Mounted handling error: ",
+                                error
+                            );
+                    },
+                    onIssuersReceived: (error, issuers) => {
+                        console.log("hello", issuers);
+                        if (error)
+                            return console.warn(
+                                "issuers handling error: ",
+                                error
+                            );
+                    },
+                    onSubmit: (event) => {
+                        event.preventDefault();
 
-    //                     const {
-    //                         paymentMethodId: payment_method_id,
-    //                         issuerId: issuer_id,
-    //                         cardholderEmail: email,
-    //                         amount,
-    //                         token,
-    //                         installments,
-    //                         identificationNumber,
-    //                         identificationType,
-    //                     } = cardForm.getCardFormData();
+                        const {
+                            paymentMethodId: payment_method_id,
+                            issuerId: issuer_id,
+                            cardholderEmail: email,
+                            // amount = 1,
+                            token,
+                            installments,
+                            identificationNumber,
+                            identificationType,
+                        } = cardForm.getCardFormData();
 
-    //                     fetch(
-    //                         `${
-    //                             import.meta.env.VITE_URL_PAYMENT_MP
-    //                         }/process-payment`,
-    //                         {
-    //                             // entry point backend
-    //                             method: "POST",
-    //                             headers: {
-    //                                 "Access-Control-Allow-Origin": "*",
-    //                                 "Access-Control-Request-Method":
-    //                                     "GET, POST, DELETE, PUT, OPTIONS",
-    //                                 "Content-Type": "application/json",
-    //                             },
-    //                             body: JSON.stringify({
-    //                                 token,
-    //                                 issuer_id,
-    //                                 payment_method_id,
-    //                                 transaction_amount: 1000,
-    //                                 installments: Number(installments),
-    //                                 description: "Descripción del producto",
-    //                                 payer: {
-    //                                     email,
-    //                                     identification: {
-    //                                         type: identificationType,
-    //                                         number: identificationNumber,
-    //                                     },
-    //                                 },
-    //                             }),
-    //                         }
-    //                     )
-    //                         .then((res) => res.json())
-    //                         .then((data) => setResultPayment(data))
-    //                         .catch((err) => {
-    //                             setResultPayment(err);
-    //                         });
-    //                 },
-    //                 onFetching: (resource) => {
-    //                     // Animate progress bar
-    //                     const progressBar =
-    //                         document.querySelector(".progress-bar");
-    //                     progressBar.removeAttribute("value");
+                        fetch(
+                            `${
+                                import.meta.env.VITE_URL_PAYMENT_MP
+                            }/process-payment`,
+                            {
+                                // entry point backend
+                                method: "POST",
+                                headers: {
+                                    "Access-Control-Allow-Origin": "*",
+                                    "Access-Control-Request-Method":
+                                        "GET, POST, DELETE, PUT, OPTIONS",
+                                    "Content-Type": "application/json",
+                                },
+                                body: JSON.stringify({
+                                    token,
+                                    issuer_id,
+                                    payment_method_id,
+                                    transaction_amount: 1000,
+                                    installments: Number(installments),
+                                    description: "Descripción del producto",
+                                    payer: {
+                                        email,
+                                        identification: {
+                                            type: identificationType,
+                                            number: identificationNumber,
+                                        },
+                                    },
+                                }),
+                            }
+                        )
+                            .then((res) => res.json())
+                            .then((data) => ResultPayment(data))
+                            .catch((err) => {
+                                ResultPayment(err);
+                            });
+                    },
+                    onFetching: (resource) => {
+                        // Animate progress bar
+                        const progressBar =
+                            document.querySelector(".progress-bar");
+                        progressBar.removeAttribute("value");
 
-    //                     return () => {
-    //                         progressBar.setAttribute("value", "0");
-    //                     };
-    //                 },
-    //             },
-    //         });
-    //     }
-    // }, [MercadoPago]);
+                        return () => {
+                            progressBar.setAttribute("value", "0");
+                        };
+                    },
+                },
+            });
+        }
+    }, [MercadoPago, ResultPayment]);
 
     const handleInputChange = (e) => {
         setState({
@@ -215,7 +215,7 @@ export default function MercadoPagoForm() {
                     Cargando...
                 </progress>
             </form>
-            {resultPayment && <p>{JSON.stringify(resultPayment)}</p>}
+            {ResultPayment && <p>{JSON.stringify(ResultPayment)}</p>}
         </div>
     );
 }
