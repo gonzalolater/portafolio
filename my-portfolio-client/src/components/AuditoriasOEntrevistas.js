@@ -72,9 +72,9 @@ const AuditoriasOEntrevistas = () => {
 
             <footer>
                 <ul>
-                    <li><a href="#">Privacidad</a></li>
+                    {/* <li><a href="#">Privacidad</a></li>
                     <li><a href="#">Términos</a></li>
-                    <li><a href="#">Contacto</a></li>
+                    <li><a href="#">Contacto</a></li> */}
                 </ul>
                 <span>Copyright 2021, Página creada por Gonzalo Daniel Aguilar.</span>
             </footer>
