@@ -17,24 +17,33 @@ import { AuthProvider } from './loginComponents/context/AuthContext';
 
 const App = () => {
   return (
-   <AuthProvider>
-    <Router>
-      <Navbar />
-      <Routes>
-        {/* <Route path="/register" element={<RegisterPage />} />
+    <AuthProvider>
+      <Router>
+        <Navbar />
+        <Routes>
+          {/* <Route path="/register" element={<RegisterPage />} />
         <Route path="/login" element={<LoginPage />} /> */}
-        <Route path="/audits" element={<Audits />} />
-        <Route path="/TechnicalChallenges" element={<TechnicalChallenges />} />
-        <Route path="/interviews" element={<Interviews />} />
-        <Route path="/technical-interviews" element={<TechnicalInterviews />} />
-        <Route path="/mentorships" element={<Mentorships />} />
-        <Route path="/studies" element={<Studies />} />
-        <Route path="/sponsors" element={<Sponsors />} />
-        <Route path="/Auditorias & Entrevistas" element={<AuditoriasOEntrevistas />} />
-        <Route path="/" element={<Home />} />
-      </Routes>
-      <Footer />
-    </Router>
+          <Route path="/audits" element={<Audits />} />
+          <Route
+            path="/TechnicalChallenges"
+            element={<TechnicalChallenges />}
+          />
+          <Route path="/interviews" element={<Interviews />} />
+          <Route
+            path="/technical-interviews"
+            element={<TechnicalInterviews />}
+          />
+          <Route path="/mentorships" element={<Mentorships />} />
+          <Route path="/studies" element={<Studies />} />
+          <Route path="/sponsors" element={<Sponsors />} />
+          <Route
+            path="/Audits & Interviews"
+            element={<AuditoriasOEntrevistas />}
+          />
+          <Route path="/" element={<Home />} />
+        </Routes>
+        <Footer />
+      </Router>
     </AuthProvider>
   );
 };
