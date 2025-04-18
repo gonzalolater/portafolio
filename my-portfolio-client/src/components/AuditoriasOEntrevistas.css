@@ -1,8 +1,19 @@
+body, html {
+    margin: 0; /* Elimina márgenes del body y html */
+    padding: 0; /* Elimina padding del body y html */
+    width: 100%; /* Asegúrate de que ocupen todo el ancho */
+    height: 100%; /* Asegúrate de que ocupen todo el alto */
+    box-sizing: border-box; /* Incluye bordes y padding en el tamaño total */
+}
+
 .auditorias-wrapper {
     font-family: Arial, sans-serif;
     color: #333;
     background-color: #f9f9f9;
     padding: 20px;
+    margin: 0; /* Elimina márgenes del contenedor principal */
+    padding: 0; /* Elimina padding del contenedor principal */
+    width: 100%; /* Asegúrate de que ocupe todo el ancho */
 }
 
 .auditorias-header {
@@ -14,6 +25,9 @@
     padding: 10px 20px;
     position: relative;
     z-index: 10; /* Asegúrate de que el header esté por encima de otros elementos */
+    width: 100%; /* Asegúrate de que ocupen todo el ancho */
+    margin: 0; /* Elimina márgenes */
+    padding: 0; /* Elimina padding */
 }
 
 .auditorias-header .logo img {
@@ -94,6 +108,9 @@
     padding: 10px 20px; /* Reducir el padding */
     font-size: 14px; /* Tamaño de fuente más pequeño */
     line-height: 1.5; /* Espaciado entre líneas */
+    width: 100%; /* Asegúrate de que ocupen todo el ancho */
+    margin: 0; /* Elimina márgenes */
+    padding: 0; /* Elimina padding */
 }
 
 .auditorias-footer ul {
