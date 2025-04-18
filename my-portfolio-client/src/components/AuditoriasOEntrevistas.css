@@ -70,6 +70,21 @@ body, html {
     white-space: nowrap; /* Evita que las palabras se dividan en varias líneas */
 }
 
+.auditorias-nav .btn-home {
+    background-color: #6200ea;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.auditorias-nav .btn-home:hover {
+    background-color: #4500b5;
+}
+
 .auditorias-container {
     margin-top: 60px; /* Espacio para el header fijo */
     margin-bottom: 60px; /* Espacio para el footer fijo */
@@ -188,26 +203,29 @@ body, html {
 }
 
 .btn-home {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: #6200ea;
-    color: white;
-    padding: 10px 15px;
-    border-radius: 5px;
-    text-decoration: none;
-    font-size: 14px;
-    font-weight: bold;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    z-index: 1000; /* Asegúrate de que esté por encima de otros elementos */
-    transition: background-color 0.3s ease;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: inline-block; /* Asegúrate de que el botón sea un bloque en línea */
+    margin: 20px auto; /* Centra el botón horizontalmente y agrega espacio superior e inferior */
+    background: linear-gradient(90deg, #ff69b4, #8a2be2); /* Gradiente de rosa a violeta */
+    color: white; /* Color del texto */
+    padding: 10px 15px; /* Espaciado interno */
+    border: 1px solid black; /* Borde negro */
+    border-radius: 5px; /* Bordes redondeados */
+    text-decoration: none; /* Elimina el subrayado */
+    font-size: 14px; /* Tamaño del texto */
+    font-weight: bold; /* Texto en negrita */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Sombra para destacar */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Transición para hover */
+    text-align: center;
 }
 
 .btn-home:hover {
-    background-color: #4500b5;
+    background: linear-gradient(90deg, #ff1493, #6a0dad); /* Gradiente más oscuro al pasar el mouse */
+    transform: scale(1.05); /* Efecto de agrandamiento */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.4); /* Sombra más pronunciada */
+}
+
+.auditorias-development {
+    text-align: center; /* Centra el contenido dentro de la sección */
 }
 
 /* Responsive adjustments */
@@ -229,5 +247,11 @@ body, html {
 
     .auditorias-footer span {
         font-size: 10px; /* Reduce aún más el tamaño de fuente */
+    }
+
+    .btn-home {
+        bottom: 10px; /* Ajusta la distancia desde la parte inferior */
+        right: 10px; /* Ajusta la distancia desde la parte derecha */
+        font-size: 12px; /* Reduce el tamaño del texto */
     }
 }
