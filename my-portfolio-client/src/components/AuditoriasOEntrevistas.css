@@ -4,6 +4,7 @@ body, html {
     width: 100%; /* Asegúrate de que ocupen todo el ancho */
     height: 100%; /* Asegúrate de que ocupen todo el alto */
     box-sizing: border-box; /* Incluye bordes y padding en el tamaño total */
+    overflow-x: hidden; /* Evita el desplazamiento horizontal */
 }
 
 .auditorias-wrapper {
@@ -22,12 +23,13 @@ body, html {
     align-items: center;
     background-color: #6200ea;
     color: white;
-    padding: 10px 20px;
-    position: relative;
-    z-index: 10; /* Asegúrate de que el header esté por encima de otros elementos */
-    width: 100%; /* Asegúrate de que ocupen todo el ancho */
-    margin: 0; /* Elimina márgenes */
-    padding: 0; /* Elimina padding */
+    padding: 10px 15px; /* Ajusta el padding para dispositivos pequeños */
+    position: fixed; /* Fija el header en la parte superior */
+    top: 0;
+    left: 0;
+    width: 100%; /* Asegúrate de que ocupe todo el ancho */
+    z-index: 1000; /* Asegúrate de que esté por encima de otros elementos */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Agrega una sombra para destacar */
 }
 
 .auditorias-header .logo img {
@@ -52,17 +54,23 @@ body, html {
 .auditorias-nav ul {
     list-style: none;
     display: flex;
-    gap: 15px;
+    flex-wrap: wrap; /* Permite que los elementos se ajusten en varias líneas si es necesario */
+    gap: 10px;
+    padding: 0;
+    margin: 0;
 }
 
 .auditorias-nav .nav-link {
     color: white;
     text-decoration: none;
     font-weight: bold;
+    font-size: 14px;
 }
 
 .auditorias-container {
-    margin-top: 20px;
+    margin-top: 60px; /* Espacio para el header fijo */
+    margin-bottom: 60px; /* Espacio para el footer fijo */
+    padding: 15px;
 }
 
 .auditorias-hero {
@@ -105,21 +113,23 @@ body, html {
     background-color: #6200ea; /* Color de fondo */
     color: white; /* Color del texto */
     text-align: center; /* Centrar el contenido */
-    padding: 10px 20px; /* Reducir el padding */
+    padding: 10px 15px; /* Ajusta el padding para dispositivos pequeños */
     font-size: 14px; /* Tamaño de fuente más pequeño */
     line-height: 1.5; /* Espaciado entre líneas */
     width: 100%; /* Asegúrate de que ocupen todo el ancho */
-    margin: 0; /* Elimina márgenes */
-    padding: 0; /* Elimina padding */
+    position: fixed; /* Fija el footer en la parte inferior */
+    bottom: 0;
+    left: 0;
+    z-index: 1000; /* Asegúrate de que esté por encima de otros elementos */
 }
 
 .auditorias-footer ul {
     list-style: none; /* Eliminar viñetas */
     padding: 0; /* Eliminar padding */
-    margin: 10px 0; /* Reducir márgenes */
+    margin: 5px 0; /* Reducir márgenes */
     display: flex; /* Mostrar elementos en línea */
     justify-content: center; /* Centrar los elementos */
-    gap: 15px; /* Espaciado entre elementos */
+    gap: 10px; /* Reduce el espacio entre elementos en dispositivos pequeños */
 }
 
 .auditorias-footer ul li {
@@ -130,12 +140,13 @@ body, html {
     color: white; /* Color de los enlaces */
     text-decoration: none; /* Eliminar subrayado */
     font-weight: bold; /* Hacer el texto más visible */
+    font-size: 12px; /* Reduce el tamaño de fuente para dispositivos pequeños */
 }
 
 .auditorias-footer span {
     display: block; /* Asegurarse de que el texto sea un bloque separado */
-    margin-top: 10px; /* Espaciado superior */
-    font-size: 12px; /* Tamaño de fuente más pequeño */
+    margin-top: 5px; /* Espaciado superior */
+    font-size: 10px; /* Reduce el tamaño de fuente para dispositivos pequeños */
 }
 
 .extra-section {
@@ -171,4 +182,26 @@ body, html {
 
 .extra-section .btn-secondary:hover {
     background-color: #4500b5;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .auditorias-header {
+        flex-direction: column; /* Cambia la dirección a columna en pantallas pequeñas */
+        align-items: flex-start;
+    }
+
+    .auditorias-nav ul {
+        flex-direction: column; /* Alinea los enlaces verticalmente */
+        gap: 5px;
+    }
+
+    .auditorias-footer ul {
+        flex-direction: column; /* Alinea los enlaces del footer verticalmente */
+        gap: 5px;
+    }
+
+    .auditorias-footer span {
+        font-size: 10px; /* Reduce aún más el tamaño de fuente */
+    }
 }
