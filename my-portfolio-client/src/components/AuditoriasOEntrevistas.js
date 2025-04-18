@@ -119,7 +119,7 @@ const AuditoriasOEntrevistas = () => {
                     <li>Terms</li>
                     <li>Contact</li>
                 </ul>
-                <span>Copyright 2021, Page created by Gonzalo Daniel Aguilar.</span>
+                <span>Copyright 2025, Page created by Gonzalo Daniel Aguilar.</span>
             </footer>
         </div>
     );
