@@ -60,7 +60,7 @@ const Home = () => {
           <span>↓</span>
         </div>
       )}
-      <h2 className="social-links-title">Social Web Icon Links</h2> {/* New heading with class */}
+      <h2 className="social-links-title">Social Web Links</h2> {/* New heading with class */}
       <div className="social-links">
         {[
           { href: "https://www.linkedin.com/in/gonzalo-daniel-aguilar/", icon: faLinkedin, text: "LinkedIn" },
