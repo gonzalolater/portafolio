@@ -1,0 +1,157 @@
+.auditorias-wrapper {
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-color: #f9f9f9;
+    padding: 20px;
+}
+
+.auditorias-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #6200ea;
+    color: white;
+    padding: 10px 20px;
+    position: relative;
+    z-index: 10; /* Asegúrate de que el header esté por encima de otros elementos */
+}
+
+.auditorias-header .logo img {
+    height: 50px;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: visible; /* Asegúrate de que el contenido no se oculte */
+    z-index: 10; /* Asegúrate de que el logo esté por encima de otros elementos */
+    margin-top: 20px; /* Agrega margen superior */
+}
+
+#header-img {
+    width: 50px; /* Ajusta el tamaño según sea necesario */
+    height: 50px;
+    display: block;
+}
+
+.auditorias-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+.auditorias-nav .nav-link {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.auditorias-container {
+    margin-top: 20px;
+}
+
+.auditorias-hero {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.auditorias-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.auditorias-form input[type="email"] {
+    padding: 10px;
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.auditorias-form .btn {
+    padding: 10px 20px;
+    background-color: #6200ea;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.auditorias-precio {
+    text-align: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.auditorias-footer {
+    background-color: #6200ea; /* Color de fondo */
+    color: white; /* Color del texto */
+    text-align: center; /* Centrar el contenido */
+    padding: 10px 20px; /* Reducir el padding */
+    font-size: 14px; /* Tamaño de fuente más pequeño */
+    line-height: 1.5; /* Espaciado entre líneas */
+}
+
+.auditorias-footer ul {
+    list-style: none; /* Eliminar viñetas */
+    padding: 0; /* Eliminar padding */
+    margin: 10px 0; /* Reducir márgenes */
+    display: flex; /* Mostrar elementos en línea */
+    justify-content: center; /* Centrar los elementos */
+    gap: 15px; /* Espaciado entre elementos */
+}
+
+.auditorias-footer ul li {
+    display: inline; /* Asegurarse de que los elementos sean en línea */
+}
+
+.auditorias-footer ul li a {
+    color: white; /* Color de los enlaces */
+    text-decoration: none; /* Eliminar subrayado */
+    font-weight: bold; /* Hacer el texto más visible */
+}
+
+.auditorias-footer span {
+    display: block; /* Asegurarse de que el texto sea un bloque separado */
+    margin-top: 10px; /* Espaciado superior */
+    font-size: 12px; /* Tamaño de fuente más pequeño */
+}
+
+.extra-section {
+    background-color: #f1f1f1;
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-top: 1px solid #ddd;
+}
+
+.extra-section h3 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.extra-section p {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.extra-section .btn-secondary {
+    padding: 10px 20px;
+    background-color: #6200ea;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.extra-section .btn-secondary:hover {
+    background-color: #4500b5;
+}
