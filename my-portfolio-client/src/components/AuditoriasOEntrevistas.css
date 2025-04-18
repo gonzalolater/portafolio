@@ -23,13 +23,15 @@ body, html {
     align-items: center;
     background-color: #6200ea;
     color: white;
-    padding: 10px 15px; /* Ajusta el padding para dispositivos pequeños */
-    position: fixed; /* Fija el header en la parte superior */
+    padding: 10px 15px;
+    position: fixed;
     top: 0;
     left: 0;
-    width: 100%; /* Asegúrate de que ocupe todo el ancho */
-    z-index: 1000; /* Asegúrate de que esté por encima de otros elementos */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Agrega una sombra para destacar */
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* Evita que el contenido se salga del header */
+    box-sizing: border-box; /* Asegúrate de que el padding no afecte el ancho */
 }
 
 .auditorias-header .logo img {
@@ -54,10 +56,10 @@ body, html {
 .auditorias-nav ul {
     list-style: none;
     display: flex;
-    flex-wrap: wrap; /* Permite que los elementos se ajusten en varias líneas si es necesario */
-    gap: 10px;
+    gap: 15px;
     padding: 0;
     margin: 0;
+    flex-wrap: wrap; /* Permite que los elementos se ajusten en varias líneas si es necesario */
 }
 
 .auditorias-nav .nav-link {
@@ -65,6 +67,7 @@ body, html {
     text-decoration: none;
     font-weight: bold;
     font-size: 14px;
+    white-space: nowrap; /* Evita que las palabras se dividan en varias líneas */
 }
 
 .auditorias-container {
@@ -198,6 +201,9 @@ body, html {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     z-index: 1000; /* Asegúrate de que esté por encima de otros elementos */
     transition: background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .btn-home:hover {
