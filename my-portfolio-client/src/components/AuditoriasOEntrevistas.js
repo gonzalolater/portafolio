@@ -91,6 +91,7 @@ const AuditoriasOEntrevistas = () => {
                     <h2 style={{ textAlign: 'center', margin: '20px 0', color: '#6200ea' }}>
                         This page is still under development
                     </h2>
+                    <a href="/" className="btn-home">Go to Home</a>
                 </section>
 
                 <section id="pricing" className="auditorias-precio">
@@ -118,8 +119,6 @@ const AuditoriasOEntrevistas = () => {
                     </a>
                 </section>
             </div>
-
-            <a href="/" className="btn-home">Go to Home</a>
 
             <footer className="auditorias-footer">
                 <ul>
