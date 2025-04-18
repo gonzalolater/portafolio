@@ -8,12 +8,12 @@ import Interviews from './components/Interviews';
 import TechnicalInterviews from './components/TechnicalInterviews';
 import Studies from './components/Studies';
 import Footer from './components/Footer';
-import TechnicalChallenges from './components/TechnicalChallenges'
-import AuditoriasOEntrevistas from "./components/AuditoriasOEntrevistas";
+import TechnicalChallenges from './components/TechnicalChallenges';
+import AuditoriasOEntrevistas from './components/AuditoriasOEntrevistas';
 import Sponsors from './components/Sponsors';
 import { AuthProvider } from './loginComponents/context/AuthContext';
 // import {LoginPage} from './loginComponents/pages/LoginPage';
-// import RegisterPage from "./loginComponents/pages/RegisterPage"
+// import RegisterPage from "./loginComponents/pages/RegisterPage";
 
 const App = () => {
   return (
@@ -41,6 +41,7 @@ const App = () => {
             element={<AuditoriasOEntrevistas />}
           />
           <Route path="/" element={<Home />} />
+          <Route path="/auditorias" element={<AuditoriasOEntrevistas />} />
         </Routes>
         <Footer />
       </Router>
