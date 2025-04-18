@@ -119,6 +119,8 @@ const AuditoriasOEntrevistas = () => {
                 </section>
             </div>
 
+            <a href="/" className="btn-home">Go to Home</a>
+
             <footer className="auditorias-footer">
                 <ul>
                     <li>Privacy</li>

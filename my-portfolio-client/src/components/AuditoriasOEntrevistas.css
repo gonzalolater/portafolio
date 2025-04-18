@@ -184,6 +184,26 @@ body, html {
     background-color: #4500b5;
 }
 
+.btn-home {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #6200ea;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1000; /* Asegúrate de que esté por encima de otros elementos */
+    transition: background-color 0.3s ease;
+}
+
+.btn-home:hover {
+    background-color: #4500b5;
+}
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
     .auditorias-header {
