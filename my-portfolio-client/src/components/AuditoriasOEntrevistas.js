@@ -1,84 +1,128 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { initMercadoPago, Wallet } from '@mercadopago/sdk-react';
+import './AuditoriasOEntrevistas.css'; // Asegúrate de crear este archivo CSS
 
 initMercadoPago('YOUR_PUBLIC_KEY'); // Reemplaza con tu clave pública de Mercado Pago
 
 const AuditoriasOEntrevistas = () => {
-    const handlePayment = async () => {
-        const response = await fetch('/api/create-preference', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({
-                items: [
-                    {
-                        title: 'Auditoría o Entrevista Técnica',
-                        quantity: 1,
-                        currency_id: 'USD',
-                        unit_price: 50, // Precio en dólares
-                    },
-                ],
-            }),
-        });
+    const [preferenceId, setPreferenceId] = useState(null);
 
-        const preference = await response.json();
-        return preference.id;
+    const handlePayment = async () => {
+        try {
+            const response = await fetch('/api/create-preference', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    items: [
+                        {
+                            title: 'Auditoría o Entrevista Técnica',
+                            quantity: 1,
+                            currency_id: 'USD',
+                            unit_price: 50, // Precio en dólares
+                        },
+                    ],
+                }),
+            });
+
+            const preference = await response.json();
+            setPreferenceId(preference.id); // Guarda el preferenceId en el estado
+        } catch (error) {
+            console.error('Error al crear la preferencia de pago:', error);
+        }
     };
 
+    useEffect(() => {
+        handlePayment(); // Llama a la función para obtener el preferenceId al montar el componente
+    }, []);
+
     return (
-        <div id="page-wrapper">
-            <header id="header">
-                <div className="logo">
-                    <img
-                        id="header-img"
-                        src="https://scontent.fluq1-1.fna.fbcdn.net/v/t1.0-9/142546402_1004947263370966_2667725116191369017_o.png?_nc_cat=104&ccb=2&_nc_sid=730e14&_nc_ohc=pArTvcC7ImMAX9I1NiR&_nc_ht=scontent.fluq1-1.fna&oh=2e5950c6fbb269a3016350afd2955418&oe=60341B9A"
-                        alt="logo profesional personal"
-                    />
-                </div>
-                <nav id="nav-bar">
-                    <ul>
-                        <li><a className="nav-link" href="#caracteristicas">Caracteristicas</a></li>
-                        <li><a className="nav-link" href="#como-funciona">Cómo funciona</a></li>
-                        <li><a className="nav-link" href="#precio">Precios</a></li>
-                    </ul>
-                </nav>
-            </header>
+      <div id="page-wrapper" className="auditorias-wrapper">
+        <header id="header" className="auditorias-header">
+          <div className="logo">
+            <img
+              id="header-img"
+              src="/favicon.ico" // Ruta correcta para archivos en la carpeta public
+              alt="logo profesional personal"
+            />
+          </div>
+          <nav id="nav-bar" className="auditorias-nav">
+            <ul>
+              <li>
+                <a className="nav-link" href="#caracteristicas">
+                  Caracteristicas
+                </a>
+              </li>
+              <li>
+                <a className="nav-link" href="#como-funciona">
+                  Cómo funciona
+                </a>
+              </li>
+              <li>
+                <a className="nav-link" href="#precio">
+                  Precios
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </header>
 
-            <div className="container">
-                <section id="hero">
-                    <h2>Coaching Individual, Análisis de partidas, Coaching en mentalidad, Coaching a equipos.</h2>
-                    <form id="form" action="https://www.freecodecamp.com/email-submit">
-                        <input
-                            name="email"
-                            id="email"
-                            type="email"
-                            placeholder="Ingrese su Email"
-                            required
-                        />
-                        <input id="submit" type="submit" value="Enviar" className="btn" />
-                    </form>
-                </section>
+        <div className="container auditorias-container">
+          <section id="hero" className="auditorias-hero">
+            <h2>Auditorías, Entrevistas, Entrevistas Tecnicas</h2>
+            <form
+              id="form"
+              action="https://www.freecodecamp.com/email-submit"
+              className="auditorias-form"
+            >
+              <input
+                name="email"
+                id="email"
+                type="email"
+                placeholder="Ingrese su Email"
+                required
+              />
+              <input id="submit" type="submit" value="Enviar" className="btn" />
+            </form>
+          </section>
 
-                <section id="precio">
-                    <div className="product" id="tenor">
-                        <div className="level">Auditorías o Entrevistas Técnicas</div>
-                        <h2>$50 USD</h2>
-                        <p>Realiza el pago para agendar tu auditoría o entrevista técnica.</p>
-                        <Wallet initialization={{ preferenceId: handlePayment }} />
-                    </div>
-                </section>
+          <section id="precio" className="auditorias-precio">
+            <div className="product" id="tenor">
+              <div className="level">Auditorías o Entrevistas Técnicas</div>
+              <h2>$50 USD</h2>
+              <p>
+                Realiza el pago para agendar tu auditoría o entrevista técnica.
+              </p>
+              {preferenceId ? (
+                <Wallet initialization={{ preferenceId }} />
+              ) : (
+                <p>Cargando...</p>
+              )}
             </div>
+          </section>
 
-            <footer>
-                <ul>
-                    {/* <li><a href="#">Privacidad</a></li>
-                    <li><a href="#">Términos</a></li>
-                    <li><a href="#">Contacto</a></li> */}
-                </ul>
-                <span>Copyright 2021, Página creada por Gonzalo Daniel Aguilar.</span>
-            </footer>
+          <section className="extra-section">
+            <h3>¿Tienes preguntas?</h3>
+            <p>
+              Contáctanos para obtener más información sobre nuestras auditorías
+              y entrevistas técnicas.
+            </p>
+            <a href="#contacto" className="btn btn-secondary">
+              Contáctanos
+            </a>
+          </section>
         </div>
+
+        <footer className="auditorias-footer">
+          <ul>
+            <li>Privacidad</li>
+            <li>Términos</li>
+            <li>Contacto</li>
+          </ul>
+          <span>Copyright 2021, Página creada por Gonzalo Daniel Aguilar.</span>
+        </footer>
+      </div>
     );
 };
 
