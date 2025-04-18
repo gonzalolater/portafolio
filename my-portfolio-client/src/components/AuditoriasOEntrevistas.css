@@ -19,19 +19,18 @@ body, html {
 
 .auditorias-header {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* Separa el logo y la navbar */
     align-items: center;
-    background-color: #6200ea;
-    color: white;
-    padding: 10px 15px;
-    position: fixed;
+    background-color: #6200ea; /* Color de fondo */
+    color: white; /* Color del texto */
+    padding: 10px 15px; /* Espaciado interno */
+    position: fixed; /* Fija el header en la parte superior */
     top: 0;
     left: 0;
-    width: 100%;
-    z-index: 1000;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    overflow: hidden; /* Evita que el contenido se salga del header */
-    box-sizing: border-box; /* Asegúrate de que el padding no afecte el ancho */
+    width: 100%; /* Asegúrate de que ocupe todo el ancho */
+    z-index: 1000; /* Asegúrate de que esté por encima de otros elementos */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra para destacar */
+    overflow-x: hidden; /* Evita que el contenido se desborde horizontalmente */
 }
 
 .auditorias-header .logo img {
@@ -54,20 +53,28 @@ body, html {
 }
 
 .auditorias-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 15px;
-    padding: 0;
-    margin: 0;
-    flex-wrap: wrap; /* Permite que los elementos se ajusten en varias líneas si es necesario */
+    list-style: none; /* Elimina las viñetas */
+    padding: 0; /* Elimina el padding */
+    margin: 0; /* Elimina el margen */
+    display: flex; /* Usa flexbox para alinear los elementos */
+    justify-content: flex-end; /* Alinea los elementos al lado derecho */
+    gap: 15px; /* Espaciado entre los elementos */
+    flex-wrap: nowrap; /* Evita que los elementos se ajusten a una nueva línea */
+    overflow-x: hidden; /* Evita el desplazamiento horizontal */
+    max-width: 100%; /* Asegúrate de que no se desborde */
+    box-sizing: border-box; /* Incluye padding y bordes en el ancho total */
 }
 
 .auditorias-nav .nav-link {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 14px;
+    color: white; /* Color del texto */
+    text-decoration: none; /* Elimina el subrayado */
+    font-weight: bold; /* Texto en negrita */
+    font-size: 14px; /* Tamaño del texto */
     white-space: nowrap; /* Evita que las palabras se dividan en varias líneas */
+}
+
+.auditorias-nav .nav-link:last-child {
+    margin-right: 30px; /* Cambia el margen derecho a 20px */
 }
 
 .auditorias-nav .btn-home {
@@ -128,11 +135,11 @@ body, html {
 }
 
 .auditorias-footer {
+    text-align: center; /* Centra el contenido del footer */
     background-color: #6200ea; /* Color de fondo */
     color: white; /* Color del texto */
-    text-align: center; /* Centrar el contenido */
-    padding: 10px 15px; /* Ajusta el padding para dispositivos pequeños */
-    font-size: 14px; /* Tamaño de fuente más pequeño */
+    padding: 10px 15px; /* Espaciado interno */
+    font-size: 14px; /* Tamaño del texto */
     line-height: 1.5; /* Espaciado entre líneas */
     width: 100%; /* Asegúrate de que ocupen todo el ancho */
     position: fixed; /* Fija el footer en la parte inferior */
@@ -142,23 +149,24 @@ body, html {
 }
 
 .auditorias-footer ul {
-    list-style: none; /* Eliminar viñetas */
-    padding: 0; /* Eliminar padding */
-    margin: 5px 0; /* Reducir márgenes */
-    display: flex; /* Mostrar elementos en línea */
-    justify-content: center; /* Centrar los elementos */
-    gap: 10px; /* Reduce el espacio entre elementos en dispositivos pequeños */
+    list-style: none; /* Elimina las viñetas */
+    padding: 0; /* Elimina el padding */
+    margin: 0; /* Elimina el margen */
+    display: flex; /* Usa flexbox para alinear los elementos en línea */
+    justify-content: center; /* Centra los elementos horizontalmente */
+    gap: 15px; /* Espaciado entre los elementos */
+    flex-wrap: nowrap; /* Evita que los elementos se ajusten a una nueva línea */
 }
 
 .auditorias-footer ul li {
-    display: inline; /* Asegurarse de que los elementos sean en línea */
+    display: inline; /* Asegúrate de que los elementos sean en línea */
 }
 
 .auditorias-footer ul li a {
-    color: white; /* Color de los enlaces */
-    text-decoration: none; /* Eliminar subrayado */
-    font-weight: bold; /* Hacer el texto más visible */
-    font-size: 12px; /* Reduce el tamaño de fuente para dispositivos pequeños */
+    color: white; /* Color del texto */
+    text-decoration: none; /* Elimina el subrayado */
+    font-weight: bold; /* Texto en negrita */
+    font-size: 14px; /* Tamaño del texto */
 }
 
 .auditorias-footer span {
@@ -231,13 +239,18 @@ body, html {
 /* Responsive adjustments */
 @media (max-width: 768px) {
     .auditorias-header {
-        flex-direction: column; /* Cambia la dirección a columna en pantallas pequeñas */
-        align-items: flex-start;
+        flex-direction: row; /* Mantén los elementos en una fila */
+        align-items: center;
     }
 
     .auditorias-nav ul {
-        flex-direction: column; /* Alinea los enlaces verticalmente */
-        gap: 5px;
+        justify-content: flex-end; /* Alinea los elementos al lado derecho */
+        flex-wrap: nowrap; /* Evita que los elementos se ajusten a una nueva línea */
+        overflow-x: auto; /* Permite desplazamiento horizontal si es necesario */
+    }
+
+    .auditorias-nav .nav-link {
+        font-size: 12px; /* Reduce el tamaño del texto en pantallas pequeñas */
     }
 
     .auditorias-footer ul {

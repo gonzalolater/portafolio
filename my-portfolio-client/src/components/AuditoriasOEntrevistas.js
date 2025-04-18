@@ -50,19 +50,13 @@ const AuditoriasOEntrevistas = () => {
                 <nav id="nav-bar" className="auditorias-nav">
                     <ul>
                         <li>
-                            <a className="nav-link" href="#features">
-                                Features
-                            </a>
+                            <a className="nav-link" href="#features">Features</a>
                         </li>
                         <li>
-                            <a className="nav-link" href="#how-it-works">
-                                How it works
-                            </a>
+                            <a className="nav-link" href="#how-it-works">How it works</a>
                         </li>
                         <li>
-                            <a className="nav-link" href="#pricing">
-                                Pricing
-                            </a>
+                            <a className="nav-link" href="#pricing">Pricing</a>
                         </li>
                     </ul>
                 </nav>
