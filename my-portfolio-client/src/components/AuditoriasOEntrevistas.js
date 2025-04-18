@@ -87,6 +87,12 @@ const AuditoriasOEntrevistas = () => {
                     </form>
                 </section>
 
+                <section id="development" className="auditorias-development">
+                    <h2 style={{ textAlign: 'center', margin: '20px 0', color: '#6200ea' }}>
+                        This page is still under development
+                    </h2>
+                </section>
+
                 <section id="pricing" className="auditorias-precio">
                     <div className="product" id="tenor">
                         <div className="level">Technical Audits or Interviews</div>
