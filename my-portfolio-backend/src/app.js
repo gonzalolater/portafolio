@@ -5,28 +5,30 @@ import cookieParser from "cookie-parser";
 import authRoutes from "./routes/auth.routes.js";
 import taksRoutes from "./routes/tasks.routes.js";
 import { FRONTEND_URL } from "./config.js";
-// // SDK de Mercado Pago
-// import { MercadoPagoConfig } from 'mercadopago';
-// // Agrega credenciales
-// const client = new MercadoPagoConfig({ accessToken: 'YOUR_ACCESS_TOKEN' });
+import mercadopago from "mercadopago";
 
+// Configura las credenciales de Mercado Pago
+mercadopago.configure({
+  access_token: "YOUR_ACCESS_TOKEN", // Reemplaza con tu Access Token de Mercado Pago
+});
 
-// const preference = new Preference(client);
-
-// preference.create({
-//   body: {
-//     items: [
-//       {
-//         title: 'Mi producto',
-//         quantity: 1,
-//         unit_price: 2000
-//       }
-//     ],
-//   }
-// })
-// .then(console.log)
-// .catch(console.log);
-
+// Crea una preferencia de ejemplo
+mercadopago.preferences
+  .create({
+    items: [
+      {
+        title: "Mi producto",
+        quantity: 1,
+        unit_price: 2000,
+      },
+    ],
+  })
+  .then((response) => {
+    console.log("Preferencia creada:", response.body);
+  })
+  .catch((error) => {
+    console.error("Error al crear la preferencia:", error);
+  });
 
 const app = express();
 
@@ -48,7 +50,7 @@ if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/dist"));
 
   app.get("*", (req, res) => {
-    console.log(path.resolve("client", "dist", "index.html") );
+    console.log(path.resolve("client", "dist", "index.html"));
     res.sendFile(path.resolve("client", "dist", "index.html"));
   });
 }
