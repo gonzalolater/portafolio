@@ -12,8 +12,8 @@ import TechnicalChallenges from './components/TechnicalChallenges';
 import AuditoriasOEntrevistas from './components/AuditoriasOEntrevistas';
 import Sponsors from './components/Sponsors';
 import { AuthProvider } from './loginComponents/context/AuthContext';
-// import {LoginPage} from './loginComponents/pages/LoginPage';
-// import RegisterPage from "./loginComponents/pages/RegisterPage";
+import {LoginPage} from './loginComponents/pages/LoginPage';
+import RegisterPage from "./loginComponents/pages/RegisterPage";
 
 const App = () => {
   return (
@@ -21,8 +21,8 @@ const App = () => {
       <Router>
         <Navbar />
         <Routes>
-          {/* <Route path="/register" element={<RegisterPage />} />
-        <Route path="/login" element={<LoginPage />} /> */}
+          <Route path="/register" element={<RegisterPage />} />
+        <Route path="/login" element={<LoginPage />} />
           <Route path="/audits" element={<Audits />} />
           <Route
             path="/TechnicalChallenges"
