@@ -17,7 +17,7 @@ const ChatButton = () => {
       <button
         style={{
           backgroundColor: 'red',
-          color: 'white',
+          color: 'yellow', // Cambia el color de la letra del botón
           padding: '10px',
           borderRadius: '5px',
         }}
@@ -37,6 +37,7 @@ const ChatButton = () => {
             padding: '20px',
             borderRadius: '5px',
             boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)',
+            color: 'black', // Cambia el color de la letra dentro del modal
           }}
         >
           <button
@@ -48,6 +49,7 @@ const ChatButton = () => {
               backgroundColor: 'transparent',
               fontSize: '20px',
               cursor: 'pointer',
+              color: 'black', // Cambia el color de la "X" para cerrar el modal
             }}
             onClick={closeModal}
           >
@@ -55,7 +57,7 @@ const ChatButton = () => {
           </button>
 
           {/* Aquí puedes hacer llamadas a la API de ChatGPT para mostrar el chat */}
-            <Chat />
+          <Chat />
         </div>
       )}
     </div>
