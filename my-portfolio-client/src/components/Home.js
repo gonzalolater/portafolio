@@ -10,7 +10,7 @@ const Home = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setShowMessage(window.scrollY === 0);
+      setShowMessage(window.scrollY === 0); // Oculta el mensaje si el usuario baja
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -22,8 +22,8 @@ const Home = () => {
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      setShowMessage(true);
-    }, 4000);
+      setShowMessage(true); // Muestra el mensaje después de 5 segundos
+    }, 5000); // Cambiado a 5000ms (5 segundos)
 
     return () => clearTimeout(timer);
   }, []);
@@ -60,7 +60,7 @@ const Home = () => {
           <span>↓</span>
         </div>
       )}
-      <h2 className="social-links-title">Social Web Links</h2> {/* New heading with class */}
+      <h2 className="social-links-title">Social Web Links</h2>
       <div className="social-links">
         {[
           { href: "https://www.linkedin.com/in/gonzalo-daniel-aguilar/", icon: faLinkedin, text: "LinkedIn" },
