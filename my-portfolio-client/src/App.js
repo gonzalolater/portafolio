@@ -11,8 +11,9 @@ import Footer from './components/Footer';
 import TechnicalChallenges from './components/TechnicalChallenges';
 import AuditoriasOEntrevistas from './components/AuditoriasOEntrevistas';
 import Sponsors from './components/Sponsors';
+import About from './components/About'; // Importa el componente About
 import { AuthProvider } from './loginComponents/context/AuthContext';
-import {LoginPage} from './loginComponents/pages/LoginPage';
+import { LoginPage } from './loginComponents/pages/LoginPage';
 import RegisterPage from "./loginComponents/pages/RegisterPage";
 
 const App = () => {
@@ -22,30 +23,23 @@ const App = () => {
         <Navbar />
         <Routes>
           <Route path="/register" element={<RegisterPage />} />
-        <Route path="/login" element={<LoginPage />} />
+          <Route path="/login" element={<LoginPage />} />
           <Route path="/audits" element={<Audits />} />
-          <Route
-            path="/TechnicalChallenges"
-            element={<TechnicalChallenges />}
-          />
+          <Route path="/TechnicalChallenges" element={<TechnicalChallenges />} />
           <Route path="/interviews" element={<Interviews />} />
-          <Route
-            path="/technical-interviews"
-            element={<TechnicalInterviews />}
-          />
+          <Route path="/technical-interviews" element={<TechnicalInterviews />} />
           <Route path="/mentorships" element={<Mentorships />} />
           <Route path="/studies" element={<Studies />} />
           <Route path="/sponsors" element={<Sponsors />} />
-          <Route
-            path="/AuditoriasOEntrevistas"
-            element={<AuditoriasOEntrevistas />}
-          />
+          <Route path="/AuditoriasOEntrevistas" element={<AuditoriasOEntrevistas />} />
           <Route path="/" element={<Home />} />
           <Route path="/auditorias" element={<AuditoriasOEntrevistas />} />
+          <Route path="/about" element={<About />} /> {/* Ruta para About */}
         </Routes>
         <Footer />
       </Router>
     </AuthProvider>
   );
 };
+
 export default App;
