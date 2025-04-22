@@ -101,6 +101,9 @@ const Navbar = () => {
               </Link>{" "}
               {/* Añadido onClick */}
             </li>
+            <li>
+              <a href="/about" className="nav-link">About</a>
+            </li>
           </ul>
         </div>
       </nav>
