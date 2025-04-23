@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import './Navbar.css';
 import Hamburguesa from './Hamburguesa';
 
@@ -7,6 +7,8 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [colorIndex, setColorIndex] = useState(0);
   const colors = ['#FF0000', '#00FF00', '#0000FF', '#FFFF00', '#00FFFF', '#FF00FF'];
+
+  const location = useLocation(); // Hook para obtener la ruta actual
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -65,6 +67,17 @@ const Navbar = () => {
               color: "inherit",
             }}
           >
+            <li
+              style={{
+                textDecoration: "none",
+                color: location.pathname === "/" ? "gray" : "inherit", // Cambia el color si estás en Home
+                pointerEvents: location.pathname === "/" ? "none" : "auto", // Deshabilita el clic si estás en Home
+              }}
+            >
+              <Link to="/" onClick={toggleMenu}>
+                Home
+              </Link>
+            </li>
             <li style={{ textDecoration: "none", color: "inherit" }}>
               <Link to="/audits" onClick={toggleMenu}>
                 Audits
@@ -93,11 +106,6 @@ const Navbar = () => {
             <li style={{ textDecoration: "none", color: "inherit" }}>
               <Link to="/about" onClick={toggleMenu}>
                 About
-              </Link>
-            </li>
-            <li style={{ textDecoration: "none", color: "inherit" }}>
-              <Link to="/" onClick={toggleMenu}>
-                Home
               </Link>
             </li>
           </ul>
