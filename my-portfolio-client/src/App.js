@@ -11,7 +11,7 @@ import Footer from './components/Footer';
 import TechnicalChallenges from './components/TechnicalChallenges';
 import AuditoriasOEntrevistas from './components/AuditoriasOEntrevistas';
 import Sponsors from './components/Sponsors';
-import About from './components/About'; // Importa el componente About
+import About from './components/About';
 import { AuthProvider } from './loginComponents/context/AuthContext';
 import { LoginPage } from './loginComponents/pages/LoginPage';
 import RegisterPage from "./loginComponents/pages/RegisterPage";
@@ -34,7 +34,7 @@ const App = () => {
           <Route path="/AuditoriasOEntrevistas" element={<AuditoriasOEntrevistas />} />
           <Route path="/" element={<Home />} />
           <Route path="/auditorias" element={<AuditoriasOEntrevistas />} />
-          <Route path="/about" element={<About />} /> {/* Ruta para About */}
+          <Route path="/about" element={<About />} />
         </Routes>
         <Footer />
       </Router>
