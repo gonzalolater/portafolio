@@ -9,7 +9,7 @@ const Navbar = () => {
   const colors = ['#FF0000', '#00FF00', '#0000FF', '#FFFF00', '#00FFFF', '#FF00FF'];
 
   const toggleMenu = () => {
-    setIsOpen(!isOpen); // Esta es la clave: invierte el valor de isOpen
+    setIsOpen(!isOpen);
   };
 
   useEffect(() => {
@@ -39,7 +39,7 @@ const Navbar = () => {
         >
           <div
             className="hamburger"
-            onClick={toggleMenu} // Usamos toggleMenu aquí
+            onClick={toggleMenu}
             style={{
               cursor: "pointer",
             }}
@@ -68,41 +68,37 @@ const Navbar = () => {
             <li style={{ textDecoration: "none", color: "inherit" }}>
               <Link to="/audits" onClick={toggleMenu}>
                 Audits
-              </Link>{" "}
-              {/* Añadido onClick */}
+              </Link>
             </li>
             <li style={{ textDecoration: "none", color: "inherit" }}>
               <Link to="/TechnicalChallenges" onClick={toggleMenu}>
                 Technical Challenges
-              </Link>{" "}
-              {/* Añadido onClick */}
+              </Link>
             </li>
             <li style={{ textDecoration: "none", color: "inherit" }}>
               <Link to="/studies" onClick={toggleMenu}>
                 Studies
-              </Link>{" "}
-              {/* Añadido onClick */}
+              </Link>
             </li>
             <li style={{ textDecoration: "none", color: "inherit" }}>
               <Link to="/sponsors" onClick={toggleMenu}>
                 Sponsors
-              </Link>{" "}
-              {/* Añadido onClick */}
+              </Link>
             </li>
             <li style={{ textDecoration: "none", color: "inherit" }}>
               <Link to="/AuditoriasOEntrevistas" onClick={toggleMenu}>
                 Audits & Interviews
-              </Link>{" "}
-              {/* Añadido onClick */}
+              </Link>
+            </li>
+            <li style={{ textDecoration: "none", color: "inherit" }}>
+              <Link to="/about" onClick={toggleMenu}>
+                About
+              </Link>
             </li>
             <li style={{ textDecoration: "none", color: "inherit" }}>
               <Link to="/" onClick={toggleMenu}>
                 Home
-              </Link>{" "}
-              {/* Añadido onClick */}
-            </li>
-            <li>
-              <a href="/about" className="nav-link">About</a>
+              </Link>
             </li>
           </ul>
         </div>
