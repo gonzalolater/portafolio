@@ -44,4 +44,26 @@
     display: flex; 
   }
   
+  .navbar-text {
+    position: absolute;
+    top: 50%;
+    right: -150px; /* Comienza fuera de la pantalla */
+    transform: translateY(-50%);
+    font-size: 16px;
+    font-weight: bold;
+    color: black;
+    animation: slideIn 1s forwards; /* Animación para deslizar el texto */
+  }
+
+  @keyframes slideIn {
+    from {
+      right: -150px; /* Comienza fuera de la pantalla */
+      opacity: 0;
+    }
+    to {
+      right: 10px; /* Termina cerca del ícono de la hamburguesa */
+      opacity: 1;
+    }
+  }
+  
   /* Agrega más estilos CSS según tus necesidades */
