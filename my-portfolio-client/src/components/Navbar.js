@@ -6,6 +6,7 @@ import Hamburguesa from './Hamburguesa';
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [colorIndex, setColorIndex] = useState(0);
+  const [showNavbarText, setShowNavbarText] = useState(false); // Estado para mostrar el texto animado
   const colors = ['#FF0000', '#00FF00', '#0000FF', '#FFFF00', '#00FFFF', '#FF00FF'];
 
   const location = useLocation(); // Hook para obtener la ruta actual
@@ -22,6 +23,15 @@ const Navbar = () => {
     return () => clearInterval(intervalId);
   }, [colors.length]);
 
+  // Muestra el texto animado después de 5 segundos
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowNavbarText(true);
+    }, 5000); // 5 segundos
+
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <>
       <nav>
@@ -30,7 +40,7 @@ const Navbar = () => {
             display: "flex",
             alignItems: "center",
             justifyContent: "space-between",
-            padding: "10px",
+            padding: "5px", // Reducido de 10px a 5px para hacer la navbar más fina
             backgroundColor: "violet",
             position: "fixed",
             top: "0",
@@ -44,9 +54,27 @@ const Navbar = () => {
             onClick={toggleMenu}
             style={{
               cursor: "pointer",
+              position: "relative",
+              display: "flex",
+              alignItems: "center", // Asegura que el texto y las líneas estén alineados verticalmente
             }}
           >
             <Hamburguesa color={colors[colorIndex]} />
+            {showNavbarText && (
+              <span
+                className="navbar-text"
+                style={{
+                  marginLeft: "40px", // Margen izquierdo de 40px
+                  marginTop: "20px", // Margen superior de 20px
+                  fontSize: "16px",
+                  fontWeight: "bold",
+                  color: "black",
+                  position: "relative", // Asegura que el margen se aplique correctamente
+                }}
+              >
+                ← NAVBAR
+              </span>
+            )}
           </div>
           <ul
             className="menu"
