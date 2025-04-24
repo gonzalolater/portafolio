@@ -7,6 +7,7 @@ import "./Home.css";
 
 const Home = () => {
   const [showMessage, setShowMessage] = useState(false);
+  const [zIndex, setZIndex] = useState(10); // Estado para manejar el z-index
 
   // Maneja la visibilidad del mensaje al hacer scroll
   useEffect(() => {
@@ -23,13 +24,20 @@ const Home = () => {
     };
   }, []);
 
-  // Muestra el mensaje después de 4 segundos
+  // Muestra el mensaje después de 4 segundos y cambia el z-index después de 15 segundos
   useEffect(() => {
-    const timer = setTimeout(() => {
+    const timerShow = setTimeout(() => {
       setShowMessage(true); // Muestra el mensaje después de 4 segundos
-    }, 4000); // Cambiado a 4000ms (4 segundos)
+    }, 4000);
 
-    return () => clearTimeout(timer);
+    const timerZIndex = setTimeout(() => {
+      setZIndex(-10); // Cambia el z-index después de 15 segundos
+    }, 15000); // Cambiado a 15 segundos
+
+    return () => {
+      clearTimeout(timerShow);
+      clearTimeout(timerZIndex);
+    };
   }, []);
 
   return (
@@ -40,6 +48,30 @@ const Home = () => {
           alt="Foto de perfil"
           className="profile-photo"
         />
+        {showMessage && (
+          <div
+            className="scroll-prompt"
+            style={{
+              zIndex: zIndex, // Cambia dinámicamente el z-index
+              position: "absolute", // Posición absoluta para colocarlo sobre la foto
+              top: "60px", // Ajusta la posición vertical con un margen superior de 40px
+              right: "20px", // Ajusta la posición horizontal con un margen derecho adicional de 10px
+              backgroundColor: "rgba(255, 255, 255, 0.8)", // Fondo semitransparente para visibilidad
+              padding: "10px",
+              borderRadius: "50%", // Hace que el elemento sea circular
+              boxShadow: "0 2px 4px rgba(0, 0, 0, 0.2)",
+              textAlign: "center", // Centra el texto dentro del círculo
+              width: "60px", // Ancho del círculo
+              height: "60px", // Alto del círculo
+              display: "flex", // Para centrar el contenido
+              alignItems: "center", // Centra verticalmente el contenido
+              justifyContent: "center", // Centra horizontalmente el contenido
+            }}
+          >
+            SCROLL DOWN <br />
+            <span>↓</span>
+          </div>
+        )}
         <div className="info-section">
           <h2>Gonzalo Daniel Aguilar</h2>
           <p className="visitor-count">
@@ -58,12 +90,6 @@ const Home = () => {
           </ul>
         </div>
       </div>
-      {showMessage && (
-        <div className="scroll-prompt">
-          SCROLL DOWN<br />
-          <span>↓</span>
-        </div>
-      )}
       <h2 className="social-links-title">Social Web Links</h2>
       <div className="social-links">
         {[
