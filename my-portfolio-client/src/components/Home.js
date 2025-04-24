@@ -8,9 +8,12 @@ import "./Home.css";
 const Home = () => {
   const [showMessage, setShowMessage] = useState(false);
 
+  // Maneja la visibilidad del mensaje al hacer scroll
   useEffect(() => {
     const handleScroll = () => {
-      setShowMessage(window.scrollY === 0); // Oculta el mensaje si el usuario baja
+      if (window.scrollY > 0) {
+        setShowMessage(false); // Oculta el mensaje si el usuario baja
+      }
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -20,10 +23,11 @@ const Home = () => {
     };
   }, []);
 
+  // Muestra el mensaje después de 4 segundos
   useEffect(() => {
     const timer = setTimeout(() => {
-      setShowMessage(true); // Muestra el mensaje después de 5 segundos
-    }, 5000); // Cambiado a 5000ms (5 segundos)
+      setShowMessage(true); // Muestra el mensaje después de 4 segundos
+    }, 4000); // Cambiado a 4000ms (4 segundos)
 
     return () => clearTimeout(timer);
   }, []);
