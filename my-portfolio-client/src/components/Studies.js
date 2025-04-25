@@ -44,18 +44,22 @@ const Studies = () => {
     { id: "33", title: "Training to Dynamize Innovation Systems from the Public Sector", imgSrc: "https://i.ibb.co/X2thKfs/Training-to-Dynamize-Innovation-Systems-from-the-Public-Sector.jpg", link: "https://ibb.co/w049PZW" },
   ];
   
-  const renderContent = (item) => {
+  const renderContent = (item, isLast) => {
     if (item.imgSrc) {
       return (
         <img
-        style={{ display: 'block', margin: '0 auto' }}
-        src={item.imgSrc}
+          style={{
+            display: 'block',
+            margin: isLast ? '0 auto 50px auto' : '0 auto', // Agrega margen inferior solo a la última imagen
+            maxWidth: '100%', // Asegura que la imagen no exceda el ancho del contenedor
+            height: 'auto', // Mantiene la proporción de la imagen
+          }}
+          src={item.imgSrc}
           alt={item.title}
           border="0"
         />
       );
     } else if (item.link) {
-      // Wrap the link in a span and apply inline styles for centering
       return (
         <span style={{ display: 'block', textAlign: 'center' }}>
           <a href={item.link}>{item.title}</a>
@@ -68,12 +72,12 @@ const Studies = () => {
 
   return (
     <main id="studies-List" style={{ marginTop: "50px" }}>
-      {courses.map((item) => (
+      {courses.map((item, index) => (
         <section className="main-section" id={item.id} key={item.id}>
           <header style={{ textAlign: 'center' }}>
             <h2>{item.title}</h2>
           </header>
-          <article>{renderContent(item)}</article>
+          <article>{renderContent(item, index === courses.length - 1)}</article>
         </section>
       ))}
     </main>
