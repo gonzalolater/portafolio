@@ -1,270 +1,307 @@
-body, html {
-    margin: 0; /* Elimina márgenes del body y html */
-    padding: 0; /* Elimina padding del body y html */
-    width: 100%; /* Asegúrate de que ocupen todo el ancho */
-    height: 100%; /* Asegúrate de que ocupen todo el alto */
-    box-sizing: border-box; /* Incluye bordes y padding en el tamaño total */
-    overflow-x: hidden; /* Evita el desplazamiento horizontal */
+@import 'https://fonts.googleapis.com/css?family=Lato:400,700';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.auditorias-wrapper {
-    font-family: Arial, sans-serif;
-    color: #333;
-    background-color: #f9f9f9;
-    padding: 20px;
-    margin: 0; /* Elimina márgenes del contenedor principal */
-    padding: 0; /* Elimina padding del contenedor principal */
-    width: 100%; /* Asegúrate de que ocupe todo el ancho */
+body {
+  background-color: #FFFFFF;
+  font-family: 'Verdana', sans-serif;
 }
 
-.auditorias-header {
-    display: flex;
-    justify-content: space-between; /* Separa el logo y la navbar */
-    align-items: center;
-    background-color: #6200ea; /* Color de fondo */
-    color: white; /* Color del texto */
-    padding: 10px 15px; /* Espaciado interno */
-    position: fixed; /* Fija el header en la parte superior */
-    top: 0;
-    left: 0;
-    width: 100%; /* Asegúrate de que ocupe todo el ancho */
-    z-index: 1000; /* Asegúrate de que esté por encima de otros elementos */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra para destacar */
-    overflow-x: hidden; /* Evita que el contenido se desborde horizontalmente */
+#page-wrapper {
+  position: relative;
 }
 
-.auditorias-header .logo img {
-    height: 50px;
+li {
+  list-style: none;
+}
+
+a {
+  color: #000000;
+  text-decoration: none;
+}
+.container {
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.btn {
+  padding: 0 20px;
+  height: 40px;
+  font-size: 1.5em;
+  font-weight: 900;
+  text-transform: uppercase;
+  border: 3px black solid;
+  border-radius: 2px;
+  background: transparent;
+  cursor: pointer;
+}
+
+.grid {
+  display: flex;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  min-height: 75px;
+  padding: 0px 20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #ffffff;
+}
+
+@media (max-width: 600px) {
+  header {
+    flex-wrap: wrap;
+  }
 }
 
 .logo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: visible; /* Asegúrate de que el contenido no se oculte */
-    z-index: 10; /* Asegúrate de que el logo esté por encima de otros elementos */
-    margin-top: 20px; /* Agrega margen superior */
+  width: 55vw;
 }
 
-#header-img {
-    width: 50px; /* Ajusta el tamaño según sea necesario */
-    height: 50px;
-    display: block;
+@media (max-width: 650px) {
+  .logo {
+    margin-top: 15px;
+    width: 100%;
+    position: relative;
+  }
 }
 
-.auditorias-nav ul {
-    list-style: none; /* Elimina las viñetas */
-    padding: 0; /* Elimina el padding */
-    margin: 0; /* Elimina el margen */
-    display: flex; /* Usa flexbox para alinear los elementos */
-    justify-content: flex-end; /* Alinea los elementos al lado derecho */
-    gap: 15px; /* Espaciado entre los elementos */
-    flex-wrap: nowrap; /* Evita que los elementos se ajusten a una nueva línea */
-    overflow-x: hidden; /* Evita el desplazamiento horizontal */
-    max-width: 100%; /* Asegúrate de que no se desborde */
-    box-sizing: border-box; /* Incluye padding y bordes en el ancho total */
+.logo > img {
+  width: 100%;
+  height: 100%;
+  max-width: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-left: 20px;
 }
 
-.auditorias-nav .nav-link {
-    color: white; /* Color del texto */
-    text-decoration: none; /* Elimina el subrayado */
-    font-weight: bold; /* Texto en negrita */
-    font-size: 14px; /* Tamaño del texto */
-    white-space: nowrap; /* Evita que las palabras se dividan en varias líneas */
+@media (max-width: 650px) {
+  .logo > img {
+    margin: 0 auto;
+  }
 }
 
-.auditorias-nav .nav-link:last-child {
-    margin-right: 30px; /* Cambia el margen derecho a 20px */
+nav {
+  font-weight: 400;
 }
 
-.auditorias-nav .btn-home {
-    background-color: #6200ea;
-    color: white;
-    padding: 8px 12px;
-    border-radius: 5px;
-    text-decoration: none;
-    font-size: 14px;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
-}
-
-.auditorias-nav .btn-home:hover {
-    background-color: #4500b5;
-}
-
-.auditorias-container {
-    margin-top: 60px; /* Espacio para el header fijo */
-    margin-bottom: 60px; /* Espacio para el footer fijo */
-    padding: 15px;
-}
-
-.auditorias-hero {
-    text-align: center;
-    margin-bottom: 30px;
-}
-
-.auditorias-form {
+@media (max-width: 650px) {
+  nav {
+    margin-top: 10px;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10px;
-}
-
-.auditorias-form input[type="email"] {
-    padding: 10px;
-    width: 300px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-.auditorias-form .btn {
-    padding: 10px 20px;
-    background-color: #6200ea;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.auditorias-precio {
     text-align: center;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 0 50px;
+  }
+  nav li {
+    padding-bottom: 5px;
+  }
 }
 
-.auditorias-footer {
-    text-align: center; /* Centra el contenido del footer */
-    background-color: #6200ea; /* Color de fondo */
-    color: white; /* Color del texto */
-    padding: 10px 15px; /* Espaciado interno */
-    font-size: 14px; /* Tamaño del texto */
-    line-height: 1.5; /* Espaciado entre líneas */
-    width: 100%; /* Asegúrate de que ocupen todo el ancho */
-    position: fixed; /* Fija el footer en la parte inferior */
-    bottom: 0;
-    left: 0;
-    z-index: 1000; /* Asegúrate de que esté por encima de otros elementos */
+nav > ul {
+  width: 30vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
 
-.auditorias-footer ul {
-    list-style: none; /* Elimina las viñetas */
-    padding: 0; /* Elimina el padding */
-    margin: 0; /* Elimina el margen */
-    display: flex; /* Usa flexbox para alinear los elementos en línea */
-    justify-content: center; /* Centra los elementos horizontalmente */
-    gap: 15px; /* Espaciado entre los elementos */
-    flex-wrap: nowrap; /* Evita que los elementos se ajusten a una nueva línea */
+@media (max-width: 650px) {
+  nav > ul {
+    flex-direction: column;
+  }
 }
 
-.auditorias-footer ul li {
-    display: inline; /* Asegúrate de que los elementos sean en línea */
+#hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 200px;
+  margin-top: 50px;
 }
 
-.auditorias-footer ul li a {
-    color: white; /* Color del texto */
-    text-decoration: none; /* Elimina el subrayado */
-    font-weight: bold; /* Texto en negrita */
-    font-size: 14px; /* Tamaño del texto */
+#hero > h2 {
+  margin-bottom: 20px;
+  word-wrap: break-word;
 }
 
-.auditorias-footer span {
-    display: block; /* Asegurarse de que el texto sea un bloque separado */
-    margin-top: 5px; /* Espaciado superior */
-    font-size: 10px; /* Reduce el tamaño de fuente para dispositivos pequeños */
+#hero input[type='email'] {
+  max-width: 275px;
+  width: 100%;
+  padding: 5px;
 }
 
-.extra-section {
-    background-color: #f1f1f1;
+#hero input[type='submit'] {
+  max-width: 150px;
+  width: 100%;
+  height: 30px;
+  margin: 15px 0;
+  border: 0;
+  background-color: #f1c40f;
+}
+
+#hero input[type='submit']:hover {
+  background-color: red;
+  transition: background-color 2s;
+}
+
+@media (max-width: 650px) {
+  #hero {
+    margin-top: 120px;
+  }
+}
+
+#caracteristicas {
+  margin-top: 10px;
+}
+
+#caracteristicas .icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 90px;
+  width: auto;
+  color: darkred;
+}
+
+@media (max-width: 550px) {
+  #caracteristicas .icon {
+    display: none;
+  }
+}
+
+#caracteristicas .desc {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100px;
+  width: 80vw;
+  padding: 5px;
+}
+
+@media (max-width: 550px) {
+  #caracteristicas .desc {
+    width: 100%;
     text-align: center;
-    padding: 20px;
-    margin-bottom: 20px;
-    border-top: 1px solid #ddd;
+    padding: 0;
+    height: 150px;
+  }
 }
 
-.extra-section h3 {
-    font-size: 18px;
-    color: #333;
+@media (max-width: 650px) {
+  #caracteristicas {
+    margin-top: 0;
+  }
+}
+
+#como-funciona {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+#como-funciona > iframe {
+  max-width: 560px;
+  width: 100%;
+}
+
+#precio {
+  margin-top: 60px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.product {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: calc(100% / 3);
+  margin: 10px;
+  border: 1px solid #000;
+  border-radius: 3px;
+}
+
+.product > .level {
+  background-color: #D01F1F;
+  color: black;
+  padding: 15px 0;
+  width: 100%;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.product > h2 {
+  margin-top: 15px;
+}
+
+.product > ol {
+  margin: 15px 0;
+}
+
+.product > ol > li {
+  padding: 5px 0;
+}
+
+.product > button {
+  border: 0;
+  margin: 15px 0;
+  background-color: #D01F1F;
+  font-weight: 400;
+}
+
+.product > button:hover {
+  background-color: orange;
+  transition: background-color 1s;
+}
+
+@media (max-width: 800px) {
+  #precio {
+    flex-direction: column;
+  }
+  .product {
+    max-width: 300px;
+    width: 100%;
+    margin: 0 auto;
     margin-bottom: 10px;
+  }
 }
 
-.extra-section p {
-    font-size: 14px;
-    color: #555;
-    margin-bottom: 15px;
+footer {
+  margin-top: 30px;
+  background-color: #FC5D5D;
+  padding: 20px;
 }
 
-.extra-section .btn-secondary {
-    padding: 10px 20px;
-    background-color: #6200ea;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    font-size: 14px;
-    font-weight: bold;
-    cursor: pointer;
+footer > ul {
+  display: flex;
+  justify-content: flex-end;
 }
 
-.extra-section .btn-secondary:hover {
-    background-color: #4500b5;
+footer > ul > li {
+  padding: 0 10px;
 }
 
-.btn-home {
-    display: inline-block; /* Asegúrate de que el botón sea un bloque en línea */
-    margin: 20px auto; /* Centra el botón horizontalmente y agrega espacio superior e inferior */
-    background: linear-gradient(90deg, #ff69b4, #8a2be2); /* Gradiente de rosa a violeta */
-    color: white; /* Color del texto */
-    padding: 10px 15px; /* Espaciado interno */
-    border: 1px solid black; /* Borde negro */
-    border-radius: 5px; /* Bordes redondeados */
-    text-decoration: none; /* Elimina el subrayado */
-    font-size: 14px; /* Tamaño del texto */
-    font-weight: bold; /* Texto en negrita */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Sombra para destacar */
-    transition: background-color 0.3s ease, transform 0.2s ease; /* Transición para hover */
-    text-align: center;
-}
-
-.btn-home:hover {
-    background: linear-gradient(90deg, #ff1493, #6a0dad); /* Gradiente más oscuro al pasar el mouse */
-    transform: scale(1.05); /* Efecto de agrandamiento */
-    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.4); /* Sombra más pronunciada */
-}
-
-.auditorias-development {
-    text-align: center; /* Centra el contenido dentro de la sección */
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    .auditorias-header {
-        flex-direction: row; /* Mantén los elementos en una fila */
-        align-items: center;
-    }
-
-    .auditorias-nav ul {
-        justify-content: flex-end; /* Alinea los elementos al lado derecho */
-        flex-wrap: nowrap; /* Evita que los elementos se ajusten a una nueva línea */
-        overflow-x: auto; /* Permite desplazamiento horizontal si es necesario */
-    }
-
-    .auditorias-nav .nav-link {
-        font-size: 12px; /* Reduce el tamaño del texto en pantallas pequeñas */
-    }
-
-    .auditorias-footer ul {
-        flex-direction: column; /* Alinea los enlaces del footer verticalmente */
-        gap: 5px;
-    }
-
-    .auditorias-footer span {
-        font-size: 10px; /* Reduce aún más el tamaño de fuente */
-    }
-
-    .btn-home {
-        bottom: 10px; /* Ajusta la distancia desde la parte inferior */
-        right: 10px; /* Ajusta la distancia desde la parte derecha */
-        font-size: 12px; /* Reduce el tamaño del texto */
-    }
+footer > span {
+  margin-top: 5px;
+  display: flex;
+  justify-content: flex-end;
+  font-size: 0.9em;
+  color: #444;
+}#message {
+  height: 90px; /* Ajusta la altura del campo de texto */
 }
