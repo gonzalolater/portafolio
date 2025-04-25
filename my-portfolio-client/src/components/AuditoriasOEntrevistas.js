@@ -1,134 +1,130 @@
-import React, { useState, useEffect } from 'react';
-import { initMercadoPago, Wallet } from '@mercadopago/sdk-react';
-import './AuditoriasOEntrevistas.css'; // Make sure this CSS file exists
-
-initMercadoPago('YOUR_PUBLIC_KEY'); // Replace with your Mercado Pago public key
+import React, { useRef } from 'react';
+import emailjs from '@emailjs/browser';
+import './AuditoriasOEntrevistas.css'; // Asegúrate de que este archivo contenga el CSS proporcionado
 
 const AuditoriasOEntrevistas = () => {
-    const [preferenceId, setPreferenceId] = useState(null);
+  const form = useRef();
 
-    const handlePayment = async () => {
-        try {
-            const response = await fetch('/api/create-preference', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({
-                    items: [
-                        {
-                            title: 'Technical Audit or Interview',
-                            quantity: 1,
-                            currency_id: 'USD',
-                            unit_price: 50, // Price in USD
-                        },
-                    ],
-                }),
-            });
+  const sendEmail = (e) => {
+    e.preventDefault();
 
-            const preference = await response.json();
-            setPreferenceId(preference.id); // Save the preferenceId in the state
-        } catch (error) {
-            console.error('Error creating payment preference:', error);
+    emailjs
+      .sendForm(
+        'service_iohvlx7', // Tu Service ID
+        'template_v9jfdik', // Tu Template ID
+        form.current,
+        {
+          publicKey: 'kwP9r1QFPmCcHszaC', // Tu Public Key
         }
-    };
+      )
+      .then(
+        () => {
+          alert('Email sent successfully!');
+        },
+        (error) => {
+          alert('Failed to send email. Please try again later.');
+          console.error('Error:', error.text);
+        }
+      );
+  };
 
-    useEffect(() => {
-        handlePayment(); // Call the function to get the preferenceId when the component mounts
-    }, []);
+  return (
+    <div id="page-wrapper">
+      <div className="container"></div>
 
-    return (
-        <div id="page-wrapper" className="auditorias-wrapper">
-            <header id="header" className="auditorias-header">
-                <div className="logo">
-                    <img
-                        id="header-img"
-                        src="/favicon.ico" // Correct path for files in the public folder
-                        alt="personal professional logo"
-                    />
-                </div>
-                <nav id="nav-bar" className="auditorias-nav">
-                    <ul>
-                        <li>
-                            <a className="nav-link" href="#features">Features</a>
-                        </li>
-                        <li>
-                            <a className="nav-link" href="#how-it-works">How it works</a>
-                        </li>
-                        <li>
-                            <a className="nav-link" href="#pricing">Pricing</a>
-                        </li>
-                    </ul>
-                </nav>
-            </header>
+      <section id="hero">
+        <h1 style={{ marginBottom: '30px', marginTop: '25px' }}>Interviews, Technical Interviews & Audits.</h1>
+        <form id="form" ref={form} onSubmit={sendEmail}>
+          <label htmlFor="email">Email: </label>
+          <input
+            name="user_email"
+            id="email"
+            type="email"
+            placeholder="Enter your email"
+            className="input"
+            required
+          />
+          <label htmlFor="message"> Message: </label>
+          <textarea
+            name="message"
+            id="message"
+            placeholder="Enter your message, your contact method, and the reason why you want to contact me through this medium."
+            className="input"
+            rows="4" // Ajusta el número de filas para que el placeholder sea completamente visible
+            required
+          ></textarea>
+          <input id="submit" type="submit" value="Send" className="btn" />
+        </form>
+      </section>
 
-            <div className="container auditorias-container">
-                <section id="hero" className="auditorias-hero">
-                    <h2>Audits, Interviews, Technical Interviews</h2>
-                    <form
-                        id="form"
-                        action="https://www.freecodecamp.com/email-submit"
-                        className="auditorias-form"
-                    >
-                        <input
-                            name="email"
-                            id="email"
-                            type="email"
-                            placeholder="Enter your Email"
-                            required
-                        />
-                        <input id="submit" type="submit" value="Submit" className="btn" />
-                    </form>
-                </section>
-
-                <section id="development" className="auditorias-development">
-                    <h2 style={{ textAlign: 'center', margin: '20px 0', color: '#6200ea' }}>
-                        This page is still under development
-                    </h2>
-                    <a href="/" className="btn-home">Go to Home</a>
-                </section>
-
-                <section id="pricing" className="auditorias-precio">
-                    <div className="product" id="tenor">
-                        <div className="level">Technical Audits or Interviews</div>
-                        <h2>$50 USD</h2>
-                        <p>
-                            Make the payment to schedule your technical audit or interview.
-                        </p>
-                        {preferenceId ? (
-                            <Wallet initialization={{ preferenceId }} />
-                        ) : (
-                            <p>Loading...</p>
-                        )}
-                    </div>
-                </section>
-
-                <section
-                  className="extra-section"
-                  style={{
-                    marginBottom: "30px", // Aumenta el margen inferior a 30px
-                  }}
-                >
-                  <h3>Do you have questions?</h3>
-                  <p>
-                    Contact us to get more information about our audits and technical interviews.
-                  </p>
-                  <a href="#contact" className="btn btn-secondary">
-                    Contact us
-                  </a>
-                </section>
+      <div className="container">
+        <section id="caracteristicas">
+          <div className="grid">
+            <div className="icon">
+              <i className="fa fa-3x fa-clock"></i>
             </div>
-
-            <footer className="auditorias-footer">
-                <ul>
-                    <li>Privacy</li>
-                    <li>Terms</li>
-                    <li>Contact</li>
-                </ul>
-                <span>Copyright 2025, Page created by Gonzalo Daniel Aguilar.</span>
-            </footer>
-        </div>
-    );
+            <div className="desc">
+              <h2>Complete Training Plan</h2>
+              <p>
+                From individual training to training sessions lasting 3 months
+                or more, to achieve your professional goals.
+              </p>
+            </div>
+          </div>
+          <div className="grid">
+            <div className="icon">
+              <i className="fa fa-3x fa-calendar"></i>
+            </div>
+            <div className="desc">
+              <h2>
+                Looking for software developers and engineers for different
+                technologies.
+              </h2>
+              <p>
+                I have a wide list of active developers for different projects
+                and monetary scope.
+              </p>
+            </div>
+          </div>
+        </section>
+        <section id="precio">
+          <div className="product" id="tenor">
+            <div className="level">Interview</div>
+            <h2>$10 USD per hour</h2>
+            <ol>
+              <li>Presentation</li>
+              <li>Filling out forms</li>
+              <li>Skills test</li>
+              <li>Feedback and follow-up</li>
+            </ol>
+            <button className="btn">Choose</button>
+          </div>
+          <div className="product" id="bass">
+            <div className="level">Technical interviews</div>
+            <h2>$20 USD per hour</h2>
+            <ol>
+              <li>Technical Challenges</li>
+              <li>Meetings with Specialists</li>
+              <li>Workflow Chart Design</li>
+              <li>MVP Development</li>
+            </ol>
+            <button className="btn">Choose</button>
+          </div>
+          <div className="product" id="valve">
+            <div className="level">Audits</div>
+            <h2>$30 USD per hour</h2>
+            <ol>
+              <li>Conclusion</li>
+              <li>Performance improvements</li>
+              <li>Technical improvements</li>
+              <li>Security improvements</li>
+            </ol>
+            <button className="btn">Choose</button>
+          </div>
+        </section>
+      </div>
+    </div>
+  );
 };
 
 export default AuditoriasOEntrevistas;
