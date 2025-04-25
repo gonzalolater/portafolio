@@ -103,14 +103,19 @@ const AuditoriasOEntrevistas = () => {
                     </div>
                 </section>
 
-                <section className="extra-section">
-                    <h3>Do you have questions?</h3>
-                    <p>
-                        Contact us to get more information about our audits and technical interviews.
-                    </p>
-                    <a href="#contact" className="btn btn-secondary">
-                        Contact us
-                    </a>
+                <section
+                  className="extra-section"
+                  style={{
+                    marginBottom: "30px", // Aumenta el margen inferior a 30px
+                  }}
+                >
+                  <h3>Do you have questions?</h3>
+                  <p>
+                    Contact us to get more information about our audits and technical interviews.
+                  </p>
+                  <a href="#contact" className="btn btn-secondary">
+                    Contact us
+                  </a>
                 </section>
             </div>
 
