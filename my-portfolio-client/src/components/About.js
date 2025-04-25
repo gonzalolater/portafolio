@@ -3,7 +3,15 @@ import React from 'react';
 const About = () => {
   return (
     <div style={{ textAlign: 'center', marginTop: '50px' }}>
-      <h1>About This Portfolio TOP 25 Global Microsoft Azure Hackaton</h1>
+      <h1
+        style={{
+          margin: '5px', // Margen de 5px alrededor del borde
+          border: '5px solid black', // Borde de 5px de color negro
+          padding: '10px', // Espaciado interno para que el texto no toque el borde
+        }}
+      >
+        About This Portfolio TOP 25 Global Microsoft Azure Hackaton
+      </h1>
       <img
         src="https://github.com/gonzalolater/portafolio/assets/42863568/bfeb85a4-e013-4bb5-a8ab-444eb59ecfe2"
         alt="Portfolio Preview"
