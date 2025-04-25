@@ -22,7 +22,11 @@ const About = () => {
           height: 'auto',
         }}
       />
-      <p>
+      <p
+        style={{
+          margin: '10px', // Agrega un margen de 10px alrededor del párrafo
+        }}
+      >
         This portfolio was created by Gonzalo Daniel Aguilar. You can find the source code on GitHub.
       </p>
       <a
