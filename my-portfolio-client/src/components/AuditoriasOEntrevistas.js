@@ -43,6 +43,8 @@ const AuditoriasOEntrevistas = () => {
             placeholder="Enter your email"
             className="input"
             required
+            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" // Expresión regular para validar correos electrónicos
+            title="Please enter a valid email address"
           />
           <label htmlFor="message"> Message: </label>
           <textarea
