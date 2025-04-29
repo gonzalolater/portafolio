@@ -41,7 +41,7 @@ const Navbar = () => {
             alignItems: "center",
             justifyContent: "space-between",
             padding: "5px", // Reducido de 10px a 5px para hacer la navbar más fina
-            backgroundColor: "#FF91AF",
+            background: "linear-gradient(to right, #FF91AF, #8a2be2)", // Gradiente aplicado
             position: "fixed",
             top: "0",
             left: "0",
