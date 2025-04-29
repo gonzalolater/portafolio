@@ -18,7 +18,7 @@ const ChatButton = () => {
     setLoading(true); // Inicia el estado de carga
     try {
       const response = await fetch(
-        'https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=AIzaSyC3vEX8lyM4wuk-a4vpzB2MdWiWdI3eB1A', // Reemplaza GEMINI_API_KEY con tu clave API
+        'https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=', // Nueva clave API
         {
           method: 'POST',
           headers: {
@@ -36,14 +36,14 @@ const ChatButton = () => {
 
       const data = await response.json();
       if (response.ok) {
-        // Extrae la respuesta del modelo
         const generatedText = data.contents[0]?.parts[0]?.text || 'No response received.';
         setChatResponse(generatedText);
       } else {
-        setChatResponse('Error: Unable to fetch response from the API.');
+        console.error('API Error:', data);
+        setChatResponse(`Error: ${data.error?.message || 'Unable to fetch response from the API.'}`);
       }
     } catch (error) {
-      console.error('Error fetching chat response:', error);
+      console.error('Fetch Error:', error);
       setChatResponse('Error: Something went wrong.');
     } finally {
       setLoading(false); // Finaliza el estado de carga
