@@ -61,11 +61,16 @@
   }
   
   .skills-list {
-    list-style-type: disc;
-    padding-left: 20px;
-    margin-bottom: 20px;
-    text-align: left; /* Alinea el texto a la izquierda */
-  }
+  list-style-type: disc; /* Muestra puntos como viñetas */
+  padding-left: 40px; /* Asegura espacio para los puntos */
+  text-align: left; /* Alinea los puntos y el texto a la izquierda */
+  margin: 20px auto 0; /* Agrega un margen superior de 20px y centra la lista */
+  max-width: 600px; /* Limita el ancho de la lista */
+}
+
+.skills-list li {
+  margin-bottom: 5px; /* Espaciado entre los elementos de la lista */
+}
   
   .scroll-prompt {
     position: fixed;
