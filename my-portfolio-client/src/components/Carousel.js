@@ -123,11 +123,10 @@ const Carousel = () => {
 
   const messageElementStyle = {
     width: '100%',
-    backgroundColor: '#FF91AF',
+    background: 'linear-gradient(to right, #FF91AF, #8a2be2)', // Gradiente aplicado
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
-    background: '#FF91AF',
     color: '#FFFFFF',
     fontSize: '10px',
     fontWeight: 'bold',
@@ -182,7 +181,7 @@ const Carousel = () => {
   };
   const buttonStyle = {
     marginTop: '-12px',
-    background: '#FF91AF',
+    background: 'linear-gradient(to right, #FF91AF, #8a2be2)', // Gradiente aplicado
     border: 'none',
     color: 'white',
     padding: '15px 16px',
@@ -198,7 +197,7 @@ const Carousel = () => {
 
   const buttonStyle1 = {
     marginTop: '-12px',
-    background: '#FF91AF',
+    background: 'linear-gradient(to right, #FF91AF, #8a2be2)', // Gradiente aplicado
     color: 'white',
     padding: '15px 16px',
     textAlign: 'center',
@@ -209,7 +208,7 @@ const Carousel = () => {
     cursor: 'pointer',
     borderRadius: '5px',
     fontWeight: 'bold',
-    border: '3px solid red'
+    border: '3px solid red',
   };
 
   const navigate = (direction) => {
@@ -224,9 +223,9 @@ const Carousel = () => {
   };
 
   const handleClickButton = () => {
-    alert('CLICK IMAGE PLEASE !!!'); 
+    alert('CLICK IMAGE PLEASE !!!');
   };
-  
+
   return (
     <div style={containerStyle}>
       <div style={messageElementStyle}>
@@ -262,7 +261,7 @@ const Carousel = () => {
           </button>
           <button style={buttonStyle1} onClick={handleClickButton}>
             CLICK IMAGES
-            </button> 
+            </button>
         </div>
       </div>
     </div>
