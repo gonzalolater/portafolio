@@ -39,7 +39,7 @@
     padding: 10px;
     border: 2px solid red;
     border-radius: 10px;
-    background-color: violet;
+    background-color: #FF91AF;
     color: white;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     -webkit-text-stroke: 1px red;
@@ -98,7 +98,7 @@
       padding: 10px;
       border: 2px solid red;
       border-radius: 10px;
-      background-color: violet;
+      background-color: #FF91AF;
       color: white;
       text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
       -webkit-text-stroke: 1px red;
