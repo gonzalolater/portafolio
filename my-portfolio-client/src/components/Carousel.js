@@ -123,11 +123,11 @@ const Carousel = () => {
 
   const messageElementStyle = {
     width: '100%',
-    backgroundColor: '#f0f0f0',
+    backgroundColor: '#FF91AF',
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
-    background: 'violet',
+    background: '#FF91AF',
     color: '#FFFFFF',
     fontSize: '10px',
     fontWeight: 'bold',
@@ -182,7 +182,7 @@ const Carousel = () => {
   };
   const buttonStyle = {
     marginTop: '-12px',
-    background: 'violet',
+    background: '#FF91AF',
     border: 'none',
     color: 'white',
     padding: '15px 16px',
@@ -198,7 +198,7 @@ const Carousel = () => {
 
   const buttonStyle1 = {
     marginTop: '-12px',
-    background: 'violet',
+    background: '#FF91AF',
     color: 'white',
     padding: '15px 16px',
     textAlign: 'center',
