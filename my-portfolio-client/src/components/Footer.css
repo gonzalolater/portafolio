@@ -1,5 +1,5 @@
 .footer {
-    background: linear-gradient(to right, #8a2be2, #FF91AF); /* Gradiente violeta */
+    background: linear-gradient(to right, #FF91AF, #8a2be2); /* Gradiente violeta */
     color: white; /* Texto blanco para mejor contraste */
     text-align: center;
     padding: 10px 20px; /* Aumenta el padding vertical */
