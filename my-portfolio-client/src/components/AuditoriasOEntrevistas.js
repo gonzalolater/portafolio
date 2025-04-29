@@ -13,9 +13,7 @@ const AuditoriasOEntrevistas = () => {
         'service_iohvlx7', // Tu Service ID
         'template_v9jfdik', // Tu Template ID
         form.current,
-        {
-          publicKey: 'kwP9r1QFPmCcHszaC', // Tu Public Key
-        }
+        'kwP9r1QFPmCcHszaC' // Tu Public Key
       )
       .then(
         () => {
