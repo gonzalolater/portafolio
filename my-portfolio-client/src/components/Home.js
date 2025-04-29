@@ -80,13 +80,13 @@ const Home = () => {
             <img src="https://profile-counter.glitch.me/gonzalolater/count.svg" alt="Visitor Count" />
           </p>
           <ul className="skills-list">
-            <li>Software Engineer, more than 10,000 hours of development.</li>
-            <li>Full Stack Web 2 & 3 Developer.</li>
-            <li>Oficial Alchemy Certified Ethereum Developer.</li>
-            <li>Agile Coach - Project Manager - Scrum Master.</li>
-            <li>Polygon, Algorand, Chainlink, Solana & DeFi Builder.</li>
-            <li>Microsoft Cybersecurity.</li>
-            <li>Microsoft Azure IA Developer With OpenAI.</li>
+            <li>1) Software Engineer, more than 15,000 hours of development.</li>
+            <li>2) Full Stack Web 2 & 3 Developer.</li>
+            <li>3) Oficial Alchemy Certified Ethereum Developer.</li>
+            <li>4) Agile Coach - Project Manager - Scrum Master.</li>
+            <li>5) Polygon, Algorand, Chainlink, Solana & DeFi Builder.</li>
+            <li>6) Microsoft Cybersecurity.</li>
+            <li>7) Microsoft Azure IA Developer With OpenAI.</li>
           </ul>
         </div>
       </div>
