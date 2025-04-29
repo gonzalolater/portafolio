@@ -41,7 +41,7 @@ const Navbar = () => {
             alignItems: "center",
             justifyContent: "space-between",
             padding: "5px", // Reducido de 10px a 5px para hacer la navbar más fina
-            backgroundColor: "violet",
+            backgroundColor: "#FF91AF",
             position: "fixed",
             top: "0",
             left: "0",
@@ -87,7 +87,7 @@ const Navbar = () => {
               position: "absolute",
               top: "100%",
               left: "0",
-              backgroundColor: "violet",
+              backgroundColor: "#FF91AF",
               boxShadow: "0px 2px 4px rgba(0, 0, 0, 0.1)",
               zIndex: "200",
               justifyContent: "flex-end",
@@ -98,8 +98,9 @@ const Navbar = () => {
             <li
               style={{
                 textDecoration: "none",
-                color: location.pathname === "/" ? "gray" : "inherit", // Cambia el color si estás en Home
+                color: location.pathname === "/" ? "gray" : "inherit", // Cambia el color a gris si estás en Home
                 pointerEvents: location.pathname === "/" ? "none" : "auto", // Deshabilita el clic si estás en Home
+                opacity: location.pathname === "/" ? "0.6" : "1", // Reduce la opacidad para indicar que está deshabilitado
               }}
             >
               <Link to="/" onClick={toggleMenu}>
