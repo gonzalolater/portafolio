@@ -48,7 +48,7 @@ const AuditoriasOEntrevistas = () => {
           <textarea
             name="message"
             id="message"
-            placeholder="Enter your message, your contact method, and the reason why you want to contact me through this medium."
+            placeholder="Enter your message and the reason why you want to contact me through this medium."
             className="input"
             rows="4" // Ajusta el número de filas para que el placeholder sea completamente visible
             required
