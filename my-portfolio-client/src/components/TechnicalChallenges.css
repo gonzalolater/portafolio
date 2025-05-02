@@ -12,6 +12,13 @@
   margin: 0 auto;
 }
 
+.technical-challenges-container h2 {
+  margin-top: 20px; /* Agrega un margen superior de 20px */
+  margin-bottom: 20px; /* Opcional: agrega un margen inferior para separación */
+  text-align: center; /* Centra el texto horizontalmente */
+  width: 100%; /* Asegura que el título ocupe todo el ancho del contenedor */
+}
+
 .navbar {
   height: 50px; /* Altura fija de la navbar */
   z-index: 1000; /* Asegura que la navbar esté sobre el contenido */
