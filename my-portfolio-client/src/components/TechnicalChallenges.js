@@ -1,4 +1,5 @@
 import React from 'react';
+import './TechnicalChallenges.css';
 
 const TechnicalChallenges = () => {
   const challenges = [
@@ -49,26 +50,50 @@ const TechnicalChallenges = () => {
     },
     {
       "title": "Technical Challenge 10 - 10 Projects created in the to be FullStack WEB 3 in Alchemy University",
-      "description": "1 How to Develop an NFT Smart Contract (ERC721) with Alchemy - 2 How to Build a Buy Me a Coffee DeFi dApp - 3 How to Make NFTs with On-chain Metadata with Hardhat and Javascript - 4 How to Create an NFT Gallery - 5 How to Create a Dynamic NFT - 6 How to Build a Staking dApp - 7 How to Build an NFT Marketplace from Scratch - 8 How to Build a Betting Game on Optimism - 9 How to Build a Token Swap Dapp with 0x API - 10 How to Create a Decentralized Twitter with Lens Protocol",
+      "description": [
+        "1. How to Develop an NFT Smart Contract (ERC721) with Alchemy",
+        "2. How to Build a Buy Me a Coffee DeFi dApp",
+        "3. How to Make NFTs with On-chain Metadata with Hardhat and Javascript",
+        "4. How to Create an NFT Gallery",
+        "5. How to Create a Dynamic NFT",
+        "6. How to Build a Staking dApp",
+        "7. How to Build an NFT Marketplace from Scratch",
+        "8. How to Build a Betting Game on Optimism",
+        "9. How to Build a Token Swap Dapp with 0x API",
+        "10. How to Create a Decentralized Twitter with Lens Protocol"
+      ],
       "repositoryLink": "https://github.com/gonzalolater?tab=repositories&q=Rtw&type=&language=&sort="
     }
   ];
   
   return (
-    <div style={{
-        marginTop: '110px',
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        marginBottom: '90px',
-      }}>
-      <h2>Technical Challenges</h2>
-      <ul>
+    <div className="technical-challenges-container">
+      <h2 style={{ textAlign: 'center' }}>Technical Challenges</h2>
+      <ul className="technical-challenges-list">
         {challenges.map((challenge, index) => (
-          <li style={{margin:'20px'}} key={index}>
+          <li className="technical-challenges-item" key={index}>
             <h3>{challenge.title}</h3>
-            <p>{challenge.description}</p>
-            {challenge.repositoryLink && <a href={challenge.repositoryLink}>Repository</a>}
+            {Array.isArray(challenge.description) ? (
+              <ul style={{ paddingLeft: '20px', textAlign: 'left' }}>
+                {challenge.description.map((item, idx) => (
+                  <li key={idx} style={{ marginBottom: '5px' }}>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            ) : (
+              <p>{challenge.description}</p>
+            )}
+            {challenge.repositoryLink && (
+              <a
+                href={challenge.repositoryLink}
+                className="technical-challenges-link"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Repository
+              </a>
+            )}
           </li>
         ))}
       </ul>
