@@ -57,15 +57,28 @@ const Audits = () => {
           <p style={{fontWeight: 'bold', color: 'red'}}>{app.description}</p>
         </div>
       ))}
-     <ul style={{textAlign:'center'}}>
-      <li>Malware Here: </li>
-      <a target="_blank" rel="noopener noreferrer"  href="https://github.com/gonzalolater/CCex-Staking-Platform/blob/main/server/routes/transactions.js#L9">CCex-Staking-Platform</a>
-      <li>Malware Here: </li>
-      <a target="_blank" rel="noopener noreferrer"  href="https://github.com/gonzalolater/DeFiExchange/blob/main/backend/src/routes/api/ieo.route.js#L1">DeFiExchange</a>
-      <li>Malware Here: </li>
-      <a target="_blank" rel="noopener noreferrer"  href="https://github.com/gonzalolater/playflysports/edit/main/Malvere%20full%20stack/backend-master/imageDetails.js#Object">Playflysports</a>
+     <ul style={{ textAlign: 'center', listStyleType: 'none', padding: 0 }}>
+      <li style={{ marginBottom: '10px', marginTop: '10px' }}>
+        Malware Here: <a style={{ color: 'red', textDecoration: 'none' }} target="_blank" rel="noopener noreferrer" href="https://github.com/gonzalolater/CCex-Staking-Platform/blob/main/server/routes/transactions.js#L9">CCex-Staking-Platform</a>
+      </li>
+      <li style={{ marginBottom: '10px', marginTop: '10px' }}>
+        Malware Here: <a style={{ color: 'red', textDecoration: 'none' }} target="_blank" rel="noopener noreferrer" href="https://github.com/gonzalolater/DeFiExchange/blob/main/backend/src/routes/api/ieo.route.js#L1">DeFiExchange</a>
+      </li>
+      <li style={{ marginBottom: '10px', marginTop: '10px' }}>
+        Malware Here: <a style={{ color: 'red', textDecoration: 'none' }} target="_blank" rel="noopener noreferrer" href="https://github.com/gonzalolater/playflysports/edit/main/Malvere%20full%20stack/backend-master/imageDetails.js#Object">Playflysports</a>
+      </li>
     </ul>
-    <p style={{textAlign:'center', marginBottom: '40px'}}>The code is from a malware family called BeaverTail described here: <a target="_blank" rel="noopener noreferrer"  href="https://unit42.paloaltonetworks.com/two-campaigns-by-north-korea-bad-actors-target-job-hunters/">Link</a></p>
+    <p style={{ textAlign: 'center', marginBottom: '40px' }}>
+      The code is from a malware family called BeaverTail described here: 
+      <a 
+        style={{ color: 'red', textDecoration: 'none' }} 
+        target="_blank" 
+        rel="noopener noreferrer" 
+        href="https://unit42.paloaltonetworks.com/two-campaigns-by-north-korea-bad-actors-target-job-hunters/"
+      >
+        Link
+      </a>
+    </p>
     </div>
   );
 };
