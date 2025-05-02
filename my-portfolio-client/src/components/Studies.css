@@ -1,8 +1,10 @@
 .navbar {
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100vh;
+  z-index: 1000; /* Asegura que esté encima del contenido */
+  height: 60px; /* Ajusta la altura según tu diseño */
   padding: 20px;
   box-sizing: border-box;
 }
@@ -30,14 +32,65 @@
 }
 
 header {
-  color: black;
-  text-align: center;
-  font-size: 1.8em;
-
+  position: fixed; /* Esto podría causar el problema */
+  top: 0;
+  left: 0;
+  width: 100%;
 }
 
 img {
   max-width: 100%;
   height: auto;
-  margin: 0 auto;  
+  margin: 0 auto 20px auto; /* Agrega margen inferior para separar la imagen del título */
+}
+
+.course-header {
+  position: static; /* Asegúrate de que no sea fixed o sticky */
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.course-title {
+  font-size: 1.5rem;
+  color: #333;
+  font-weight: bold;
+  margin-top: 10px; /* Asegura que haya espacio entre el título y otros elementos */
+}
+
+.image-container {
+  position: relative;
+  text-align: center; /* Centra el contenido horizontalmente */
+  margin: 20px auto; /* Centra el contenedor en la página */
+  max-width: 90%; /* Limita el ancho máximo del contenedor */
+}
+
+.image-title {
+  position: static; /* Asegúrate de que no sea fixed o sticky */
+  font-size: 1.5rem;
+  color: #333;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.responsive-image {
+  display: block;
+  max-width: 100%; /* Hace que la imagen sea responsiva */
+  height: auto; /* Mantiene la proporción de la imagen */
+  margin: 0 auto; /* Centra la imagen horizontalmente */
+}
+
+main {
+  margin-top: 80px; /* Ajusta este valor según la altura de la navbar */
+  margin-bottom: 80px; /* Ajusta este valor según la altura del footer */
+  padding: 20px; /* Opcional: agrega un poco de espacio interno */
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* Asegura que esté encima del contenido */
+  height: 60px; /* Ajusta la altura según tu diseño */
 }
