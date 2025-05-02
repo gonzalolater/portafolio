@@ -1,0 +1,60 @@
+.technical-challenges-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Alinea el contenido al lado izquierdo */
+  justify-content: center; /* Centra verticalmente */
+  min-height: 100vh; /* Asegura que el contenedor ocupe al menos toda la altura de la ventana */
+  padding: 50px 20px; /* Agrega espacio para la navbar (50px) y el footer (50px) */
+  max-width: 800px;
+  width: 100%;
+  box-sizing: border-box;
+  text-align: left; /* Asegura que el texto esté alineado a la izquierda */
+  margin: 0 auto;
+}
+
+.navbar {
+  height: 50px; /* Altura fija de la navbar */
+  z-index: 1000; /* Asegura que la navbar esté sobre el contenido */
+}
+
+.footer {
+  height: 50px; /* Altura fija del footer */
+  z-index: 1000; /* Asegura que el footer esté sobre el contenido */
+}
+
+.technical-challenges-list {
+  padding: 0;
+  list-style-type: none;
+  width: 100%;
+}
+
+.technical-challenges-item {
+  margin: 20px auto;
+  text-align: left; /* Alinea el texto de cada elemento a la izquierda */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Asegura que los elementos internos estén alineados a la izquierda */
+}
+
+.technical-challenges-link {
+  color: red;
+  text-decoration: none;
+  display: block;
+  margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+  .technical-challenges-container {
+    padding: 50px 10px; /* Reduce el padding lateral en pantallas más pequeñas */
+    min-height: auto; /* Permite que el contenedor se ajuste al contenido */
+  }
+
+  .technical-challenges-container ul {
+    padding-left: 0; /* Elimina el padding adicional en listas */
+  }
+
+  .technical-challenges-container li {
+    margin: 10px auto; /* Reduce el margen entre elementos */
+    margin-bottom: 35px; /* Agrega un margen inferior de 35px */
+  }
+}
