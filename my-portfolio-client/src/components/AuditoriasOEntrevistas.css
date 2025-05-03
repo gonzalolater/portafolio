@@ -13,6 +13,8 @@ body {
 
 #page-wrapper {
   position: relative;
+  margin-bottom: 80px; /* Ajusta este valor según la altura del footer */
+  padding: 20px; /* Opcional: agrega espacio interno para mejorar el diseño */
 }
 
 li {
