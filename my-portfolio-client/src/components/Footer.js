@@ -5,10 +5,7 @@ import './Footer.css'; // Importa el archivo CSS
 const Footer = () => {
   return (
     <footer className="footer">
-      <h2>My Portfolio Full Responsive</h2>
-      <div className="chat-button-container">
-        <ChatButton />
-      </div>
+      <h2>My Portfolio Full Responsive <ChatButton className="chat-button-container"/></h2>
     </footer>
   );
 };
