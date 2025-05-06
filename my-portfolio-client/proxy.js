@@ -4,7 +4,7 @@ module.exports = function(app) {
     app.use(
       '/api',
       proxy({
-        target: 'https://polite-ground-030dc3103.4.azurestaticapps.net/',
+        target: 'https://main--portfolio-aguilar-gonzalo-daniel.netlify.app/',
         changeOrigin: true,
       })
     );
