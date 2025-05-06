@@ -6,7 +6,8 @@ const TechnicalChallenges = () => {
     {
       "title": "Technical Challenges 1 - Challenge-Liteflix",
       "description": "Build a Netflix clone.",
-      "repositoryLink": "https://github.com/gonzalolater/Challenge-Liteflix"
+      "repositoryLink": "https://github.com/gonzalolater/Challenge-Liteflix",
+      "deployedLink": "https://liteflix-gonzalo-aguilar.netlify.app/" // Agregamos el link desplegado
     },
     {
       "title": "Technical Challenges 2 - Challenger-React-ETH ",
@@ -65,7 +66,7 @@ const TechnicalChallenges = () => {
       "repositoryLink": "https://github.com/gonzalolater?tab=repositories&q=Rtw&type=&language=&sort="
     }
   ];
-  
+
   return (
     <div className="technical-challenges-container">
       <h2 style={{ textAlign: 'center' }}>Technical Challenges</h2>
@@ -92,6 +93,16 @@ const TechnicalChallenges = () => {
                 rel="noopener noreferrer"
               >
                 Repository
+              </a>
+            )}
+            {challenge.deployedLink && ( // Nuevo enlace condicional
+              <a
+                href={challenge.deployedLink}
+                className="technical-challenges-link deployed-link" // Puedes agregar una clase para estilos
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                View Live
               </a>
             )}
           </li>
