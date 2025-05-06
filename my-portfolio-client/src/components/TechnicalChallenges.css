@@ -50,6 +50,21 @@
   margin-top: 10px;
 }
 
+/* Estilos para el nuevo enlace "View Live" */
+.technical-challenges-link.deployed-link {
+  background-color: #007bff; /* Un color azul para distinguirlo */
+  color: white;
+  padding: 8px 12px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 0.9em;
+  margin-left: 10px; /* Espacio entre los enlaces */
+}
+
+.technical-challenges-link.deployed-link:hover {
+  background-color: #0056b3;
+}
+
 @media (max-width: 768px) {
   .technical-challenges-container {
     padding: 50px 10px; /* Reduce el padding lateral en pantallas más pequeñas */
@@ -63,5 +78,17 @@
   .technical-challenges-container li {
     margin: 10px auto; /* Reduce el margen entre elementos */
     margin-bottom: 35px; /* Agrega un margen inferior de 35px */
+    flex-direction: column; /* Asegura que los enlaces se apilen bien en móvil */
+    align-items: flex-start; /* Alinea los enlaces a la izquierda en móvil */
+  }
+
+  .technical-challenges-link {
+    margin-top: 5px; /* Reduce el margen superior del enlace en móvil */
+    display: inline-block; /* Permite que los enlaces estén en la misma línea si hay espacio */
+    margin-right: 10px; /* Agrega espacio entre los enlaces en la misma línea */
+  }
+
+  .technical-challenges-link.deployed-link {
+    margin-left: 0; /* Elimina el margen izquierdo en móvil para alinearlo */
   }
 }
