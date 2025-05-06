@@ -1,8 +1,8 @@
 .footer {
-  background: linear-gradient(to right, #FF91AF, #8a2be2); /* Gradiente violetا */
-  color: white; /* نص أبيض لتحسين التباين */
+  background: linear-gradient(to right, #FF91AF, #8a2be2); /* Gradiente violeta */
+  color: white; /* Texto blanco para mejor contraste */
   text-align: center;
-  padding: 20px 20px; /* زيادة الحشو الرأسي لسطح المكتب */
+  padding: 20px 20px; /* Aumenté el padding vertical para escritorio */
   position: fixed;
   bottom: 0;
   left: 0;
@@ -10,31 +10,32 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-sizing: border-box; /* يتضمن الحشو والحدود في العرض */
-  border-top: 2px solid rgba(0, 0, 0, 0.1); /* حد علوي دقيق */
-  box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.1); /* ظل علوي دقيق */
+  box-sizing: border-box; /* Incluye padding y border en el ancho */
+  border-top: 2px solid rgba(0, 0, 0, 0.1); /* Borde superior sutil */
+  box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.1); /* Sombra superior sutil */
 }
 
 .footer h2 {
   flex: 1;
-  margin: 0; /* إزالة الهوامش الافتراضية لـ h2 */
+  margin: 0; /* Elimina margenes por defecto del h2 */
 }
 
 .chat-button-container {
-  margin-left: auto; /* دفع الزر إلى أقصى اليمين */
+  margin-left: auto; /* Empuja el botón al extremo derecho */
 }
 
-/* استعلام الوسائط لكي لا يشغل التذييل الشاشة بأكملها على الهواتف المحمولة */
+/* Media query para que el footer no ocupe toda la pantalla en moviles */
 @media (max-width: 768px) {
   .footer {
-    flex-direction: column; /* تكديس العناصر عموديًا */
+    flex-direction: column; /* Apila los elementos verticalmente */
     align-items: center;
-    padding: 40px 10px; /* زيادة الحشو الرأسي بشكل أكبر للهواتف المحمولة */
+    padding: 20px 10px; /* Reduje un poco el padding vertical */
+    min-height: 120px; /* Establecí una altura mínima para el footer en móviles */
   }
   .footer h2 {
-    margin-bottom: 15px; /* زيادة الهامش السفلي لمزيد من المساحة على الهواتف المحمولة */
+    margin-bottom: 10px; /* Ajusté el margen inferior */
     text-align: center;
-    font-size: 1.2em; /* تقليل حجم الخط قليلاً إذا كان النص طويلاً جدًا */
+    font-size: 1.2em; /* Mantengo la reducción del tamaño de fuente */
   }
   .chat-button-container {
     margin-left: 0;
