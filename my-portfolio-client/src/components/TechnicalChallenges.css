@@ -69,6 +69,7 @@
   .technical-challenges-container {
     padding: 50px 10px; /* Reduce el padding lateral en pantallas más pequeñas */
     min-height: auto; /* Permite que el contenedor se ajuste al contenido */
+    margin-bottom: 40px; /* Aumenta el margen inferior a 40px para separar del footer */
   }
 
   .technical-challenges-container ul {
