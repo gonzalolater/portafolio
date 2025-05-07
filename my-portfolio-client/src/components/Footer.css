@@ -2,7 +2,7 @@
   background: linear-gradient(to right, #FF91AF, #8a2be2); /* Gradiente violeta */
   color: white; /* Texto blanco para mejor contraste */
   text-align: center;
-  padding: 20px 20px; /* Aumenté el padding vertical para escritorio */
+  padding: 30px 20px; /* Aumenté el padding vertical para hacerlo más alto */
   position: fixed;
   bottom: 0;
   left: 0;
@@ -17,7 +17,7 @@
 
 .footer h2 {
   flex: 1;
-  margin: 0; /* Elimina margenes por defecto del h2 */
+  margin: 5px; /* Agregué un margen de 5px alrededor del texto */
 }
 
 .chat-button-container {
