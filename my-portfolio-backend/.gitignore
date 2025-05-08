@@ -1,3 +1,16 @@
 /node_modules
 .env
-
+.env.template
+.DS_Store
+npm-debug.log
+yarn-error.log
+package-lock.json
+yarn.lock
+coverage
+dist
+.vscode
+.idea
+.vscode-test
+*.tgz
+*.zip
+*.tar.gz
