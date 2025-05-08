@@ -17,7 +17,7 @@
 
 .footer h2 {
   flex: 1;
-  margin: 5px; /* Agregué un margen de 5px alrededor del texto */
+  margin: 5px 5px 10px 5px; /* Ajusté el margen inferior a 10px */
 }
 
 .chat-button-container {
