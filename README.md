@@ -36,6 +36,8 @@ Thank you for visiting my portfolio, and I hope you enjoy exploring my projects 
   <img src="https://i.ibb.co/Y2TXsqw/IMG-20240719-WA0014.jpg" />
 </p>
 
+## Analysis: https://deepwiki.com/gonzalolater/portafolio/1-overview
+
 -----------------------------------------------------------
 
 # Gonzalo Daniel Aguilar - Ingeniero de Software | Desarrollador Web Full Stack.
@@ -74,3 +76,5 @@ Mi portafolio es una recopilación de todos mis logros y proyectos, donde podrá
 <p align="center">
   <img src="https://i.ibb.co/Y2TXsqw/IMG-20240719-WA0014.jpg" />
 </p>
+
+## Analisis: https://deepwiki.com/gonzalolater/portafolio/1-overview
