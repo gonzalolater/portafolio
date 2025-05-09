@@ -79,3 +79,5 @@ You won’t want to miss it! Head over to the Learning Journey tab to get starte
 
 * The completed submission form on Devpost before the deadline.
 * Please see the Official Rules for full details.
+
+## Global top 25 position.
