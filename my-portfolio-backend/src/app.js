@@ -17,9 +17,7 @@ if (!process.env.MERCADOPAGO_ACCESS_TOKEN) {
 }
 
 // Configura las credenciales de Mercado Pago
-mercadopago.configure({
-  access_token: "YOUR_ACCESS_TOKEN", // Reemplaza con tu Access Token de Mercado Pago
-});
+mercadopago.configurations.setAccessToken(process.env.MERCADOPAGO_ACCESS_TOKEN);
 
 // Crea una preferencia de ejemplo
 mercadopago.preferences
