@@ -304,6 +304,14 @@ footer > span {
   justify-content: flex-end;
   font-size: 0.9em;
   color: #444;
-}#message {
+}
+
+#message {
   height: 90px; /* Ajusta la altura del campo de texto */
+}
+
+@media (max-width: 768px) {
+  #valve {
+    margin-bottom: 30px; /* Incrementa el margen inferior a 20px */
+  }
 }
