@@ -97,7 +97,12 @@ const AuditoriasOEntrevistas = () => {
               <li>Skills test</li>
               <li>Feedback and follow-up</li>
             </ol>
-            <button className="btn">Choose</button>
+            <button
+              className="btn"
+              onClick={() => window.location.href = "https://calendar.app.google/LJK3kPgV2kQACoz46"}
+            >
+              Choose
+            </button>
           </div>
           <div className="product" id="bass">
             <div className="level">Technical interviews</div>
@@ -108,7 +113,12 @@ const AuditoriasOEntrevistas = () => {
               <li>Workflow Chart Design</li>
               <li>MVP Development</li>
             </ol>
-            <button className="btn">Choose</button>
+            <button
+              className="btn"
+              onClick={() => window.location.href = "https://calendar.app.google/LJK3kPgV2kQACoz46"}
+            >
+              Choose
+            </button>
           </div>
           <div className="product" id="valve">
             <div className="level">Audits</div>
@@ -119,7 +129,12 @@ const AuditoriasOEntrevistas = () => {
               <li>Technical improvements</li>
               <li>Security improvements</li>
             </ol>
-            <button className="btn">Choose</button>
+            <button
+              className="btn"
+              onClick={() => window.location.href = "https://calendar.app.google/LJK3kPgV2kQACoz46"}
+            >
+              Choose
+            </button>
           </div>
         </section>
       </div>
