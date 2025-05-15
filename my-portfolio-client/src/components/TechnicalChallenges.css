@@ -10,6 +10,7 @@
   box-sizing: border-box;
   text-align: left; /* Asegura que el texto esté alineado a la izquierda */
   margin: 0 auto;
+  margin-bottom: 40px; /* Aumenta el margen inferior a 40px */
 }
 
 .technical-challenges-container h2 {
