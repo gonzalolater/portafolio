@@ -2,7 +2,7 @@
   background: linear-gradient(to right, #FF91AF, #8a2be2); /* Gradiente violeta */
   color: white; /* Texto blanco para mejor contraste */
   text-align: center;
-  padding: 30px 20px; /* Aumenté el padding vertical para hacerlo más alto */
+  padding: 50px 20px; /* Aumenté el padding vertical para hacerlo más alto */
   position: fixed;
   bottom: 0;
   left: 0;
