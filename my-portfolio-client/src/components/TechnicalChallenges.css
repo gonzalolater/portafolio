@@ -66,6 +66,11 @@
   background-color: #0056b3;
 }
 
+.only-desktop-button {
+  display: inline-block;
+  margin-left: 10px;
+}
+
 @media (max-width: 768px) {
   .technical-challenges-container {
     padding: 50px 10px; /* Reduce el padding lateral en pantallas más pequeñas */
@@ -92,5 +97,9 @@
 
   .technical-challenges-link.deployed-link {
     margin-left: 0; /* Elimina el margen izquierdo en móvil para alinearlo */
+  }
+
+  .only-desktop-button {
+    display: none;
   }
 }
