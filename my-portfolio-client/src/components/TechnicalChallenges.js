@@ -95,15 +95,21 @@ const TechnicalChallenges = () => {
                 Repository
               </a>
             )}
-            {challenge.deployedLink && ( // Nuevo enlace condicional
+            {challenge.deployedLink && (
               <a
                 href={challenge.deployedLink}
-                className="technical-challenges-link deployed-link" // Puedes agregar una clase para estilos
+                className="technical-challenges-link deployed-link"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 View Live
               </a>
+            )}
+            {/* Solo para el primer desafío y solo en escritorio */}
+            {index === 0 && (
+              <button className="only-desktop-button" disabled>
+                Solo escritorio
+              </button>
             )}
           </li>
         ))}
