@@ -67,8 +67,7 @@
 }
 
 .only-desktop-button {
-  display: inline-block;
-  margin-left: 10px;
+  display: none;
 }
 
 @media (max-width: 768px) {
@@ -100,6 +99,7 @@
   }
 
   .only-desktop-button {
-    display: none;
+    display: inline-block;
+    margin-left: 10px;
   }
 }
