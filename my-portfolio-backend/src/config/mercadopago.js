@@ -1,6 +1,4 @@
+// filepath: /workspaces/portafolio/my-portfolio-backend/src/config/mercadopago.js
 import mercadopago from "mercadopago";
-
-// Configura el token de acceso
-mercadopago.configurations.setAccessToken(process.env.MERCADOPAGO_ACCESS_TOKEN);
-
+mercadopago.accessToken = process.env.MERCADOPAGO_ACCESS_TOKEN;
 export default mercadopago;
