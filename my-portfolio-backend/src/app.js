@@ -1,3 +1,5 @@
+import dotenv from "dotenv";
+dotenv.config();
 import express from "express";
 import cors from "cors";
 import morgan from "morgan";
@@ -6,7 +8,11 @@ import helmet from "helmet";
 import { FRONTEND_URL } from "./config.js";
 import mercadopago from "./config/mercadopago.js";
 import fs from "fs";
-import path from "path";
+import path, { dirname } from "path";
+import { fileURLToPath } from "url";
+import paymentRoutes from "./routes/payment.js";
+
+const __dirname = dirname(fileURLToPath(import.meta.url));
 
 if (!FRONTEND_URL) {
   throw new Error("FRONTEND_URL no está definido en las variables de entorno.");
@@ -15,27 +21,6 @@ if (!FRONTEND_URL) {
 if (!process.env.MERCADOPAGO_ACCESS_TOKEN) {
   throw new Error("El token de acceso de Mercado Pago no está configurado.");
 }
-
-// Configura las credenciales de Mercado Pago
-mercadopago.configurations.setAccessToken(process.env.MERCADOPAGO_ACCESS_TOKEN);
-
-// Crea una preferencia de ejemplo
-mercadopago.preferences
-  .create({
-    items: [
-      {
-        title: "Mi producto",
-        quantity: 1,
-        unit_price: 2000,
-      },
-    ],
-  })
-  .then((response) => {
-    console.log("Preferencia creada:", response.body);
-  })
-  .catch((error) => {
-    console.error("Error al crear la preferencia:", error);
-  });
 
 const app = express();
 
@@ -55,17 +40,16 @@ app.use(morgan("combined", { stream: accessLogStream }));
 app.use(cookieParser());
 app.use(helmet());
 
-const routesPath = path.join(__dirname, "routes");
-fs.readdirSync(routesPath).forEach((file) => {
-  const route = require(`./routes/${file}`);
-  app.use(`/api/${file.split(".")[0]}`, route);
-});
+// Rutas
+app.use("/api/payment", paymentRoutes);
+
+// Si tienes más rutas, impórtalas y agrégalas aquí
 
 if (process.env.NODE_ENV === "production") {
-  app.use(express.static("client/dist"));
+  app.use(express.static(path.join(__dirname, "../client/dist")));
 
   app.get("*", (req, res) => {
-    res.sendFile(path.resolve("client", "dist", "index.html"));
+    res.sendFile(path.resolve(__dirname, "../client/dist/index.html"));
   });
 } else {
   console.log("Modo desarrollo activado");
