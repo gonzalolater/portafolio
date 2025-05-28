@@ -1,5 +1,5 @@
 /node_modules
-.env
+/.env
 .env.template
 .DS_Store
 npm-debug.log
@@ -14,4 +14,5 @@ dist
 *.tgz
 *.zip
 *.tar.gz
-my-portfolio-backend/src/config.js/src/config.js
+/src/config.js
+/my-portfolio-backend/src/config.js
