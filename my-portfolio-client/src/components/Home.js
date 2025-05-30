@@ -52,20 +52,20 @@ const Home = () => {
           <div
             className="scroll-prompt"
             style={{
-              zIndex: zIndex, // Cambia dinámicamente el z-index
-              position: "absolute", // Posición absoluta para colocarlo sobre la foto
-              top: "60px", // Ajusta la posición vertical con un margen superior de 40px
-              right: "20px", // Ajusta la posición horizontal con un margen derecho adicional de 10px
-              backgroundColor: "rgba(255, 255, 255, 0.8)", // Fondo semitransparente para visibilidad
+              zIndex: zIndex,
+              position: "absolute",
+              top: "60px",
+              right: "20px",
+              backgroundColor: "rgba(255, 255, 255, 0.8)",
               padding: "10px",
-              borderRadius: "50%", // Hace que el elemento sea circular
+              borderRadius: "50%",
               boxShadow: "0 2px 4px rgba(0, 0, 0, 0.2)",
-              textAlign: "center", // Centra el texto dentro del círculo
-              width: "60px", // Ancho del círculo
-              height: "60px", // Alto del círculo
-              display: "flex", // Para centrar el contenido
-              alignItems: "center", // Centra verticalmente el contenido
-              justifyContent: "center", // Centra horizontalmente el contenido
+              textAlign: "center",
+              width: "60px",
+              height: "60px",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
             }}
           >
             SCROLL DOWN <br />
@@ -90,6 +90,44 @@ const Home = () => {
           </ul>
         </div>
       </div>
+
+      {/* Botón Architecture entre el nombre y Social Web Links */}
+      <div style={{ display: "flex", justifyContent: "flex-end", margin: "0 10px 20px 0" }}>
+        <a
+          href="https://deepwiki.com/gonzalolater/portafolio/1-overview"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{ textDecoration: "none" }}
+        >
+          <button
+            className="architecture-btn"
+            style={{
+              background: "linear-gradient(135deg, #b983ff 60%, #8f5cff 100%)",
+              color: "#111",
+              border: "1px solid #111",
+              borderRadius: "50%",
+              width: "110px",
+              height: "110px",
+              boxShadow: "0 6px 24px rgba(140, 60, 255, 0.4)",
+              fontWeight: "bold",
+              fontSize: "0.95rem",
+              cursor: "pointer",
+              transition: "transform 0.2s",
+              outline: "none",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              letterSpacing: "0.5px",
+              animation: "blink 1s infinite"
+            }}
+            onMouseOver={e => (e.currentTarget.style.transform = "scale(1.08)")}
+            onMouseOut={e => (e.currentTarget.style.transform = "scale(1)")}
+          >
+            Architecture
+          </button>
+        </a>
+      </div>
+
       <h2 className="social-links-title">Social Web Links</h2>
       <div className="social-links">
         {[
