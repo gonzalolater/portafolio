@@ -118,7 +118,7 @@ const Home = () => {
               alignItems: "center",
               justifyContent: "center",
               letterSpacing: "0.5px",
-              animation: "blink 1s infinite"
+              animation: "spin-horizontal 2s linear infinite"
             }}
             onMouseOver={e => (e.currentTarget.style.transform = "scale(1.08)")}
             onMouseOut={e => (e.currentTarget.style.transform = "scale(1)")}
