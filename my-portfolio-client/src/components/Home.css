@@ -153,3 +153,8 @@
     0%, 100% { opacity: 1; }
     50% { opacity: 0.4; }
   }
+  
+  @keyframes spin-horizontal {
+  0% { transform: rotateY(0deg); }
+  100% { transform: rotateY(360deg); }
+}
