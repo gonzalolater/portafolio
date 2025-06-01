@@ -79,7 +79,7 @@ const Home = () => {
             <br />
             <img src="https://profile-counter.glitch.me/gonzalolater/count.svg" alt="Visitor Count" />
           </p>
-          <ul className="skills-list">
+          <ul className="skills-list slide-in">
             <li>1) Software Engineer, more than 15,000 hours of development.</li>
             <li>2) Full Stack Web 2 & 3 Developer.</li>
             <li>3) Oficial Alchemy Certified Ethereum Developer.</li>
