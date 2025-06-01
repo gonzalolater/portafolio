@@ -23,6 +23,16 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
     transition: transform 0.3s ease-in-out; /* Transición para el hover */
+    animation: shine 2s infinite alternate;
+  }
+  
+  @keyframes shine {
+    0%, 100% {
+      box-shadow: 0 0 20px 5px #b983ff, 0 0 40px 10px #8f5cff;
+    }
+    50% {
+      box-shadow: 0 0 40px 15px #fff, 0 0 80px 30px #b983ff;
+    }
   }
   
   .profile-photo:hover {
