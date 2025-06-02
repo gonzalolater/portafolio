@@ -12,6 +12,7 @@
     left: 0;
     width: 100%;
     z-index: 100;
+    border-bottom: none; /* Cambiado a none */
   }
   
   .container {
