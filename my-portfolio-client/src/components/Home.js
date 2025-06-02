@@ -61,15 +61,17 @@ const Home = () => {
               borderRadius: "50%",
               boxShadow: "0 2px 4px rgba(0, 0, 0, 0.2)",
               textAlign: "center",
-              width: "60px",
-              height: "60px",
+              width: "90px",      // <-- antes 60px
+              height: "90px",     // <-- antes 60px
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
+              fontSize: "1rem",   // puedes ajustar el tamaño de letra si lo deseas
+              flexDirection: "column"
             }}
           >
-            SCROLL DOWN <br />
-            <span>↓</span>
+            SCROLL DOWN
+            <span style={{ fontSize: "1.5rem" }}>↓</span>
           </div>
         )}
         <div className="info-section">
