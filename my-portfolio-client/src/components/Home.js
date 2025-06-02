@@ -28,7 +28,7 @@ const Home = () => {
   useEffect(() => {
     const timerShow = setTimeout(() => {
       setShowMessage(true); // Muestra el mensaje después de 4 segundos
-    }, 4000);
+    }, 3000);
 
     const timerZIndex = setTimeout(() => {
       setZIndex(-10); // Cambia el z-index después de 15 segundos
@@ -80,13 +80,15 @@ const Home = () => {
             <img src="https://profile-counter.glitch.me/gonzalolater/count.svg" alt="Visitor Count" />
           </p>
           <ul className="skills-list slide-in">
-            <li>1) Software Engineer, more than 15,000 hours of development.</li>
-            <li>2) Full Stack Web 2 & 3 Developer.</li>
-            <li>3) Oficial Alchemy Certified Ethereum Developer.</li>
-            <li>4) Agile Coach - Project Manager - Scrum Master.</li>
-            <li>5) Polygon, Algorand, Chainlink, Solana & DeFi Builder.</li>
-            <li>6) Microsoft Cybersecurity.</li>
-            <li>7) Microsoft Azure IA Developer With OpenAI.</li>
+            <li><b>1) Senior Software Engineer:</b> Proven commitment with over 15,000 hours of development experience.</li>
+            <li><b>2) Full Stack Web 2 & Web 3 Developer:</b> Expert in designing, developing, and deploying next-generation web applications.</li>
+            <li><b>3) Official Alchemy Certified Ethereum Developer:</b> Certified in smart contract and DApp development on the Ethereum network.</li>
+            <li><b>4) Agile Coach & Project Manager:</b> Leading teams using agile methodologies (Scrum Master) to ensure successful project delivery.</li>
+            <li><b>5) Blockchain & DeFi Architect:</b> Experienced builder in decentralized ecosystems like Polygon, Algorand, and Solana, with deep DeFi knowledge.</li>
+            <li><b>6) Chainlink Integration Specialist:</b> Proven ability to integrate decentralized oracles for blockchain applications.</li>
+            <li><b>7) Microsoft Cybersecurity Professional:</b> Strong knowledge of information security and system protection.</li>
+            <li><b>8) Microsoft Azure AI & OpenAI Developer:</b> Designer and implementer of artificial intelligence solutions using Azure and OpenAI capabilities.</li>
+            <li><b>9) Hackathon Innovator & Award Winner:</b> Recognized for developing creative and functional solutions under pressure, achieving second place in hackathons.</li>
           </ul>
         </div>
       </div>
