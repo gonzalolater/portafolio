@@ -2,10 +2,11 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 37px;
+    margin-top: 0;  /* Elimina cualquier margen superior */
     min-height: 100vh;
     padding: 20px;
-    background-color: #f8f8f8; /* Un sutil fondo grisáceo */
+    padding-top: 60px; /* Ajusta este valor a la altura real de tu navbar */
+    background: #f3f3f3; /* o el gris que prefieras */
   }
   
   .profile-section {
