@@ -79,7 +79,8 @@
 }
 
 .skills-list li {
-  margin-bottom: 5px; /* Espaciado entre los elementos de la lista */
+  margin-bottom: 10px;
+  line-height: 1.5;
 }
   
   .scroll-prompt {
