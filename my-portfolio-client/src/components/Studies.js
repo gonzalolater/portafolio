@@ -54,6 +54,7 @@ const Studies = () => {
           src={item.imgSrc}
           alt={item.title}
           border="0"
+          loading="lazy" // <-- Lazy load activado
         />
       </div>
     );
