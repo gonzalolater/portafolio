@@ -1,0 +1,16 @@
+.audit-image {
+  border: 1px solid #fff;
+  max-width: 100%;
+  height: auto;
+  width: 100%;
+  opacity: 0;
+  transform: translateX(-100px);
+  animation: slideInRight 2s forwards;
+}
+
+@keyframes slideInRight {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
