@@ -54,19 +54,47 @@ const Studies = () => {
           src={item.imgSrc}
           alt={item.title}
           border="0"
-          loading="lazy" // <-- Lazy load activado
+          loading="lazy"
         />
       </div>
     );
   };
 
   return (
-    <main id="studies-List" style={{ marginTop: "80px", marginBottom: "80px" }}>
-      {courses.map((item, index) => (
-        <section className="main-section" id={item.id} key={item.id}>
-          <article>{renderContent(item, index === courses.length - 1)}</article>
-        </section>
-      ))}
+    <main id="studies-List" style={{ marginTop: "80px", marginBottom: "80px", display: "flex" }}>
+      {/* Sidebar fijo para escritorio */}
+      <aside className="studies-sidebar">
+        <table style={{ width: "100%", borderCollapse: "collapse" }}>
+          <thead>
+            <tr>
+              <th style={{ textAlign: "center", padding: "8px", borderBottom: "1px solid #ccc" }}>Titles</th>
+            </tr>
+          </thead>
+          <tbody>
+            {courses.map((item) => (
+              <tr key={item.id}>
+                <td style={{ padding: "8px", borderBottom: "1px solid #eee" }}>
+                  <a
+                    href={`#${item.id}`}
+                    style={{ color: "#007bff", textDecoration: "underline", cursor: "pointer" }}
+                  >
+                    {item.title}
+                  </a>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </aside>
+
+      {/* Contenido de imágenes */}
+      <section className="studies-content">
+        {courses.map((item, index) => (
+          <section className="main-section" id={item.id} key={item.id}>
+            <article>{renderContent(item, index === courses.length - 1)}</article>
+          </section>
+        ))}
+      </section>
     </main>
   );
 };
