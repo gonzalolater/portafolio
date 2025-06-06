@@ -1,4 +1,5 @@
 import React from 'react';
+import './Audits.css'; // <--- Importa el CSS
 
 const Audits = () => {
   const apps = [
@@ -51,7 +52,7 @@ const Audits = () => {
             <img
               src={app.image}
               alt={app.name}
-              style={{maxWidth: '100%', height: 'auto', width: '100%'}}
+              className="audit-image" // <-- Aplica la clase aquí
             />
           </a>
           <p style={{fontWeight: 'bold', color: 'red'}}>{app.description}</p>
