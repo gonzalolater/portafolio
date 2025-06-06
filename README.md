@@ -36,7 +36,7 @@ Thank you for visiting my portfolio, and I hope you enjoy exploring my projects 
   <img src="https://i.ibb.co/Y2TXsqw/IMG-20240719-WA0014.jpg" />
 </p>
 
-## Analysis: https://deepwiki.com/gonzalolater/portafolio/1-overview
+## Analysis: https://deepwiki.com/gonzalolater/portafolio
 
 -----------------------------------------------------------
 
@@ -77,4 +77,4 @@ Mi portafolio es una recopilación de todos mis logros y proyectos, donde podrá
   <img src="https://i.ibb.co/Y2TXsqw/IMG-20240719-WA0014.jpg" />
 </p>
 
-## Analisis: https://deepwiki.com/gonzalolater/portafolio/1-overview
+## Analisis: https://deepwiki.com/gonzalolater/portafolio
