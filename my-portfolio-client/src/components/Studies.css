@@ -94,3 +94,34 @@ footer {
   z-index: 1000; /* Asegura que esté encima del contenido */
   height: 60px; /* Ajusta la altura según tu diseño */
 }
+
+.studies-sidebar {
+  width: 40%;
+  position: fixed;
+  left: 0;
+  top: 80px;
+  height: calc(100vh - 160px);
+  overflow-y: auto;
+  background: #fff;
+  z-index: 10;
+  padding-right: 16px;
+  border-right: 1px solid #eee;
+  display: none;
+}
+
+.studies-content {
+  width: 100%;
+  margin-left: 0;
+}
+
+@media (min-width: 1024px) {
+  .studies-sidebar {
+    display: block;
+    padding-bottom: 80px; /* Espacio para el footer fijo */
+  }
+  .studies-content {
+    width: 60%;
+    margin-left: 40%;
+    padding-left: 32px;
+  }
+}
