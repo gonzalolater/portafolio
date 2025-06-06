@@ -98,7 +98,7 @@ const Home = () => {
       {/* Botón Architecture entre el nombre y Social Web Links */}
       <div style={{ display: "flex", justifyContent: "flex-end", margin: "0 10px 20px 0" }}>
         <a
-          href="https://deepwiki.com/gonzalolater/portafolio/1-overview"
+          href="https://deepwiki.com/gonzalolater/portafolio"
           target="_blank"
           rel="noopener noreferrer"
           style={{ textDecoration: "none" }}
