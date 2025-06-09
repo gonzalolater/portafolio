@@ -61,22 +61,49 @@ const Studies = () => {
   };
 
   return (
-    <main id="studies-List" style={{ marginTop: "80px", marginBottom: "80px", display: "flex" }}>
+    <main id="studies-List" style={{ marginTop: "80px", marginBottom: "24px", display: "flex" }}>
       {/* Sidebar fijo para escritorio */}
       <aside className="studies-sidebar">
-        <table style={{ width: "100%", borderCollapse: "collapse" }}>
+        <table style={{ width: "100%", borderCollapse: "collapse", marginBottom: "0" }}>
           <thead>
             <tr>
-              <th style={{ textAlign: "center", padding: "8px", borderBottom: "1px solid #ccc" }}>Titles</th>
+              <th style={{ textAlign: "center", padding: "8px", borderBottom: "1px solid #ccc" }}>
+                <h2
+                  style={{
+                    color: "#8e24aa",
+                    border: "1px solid #000", // borde negro sólido de 1px
+                    boxShadow: "2px 2px 8px rgba(0,0,0,0.2)",
+                    display: "inline-block",
+                    padding: "4px 16px",
+                    borderRadius: "6px"
+                  }}
+                >
+                  TITLES
+                </h2>
+              </th>
             </tr>
           </thead>
           <tbody>
             {courses.map((item) => (
               <tr key={item.id}>
-                <td style={{ padding: "8px", borderBottom: "1px solid #eee" }}>
+                <td
+                  style={{
+                    padding: "8px",
+                    borderBottom: "1px solid #eee",
+                    textAlign: "center" // centra el contenido de la celda
+                  }}
+                >
                   <a
                     href={`#${item.id}`}
-                    style={{ color: "#007bff", textDecoration: "underline", cursor: "pointer" }}
+                    style={{
+                      color: "#8e24aa",
+                      textDecoration: "none",
+                      cursor: "pointer",
+                      fontWeight: "500",
+                      transition: "color 0.2s"
+                    }}
+                    onMouseOver={e => (e.currentTarget.style.color = "#6d1b7b")}
+                    onMouseOut={e => (e.currentTarget.style.color = "#8e24aa")}
                   >
                     {item.title}
                   </a>
@@ -90,7 +117,12 @@ const Studies = () => {
       {/* Contenido de imágenes */}
       <section className="studies-content">
         {courses.map((item, index) => (
-          <section className="main-section" id={item.id} key={item.id}>
+          <section
+            className="main-section"
+            id={item.id}
+            key={item.id}
+            style={{ marginBottom: "80px" }}
+          >
             <article>{renderContent(item, index === courses.length - 1)}</article>
           </section>
         ))}
