@@ -6,7 +6,7 @@ import morgan from "morgan";
 import cookieParser from "cookie-parser";
 import helmet from "helmet";
 import { FRONTEND_URL } from "./config.js";
-import mercadopago from "./config/mercadopago.js";
+// import mercadopago from "./config/mercadopago.js";
 import fs from "fs";
 import path, { dirname } from "path";
 import { fileURLToPath } from "url";
@@ -18,9 +18,9 @@ if (!FRONTEND_URL) {
   throw new Error("FRONTEND_URL no está definido en las variables de entorno.");
 }
 
-if (!process.env.MERCADOPAGO_ACCESS_TOKEN) {
-  throw new Error("El token de acceso de Mercado Pago no está configurado.");
-}
+// if (!process.env.MERCADOPAGO_ACCESS_TOKEN) {
+//   throw new Error("El token de acceso de Mercado Pago no está configurado.");
+// }
 
 const app = express();
 
@@ -46,10 +46,12 @@ app.use("/api/payment", paymentRoutes);
 // Si tienes más rutas, impórtalas y agrégalas aquí
 
 if (process.env.NODE_ENV === "production") {
-  app.use(express.static(path.join(__dirname, "../client/dist")));
+  app.use(express.static(path.join(__dirname, "../../my-portfolio-client/dist")));
 
   app.get("*", (req, res) => {
-    res.sendFile(path.resolve(__dirname, "../client/dist/index.html"));
+    res.sendFile(
+      path.resolve(__dirname, "../../my-portfolio-client/dist/index.html")
+    );
   });
 } else {
   console.log("Modo desarrollo activado");
