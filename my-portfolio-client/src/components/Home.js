@@ -82,7 +82,7 @@ const Home = () => {
             <img src="https://profile-counter.glitch.me/gonzalolater/count.svg" alt="Visitor Count" />
           </p>
           <ul className="skills-list slide-in">
-            <li><b>1) Senior Software Engineer:</b> Proven commitment with over 15,000 hours of development experience.</li>
+            <li><b>1) Senior Software Engineer:</b> Proven commitment with over 16.000 hours of development experience.</li>
             <li><b>2) Full Stack Web 2 & Web 3 Developer:</b> Expert in designing, developing, and deploying next-generation web applications.</li>
             <li><b>3) Official Alchemy Certified Ethereum Developer:</b> Certified in smart contract and DApp development on the Ethereum network.</li>
             <li><b>4) Agile Coach & Project Manager:</b> Leading teams using agile methodologies (Scrum Master) to ensure successful project delivery.</li>
