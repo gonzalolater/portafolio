@@ -195,21 +195,21 @@ const Carousel = () => {
     boxShadow: '0 0 5px red',
   };
 
-  const buttonStyle1 = {
-    marginTop: '-12px',
-    background: 'linear-gradient(to right, #FF91AF, #8a2be2)', // Gradiente aplicado
-    color: 'white',
-    padding: '15px 16px',
-    textAlign: 'center',
-    textDecoration: 'none',
-    display: 'inline-block',
-    fontSize: '16px',
-    margin: '0 10px',
-    cursor: 'pointer',
-    borderRadius: '5px',
-    fontWeight: 'bold',
-    border: '3px solid red',
-  };
+  // const buttonStyle1 = {
+  //   marginTop: '-12px',
+  //   background: 'linear-gradient(to right, #FF91AF, #8a2be2)', // Gradiente aplicado
+  //   color: 'white',
+  //   padding: '15px 16px',
+  //   textAlign: 'center',
+  //   textDecoration: 'none',
+  //   display: 'inline-block',
+  //   fontSize: '16px',
+  //   margin: '0 10px',
+  //   cursor: 'pointer',
+  //   borderRadius: '5px',
+  //   fontWeight: 'bold',
+  //   border: '3px solid red',
+  // };
 
   const navigate = (direction) => {
     const newIndex = direction === 'next' ? currentImageIndex + 1 : currentImageIndex - 1;
@@ -222,9 +222,6 @@ const Carousel = () => {
     setCurrentImageIndex(index);
   };
 
-  const handleClickButton = () => {
-    alert('CLICK IMAGE PLEASE !!!');
-  };
 
   return (
     <div style={containerStyle}>
@@ -259,9 +256,6 @@ const Carousel = () => {
           <button style={buttonStyle} onClick={() => navigate('next')}>
             Next
           </button>
-          <button style={buttonStyle1} onClick={handleClickButton}>
-            CLICK IMAGES
-            </button>
         </div>
       </div>
     </div>
