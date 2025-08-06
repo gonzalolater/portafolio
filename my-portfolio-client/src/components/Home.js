@@ -76,11 +76,11 @@ const Home = () => {
         )}
         <div className="info-section">
           <h2>Gonzalo Daniel Aguilar</h2>
-          <p className="visitor-count">
+          {/* <p className="visitor-count">
             <h2>VISITOR COUNT</h2>
             <br />
             <img src="https://profile-counter.glitch.me/gonzalolater/count.svg" alt="Visitor Count" />
-          </p>
+          </p> */}
           <ul className="skills-list slide-in">
             <li><b>1) Senior Software Engineer:</b> Proven commitment with over 16.000 hours of development experience.</li>
             <li><b>2) Full Stack Web 2 & Web 3 Developer:</b> Expert in designing, developing, and deploying next-generation web applications.</li>
