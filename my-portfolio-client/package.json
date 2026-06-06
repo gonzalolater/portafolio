@@ -14,7 +14,7 @@
     "@fortawesome/react-fontawesome": "^0.2.2",
     "@hookform/resolvers": "^3.4.2",
     "@mercadopago/sdk-react": "^1.0.2",
-    "axios": "^1.12.0",
+    "axios": "^1.16.0",
     "dayjs": "^1.11.11",
     "dayjs-plugin-utc": "^0.1.2",
     "joy": "^0.1.1",
